@@ -358,13 +358,17 @@ aside#mobile_gnb_list {
   opacity: 65%;
 }
 .qa_page2 .qa_form .qa_form_result {
-  width: 100%;
-  border: 1px solid #f00;
+  display: none;
 }
-.qa_page2 .qa_form .qa_form_result label em {
+.qa_page2 .qa_form .qa_form_result.showForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.qa_page2 .qa_form .qa_form_result.showForm label em {
   color: #f00;
 }
-.qa_page2 .qa_form .qa_form_result input {
+.qa_page2 .qa_form .qa_form_result.showForm input {
   width: 90%;
   padding: 1.5%;
   outline: none;
@@ -374,19 +378,21 @@ aside#mobile_gnb_list {
   background: #fff;
   opacity: 65%;
 }
-.qa_page2 .qa_form .qa_form_result select[name=orderList] {
-  border: 1px solid #f00;
-  width: 100%;
+.qa_page2 .qa_form .qa_form_result.showForm select[name=orderList] {
+  order: 2;
+  width: 90%;
   padding: 2.5%;
+  background: #fff;
+  opacity: 65%;
 }
-.qa_page2 .qa_form .qa_form_result .nameCountry {
+.qa_page2 .qa_form .qa_form_result.showForm .nameCountry {
   width: 90%;
   margin-bottom: 3%;
 }
-.qa_page2 .qa_form .qa_form_result .nameCountry > label {
+.qa_page2 .qa_form .qa_form_result.showForm .nameCountry > label {
   display: block;
 }
-.qa_page2 .qa_form .qa_form_result .nameCountry input[type=name] {
+.qa_page2 .qa_form .qa_form_result.showForm .nameCountry input[type=name] {
   width: 48%;
   padding: 1.5%;
   font-size: 16px;
@@ -394,14 +400,14 @@ aside#mobile_gnb_list {
   background: #fff;
   opacity: 65%;
 }
-.qa_page2 .qa_form .qa_form_result .nameCountry > select {
+.qa_page2 .qa_form .qa_form_result.showForm .nameCountry > select {
   width: 48%;
   padding: 1.5%;
   font-size: 16px;
   background: #fff;
   opacity: 65%;
 }
-.qa_page2 .qa_form .qa_form_result textarea {
+.qa_page2 .qa_form .qa_form_result.showForm textarea {
   width: 90%;
   outline: none;
   font-size: 24px;
@@ -410,7 +416,7 @@ aside#mobile_gnb_list {
   background: #fff;
   opacity: 65%;
 }
-.qa_page2 .qa_form .qa_form_result .submit_sec input[type=submit] {
+.qa_page2 .qa_form .qa_form_result.showForm .submit_sec input[type=submit] {
   width: 20%;
   margin-top: 3%;
   border: none;
@@ -418,12 +424,12 @@ aside#mobile_gnb_list {
   color: #fff;
   font-size: 20px;
 }
-.qa_page2 .qa_form .qa_form_result .submit_sec p {
+.qa_page2 .qa_form .qa_form_result.showForm .submit_sec p {
   display: inline-block;
   font-size: 16px;
   margin-left: 25px;
 }
-.qa_page2 .qa_form .qa_form_result .submit_sec p span {
+.qa_page2 .qa_form .qa_form_result.showForm .submit_sec p span {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -478,13 +484,9 @@ footer .footer_inner .footer_contents .footer_content p span {
   header nav .gnb {
     left: 35px;
   }
-  .qa_page1 {
-    border: 1px solid #f00;
-  }
   .qa_page1 .qa_page1_heading {
     width: 100%;
     height: 70vh;
-    border: 1px solid #f00;
   }
   .qa_page2 {
     height: 100vh;
@@ -510,7 +512,6 @@ footer .footer_inner .footer_contents .footer_content p span {
   .query_version .mini_ask {
     width: 40%;
     height: 55%;
-    border: 1px solid #f00;
   }
   footer .footer_inner .footer_contents .footer_content h3 {
     font-size: 16px;

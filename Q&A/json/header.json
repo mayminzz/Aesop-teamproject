@@ -1,44 +1,41 @@
 {
   "leftNav": [
     {
-      "src":"./nav-html/1-idex.html",
       "class": "skin",
       "category": "스킨케어"
     },
     {
-      "src":"./nav-html/2-idex.html",
       "class": "body_hand",
       "category": "바디&핸드"
     },
     {
-      "src":"./nav-html/3-idex.html",
       "class": "hair",
       "category": "헤어"
     },
     {
-      "src":"./nav-html/4-idex.html",
       "class": "care",
       "category": "홈케어"
     },
     {
-      "src":"./nav-html/5-idex.html",
       "class": "kit",
       "category": "키트&트래블"
     },
     {
-      "srcleft":"./nav-html/6-idex.html",
       "class": "story",
       "category": "이솝이야기"
     }
   ],
   "rightNav": [
     {
+      "class": "login",
       "category": "로그인"
     },
     {
+      "class": "wishlist",
       "category": "위시리스트"
     },
     {
+      "class": "cart",
       "category": "카트"
     }
   ],

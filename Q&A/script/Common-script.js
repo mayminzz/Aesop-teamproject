@@ -12,14 +12,12 @@ if (documentHeight != 0) {
   console.log(offset);
 }
 scrollPos = html.scrollTop;
-console.log(scrollPos);
 
 let previousScrollPos = 0;
 
 // 스크롤 이벤트 추가
 window.addEventListener("scroll", () => {
   scrollPos = html.scrollTop;
-  console.log(scrollPos);
 
   if (scrollPos > offset) {
     btn.classList.add("btt_show");
@@ -71,15 +69,17 @@ fetch(headerUrl)
     let rightOutput = "";
 
     json.rightNav.forEach((list) => {
-      rightOutput += `<a href="#">${list.category}</a>`;
+      rightOutput += `<a href="#" class="${list.class}">${list.category}</a>`;
     });
 
     const gnbRight = document.querySelector(".gnb_right");
     gnbRight.innerHTML = rightOutput;
-
-    // const findIcon = document.createElement("a");
-    // findIcon.classList.add("finder");
-    // json.rightNav.unshift(findIcon);
+    const cart = document.querySelector(".cart");
+    console.log(cart);
+    cart.addEventListener("click", () => {
+      const cartSpan = document.createElement("span");
+      cartSpan.classList.toggle("showCart");
+    });
 
     // ==================== nav_detail_list =========================
     const gnbBtns = document.querySelectorAll(".gnb ul li");

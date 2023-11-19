@@ -52,13 +52,22 @@ fetch(askUrl)
     const orderSelect = document.createElement("select");
     orderSelect.setAttribute("name", "orderList");
     orderSelect.innerHTML = orderOutput;
-    resultForm.appendChild(orderSelect);
 
-    const options = ask.querySelectorAll("option");
-    console.log(options);
+    const options = document.querySelectorAll("option");
+    const nameCountry = document.querySelector(".nameCountry");
+
     const displaySelect = () => {
-      let selectedText =
-        askSelected.options[askSelected.selectedIndex].innerText;
+      let selectedEl = askSelected.options[askSelected.selectedIndex];
+      if (selectedEl.value === "blank") {
+        resultForm.style.display = "none";
+      }
+      if (selectedEl.value === "order") {
+        resultForm.classList.add("showForm");
+      } else {
+        resultForm.classList.remove("showForm");
+      } 
     };
     askSelected.addEventListener("change", displaySelect);
   });
+
+
