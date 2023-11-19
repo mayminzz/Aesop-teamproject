@@ -1,21 +1,20 @@
-// back to top
+// back to top + nav scroll
 const btn = document.querySelector(".back_to_top");
 const html = document.querySelector("html");
 let offset;
 let scrollPos;
 let documentHeight;
 
-// 문서 높이 계산하기
+// 문서 높이 계산
 documentHeight = Math.max(html.offsetHeight, html.scrollHeight);
 if (documentHeight != 0) {
   offset = documentHeight / 16;
-  console.log(offset);
 }
 scrollPos = html.scrollTop;
 
 let previousScrollPos = 0;
 
-// 스크롤 이벤트 추가
+// 스크롤 이벤트
 window.addEventListener("scroll", () => {
   scrollPos = html.scrollTop;
 
@@ -77,8 +76,10 @@ fetch(headerUrl)
     const cart = document.querySelector(".cart");
     console.log(cart);
     cart.addEventListener("click", () => {
-      const cartSpan = document.createElement("span");
-      cartSpan.classList.toggle("showCart");
+      const cartShow = document.querySelector("#cart_alarm");
+      cartShow.classList.toggle("showCart");
+
+      // cartSpan.classList.toggle("showCart");
     });
 
     // ==================== nav_detail_list =========================
