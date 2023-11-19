@@ -36,22 +36,29 @@ fetch(askUrl)
     let askOutput = "";
     json.ask.forEach((askList) => {
       askOutput += `
-      <option value="${askList.value}">${askList.listName}</option>
+      <option data-name="${askList.data}" value="${askList.value}">${askList.listName}</option>
       `;
     });
     const askSelected = document.querySelector("#ask");
     askSelected.innerHTML = askOutput;
+
+    let orderOutput = "";
+    json.orderQuestion.forEach((orderList) => {
+      orderOutput += `
+      <option>${orderList.list}</option>
+      `;
+    });
+    const resultForm = document.querySelector(".qa_form_result");
+    const orderSelect = document.createElement("select");
+    orderSelect.setAttribute("name", "orderList");
+    orderSelect.innerHTML = orderOutput;
+    resultForm.appendChild(orderSelect);
+
+    const options = ask.querySelectorAll("option");
+    console.log(options);
+    const displaySelect = () => {
+      let selectedText =
+        askSelected.options[askSelected.selectedIndex].innerText;
+    };
+    askSelected.addEventListener("change", displaySelect);
   });
-
-const resultForm = document.querySelector(".qa_form_result");
-console.log(resultForm);
-
-const displaySelect = () => {
-  let selectedText = selectedList.options[selectedList.selectedIndex].innerText;
-  console.log(selectedText);
-  // if (selectedText.value === "product") {
-  //   alert(`${selectedText}를 선택했습니다.`);
-  // }
-
-  selectedList.addEventListener("change", displaySelect);
-};
