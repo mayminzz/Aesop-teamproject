@@ -1,3 +1,50 @@
+// back to top
+const btn = document.querySelector(".back_to_top");
+const html = document.querySelector("html");
+let offset;
+let scrollPos;
+let documentHeight;
+
+// 문서 높이 계산하기
+documentHeight = Math.max(html.offsetHeight, html.scrollHeight);
+if (documentHeight != 0) {
+  offset = documentHeight / 16;
+  console.log(offset);
+}
+scrollPos = html.scrollTop;
+console.log(scrollPos);
+
+let previousScrollPos = 0;
+
+// 스크롤 이벤트 추가
+window.addEventListener("scroll", () => {
+  scrollPos = html.scrollTop;
+  console.log(scrollPos);
+
+  if (scrollPos > offset) {
+    btn.classList.add("btt_show");
+  } else {
+    btn.classList.remove("btt_show");
+  }
+
+  const header = document.querySelector("header");
+  const giftTop = document.querySelector(".gift_top");
+
+  if (scrollPos <= previousScrollPos) {
+    header.classList.add("scrollEffect");
+    console.log("Scrolling Up");
+  }
+  if (scrollPos > previousScrollPos) {
+    header.classList.remove("scrollEffect");
+    console.log("Scrolling Down");
+  }
+  if (scrollPos < 45) {
+    header.classList.remove("scrollEffect");
+  }
+  // 현재 스크롤 위치를 저장
+  previousScrollPos = scrollPos;
+});
+
 // ======================== GiftTop ====================================
 const giftTop = document.querySelector(".gift_top");
 window.addEventListener("load", () => {
@@ -34,7 +81,7 @@ fetch(headerUrl)
     // findIcon.classList.add("finder");
     // json.rightNav.unshift(findIcon);
 
-    // ==================== PC nav_detail_list =========================
+    // ==================== nav_detail_list =========================
     const gnbBtns = document.querySelectorAll(".gnb ul li");
     const gnbList = document.querySelector("#nav_detail_list");
     const iframe = document.querySelector("iframe");
@@ -58,7 +105,6 @@ fetch(headerUrl)
 
         const currentHtml = navHtml[i];
         iframe.src = currentHtml;
-
         iframe.style.width = "100%";
         iframe.style.height = "100%";
         delBtn.style.display = "block";
@@ -117,9 +163,11 @@ fetch(headerUrl)
 //======================= 오른 쪽 작은 문의사항 창 =============================
 const queryBtn = document.querySelector("#query");
 const miniBox = document.querySelector(".mini_ask");
+const container = document.querySelector(".container");
 
 queryBtn.addEventListener("click", () => {
   miniBox.classList.toggle("show");
+  container.classList.toggle("containerOpacity");
 });
 
 // ======================== footer =======================================
@@ -132,12 +180,12 @@ fetch(footerUrl)
     let contentOutput = "";
     json.forEach((content) => {
       let subtitleOutput = "";
-      
+
       contentOutput += `
         <div class="footer_content">
           <h3>${content.title}</h3>
           <p>`;
-      
+
       const subtitles = content.subtitle;
       subtitles.forEach((subtitle) => {
         subtitleOutput += `<span>${subtitle}</span>`;
@@ -147,4 +195,13 @@ fetch(footerUrl)
     });
 
     contents.innerHTML = contentOutput;
+
+    const spanEl = document.createElement("span");
+    const fInner = document.querySelector(".footer_inner");
+    spanEl.innerText = "©Aesop";
+    fInner.appendChild(spanEl);
+    spanEl.style.color = "#b8b8b8";
+    spanEl.style.fontSize = "20px";
+    spanEl.style.display = "block";
+    spanEl.style.margin = "10px 0";
   });

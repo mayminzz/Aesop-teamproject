@@ -405,7 +405,7 @@ aside#mobile_gnb_list {
   transform: translateY(-50%);
   width: 27px;
   height: 76px;
-  background: url(/img/brandstory/icons/left_71.png) no-repeat center center;
+  background: url(/img/icon/arrow_left.png) no-repeat center center;
   cursor: pointer;
   opacity: 0.6;
 }
@@ -422,7 +422,7 @@ aside#mobile_gnb_list {
   transform: translateY(-50%);
   width: 27px;
   height: 76px;
-  background: url(/img/brandstory/icons/right_71.png) no-repeat center center;
+  background: url(/img/icon/arrow_right.png) no-repeat center center;
   cursor: pointer;
   opacity: 0.6;
 }
