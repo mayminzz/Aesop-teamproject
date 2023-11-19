@@ -1,0 +1,138 @@
+@font-face {
+  font-family: Regular;
+  src: url("../font/SuisseIntl-Regular-WebS.a55b96fd.woff2");
+}
+@font-face {
+  font-family: Medium;
+  src: url("../font/SuisseIntl-Medium-WebS.5ee1ad41.woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap01 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  background: #e7ddc9;
+}
+#wrap01 > img {
+  flex: 1;
+  width: 200px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#wrap01 > .story_list {
+  flex: 4;
+  padding: 30px;
+}
+#wrap01 > .story_list > .list_sec {
+  display: flex;
+  flex-direction: row;
+}
+#wrap01 > .story_list > .list_sec > h4 {
+  width: 350px;
+  text-align: right;
+  padding-top: 5px;
+  font-size: 24px;
+}
+#wrap01 > .story_list > .list_sec > .list_sec_datail_list {
+  padding-left: 60px;
+}
+#wrap01 > .story_list > .list_sec > .list_sec_datail_list > li {
+  display: block;
+  line-height: 2em;
+  font-size: 20px;
+  color: #383838;
+}
+#wrap01 > .story_list > .list_sec > .list_sec_datail_list > li a {
+  color: #383838;
+  font-size: 20px;
+  position: relative;
+}
+#wrap01 > .story_list > .list_sec > .list_sec_datail_list > li a::before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #383838;
+  position: absolute;
+  bottom: 0;
+  transition: 0.5s;
+}
+#wrap01 > .story_list > .list_sec > .list_sec_datail_list > li a:hover::before {
+  width: 100%;
+}
+
+#wrap02 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  background: #e7ddc9;
+}
+#wrap02 img:nth-of-type(1) {
+  flex: 1;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#wrap02 img:nth-of-type(2) {
+  position: absolute;
+  bottom: 0px;
+  right: 50px;
+}
+#wrap02 .kit_list {
+  height: 100%;
+  flex: 4;
+  display: flex;
+  gap: 70px;
+  padding: 50px 0 0 100px;
+}
+#wrap02 .list_sec {
+  width: 250px;
+  font-size: 24px;
+}
+#wrap02 .list_sec h4 {
+  margin-bottom: 10px;
+}
+#wrap02 .list_sec_datail_list li a {
+  font-size: 20px;
+  color: #383838;
+  line-height: 2em;
+  position: relative;
+}
+#wrap02 .list_sec_datail_list li a::before {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #383838;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s;
+}
+#wrap02 .list_sec_datail_list li a:hover::before {
+  width: 100%;
+}

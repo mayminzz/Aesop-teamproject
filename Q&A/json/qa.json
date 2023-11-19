@@ -1,0 +1,28 @@
+{
+  "ask": [
+    {
+      "value":"blank",
+      "listName": "-"
+    },
+    {
+      "value":"order",
+      "listName": "주문문의"
+    },
+    {
+      "value":"product",
+      "listName": "제품문의"
+    },
+    {
+      "value":"return",
+      "listName": "반품&교환 문의"
+    },
+    {
+      "value":"client",
+      "listName": "고객정보 문의"
+    },
+    {
+      "value":"etc",
+      "listName": "기타문의"
+    }
+  ]
+}
