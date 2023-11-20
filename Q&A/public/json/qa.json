@@ -1,0 +1,54 @@
+{
+  "ask": [
+    {
+      "data": "blank",
+      "value": "blank",
+      "listName": "-"
+    },
+    {
+      "data": "order",
+      "value": "order",
+      "listName": "주문문의"
+    },
+    {
+      "data": "product",
+      "value": "product",
+      "listName": "제품문의"
+    },
+    {
+      "data": "return",
+      "value": "return",
+      "listName": "반품&교환 문의"
+    },
+    {
+      "data": "client",
+      "value": "client",
+      "listName": "고객정보 문의"
+    },
+    {
+      "data": "etc",
+      "value": "etc",
+      "listName": "기타문의"
+    }
+  ],
+  "orderQuestion": [
+    {
+      "list": "주문정보"
+    },
+    {
+      "list": "선물포장"
+    },
+    {
+      "list": "주문 정보 수정"
+    },
+    {
+      "list": "오배송, 누락, 또는 파손된 제품 수령"
+    },
+    {
+      "list": "결제 문의"
+    },
+    {
+      "list": "CLick and Collect"
+    }
+  ]
+}

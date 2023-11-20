@@ -74,29 +74,16 @@ fetch(headerUrl)
     const gnbRight = document.querySelector(".gnb_right");
     gnbRight.innerHTML = rightOutput;
     const cart = document.querySelector(".cart");
-    // cart.style.zIndex = "99";
 
     const cartShow = document.querySelector("#cart_alarm");
 
-    function animate() {
-      let position = 0;
-      let maxPosition = 140;
-      for (let i = 0; i > maxPosition; i++) {
-        position += i;
-        return position;
-      }
-      cartShow.style.transform = `translateY(${position}px)`;
-      requestAnimationFrame(animate);
-    }
-
-    animate();
-
-    cart.addEventListener("click", animate);
-    // cart.addEventListener("click", () => {
-    //   const cartShow = document.querySelector("#cart_alarm");
-    //   cartShow.classList.toggle("showCart");
-
-    // });
+    cart.addEventListener("click", () => {
+      const cartShow = document.querySelector("#cart_alarm");
+      cartShow.classList.add("showCart");
+      setTimeout(() => {
+        cartShow.classList.remove("showCart");
+      },2500)
+    });
 
     // ==================== nav_detail_list =========================
     const gnbBtns = document.querySelectorAll(".gnb ul li");

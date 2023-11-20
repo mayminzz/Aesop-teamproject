@@ -34,6 +34,7 @@ a {
 }
 
 #cart_alarm {
+  display: none;
   height: 0px;
   transition: all 0.5s;
   position: relative;
@@ -49,14 +50,25 @@ a {
 #cart_alarm.showCart {
   display: block;
   width: 100%;
-  height: 145px;
   position: absolute;
   top: 0;
   left: 0;
   background: #222;
   opacity: 0.98;
+  animation: cartAni 2s ease-out;
 }
 
+@keyframes cartAni {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 145px;
+  }
+  100% {
+    height: 0;
+  }
+}
 .query_version {
   position: fixed;
   width: 100%;
@@ -666,12 +678,13 @@ footer .footer_inner .footer_contents .footer_content p span {
   #mobile_gnb_list.showModalGnb {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     height: 110vh;
     top: 0;
     z-index: 6;
     opacity: 1;
     background: #fffef2;
+    overflow: hidden;
   }
   #mobile_gnb_list.showModalGnb .modal_top_gnb_list {
     order: 1;
