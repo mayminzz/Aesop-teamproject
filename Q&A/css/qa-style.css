@@ -383,7 +383,7 @@ aside#mobile_gnb_list {
   height: 120px;
   border: 1px solid;
   text-align: left;
-  padding: 30px 50px;
+  padding: 7% 11%;
   margin-top: 40px;
 }
 .qa_page2 .qa_info .consulting_box span {
@@ -391,6 +391,7 @@ aside#mobile_gnb_list {
   font-size: 20px;
   margin-bottom: 3px;
   position: relative;
+  cursor: pointer;
 }
 .qa_page2 .qa_info .consulting_box span::before {
   content: "\f0e0";
@@ -416,7 +417,7 @@ aside#mobile_gnb_list {
   content: "\f095";
   font-family: fontawesome;
   position: absolute;
-  top: 3px;
+  top: 2.5px;
   left: -20px;
 }
 .qa_page2 .qa_info .company_information span:nth-child(3) {
@@ -454,12 +455,15 @@ aside#mobile_gnb_list {
   justify-content: center;
   align-items: flex-start;
   font-size: 24px;
-  padding: 20px 0px 20px 60px;
+  padding-left: 10%;
   display: none;
 }
 .qa_page2 .qa_form label {
   display: block;
   font-size: 20px;
+}
+.qa_page2 .qa_form label em {
+  color: #f00;
 }
 .qa_page2 .qa_form select[name=ask] {
   width: 50%;
@@ -468,7 +472,7 @@ aside#mobile_gnb_list {
   margin: 1% 0 3% 0;
   outline: none;
   background: #fff;
-  opacity: 65%;
+  opacity: 0.5;
 }
 .qa_page2 .qa_form .qa_form_result {
   display: none;
@@ -478,10 +482,7 @@ aside#mobile_gnb_list {
   display: flex;
   flex-direction: column;
 }
-.qa_page2 .qa_form .qa_form_result.showForm label em {
-  color: #f00;
-}
-.qa_page2 .qa_form .qa_form_result.showForm input {
+.qa_page2 .qa_form input[type=email] {
   width: 90%;
   padding: 1.5%;
   outline: none;
@@ -489,60 +490,72 @@ aside#mobile_gnb_list {
   margin-top: 1%;
   margin-bottom: 3%;
   background: #fff;
-  opacity: 65%;
+  opacity: 0.5;
 }
-.qa_page2 .qa_form .qa_form_result.showForm select[name=orderList] {
+.qa_page2 .qa_form select[name=order],
+.qa_page2 .qa_form select[name=product],
+.qa_page2 .qa_form select[name=return],
+.qa_page2 .qa_form select[name=client] {
   width: 90%;
   padding: 1.5%;
   background: #fff;
-  opacity: 65%;
+  opacity: 0.5;
+  margin-top: 1%;
   margin-bottom: 3%;
 }
-.qa_page2 .qa_form .qa_form_result.showForm .nameCountry {
+.qa_page2 .qa_form .nameCountry {
   width: 90%;
   margin-bottom: 3%;
 }
-.qa_page2 .qa_form .qa_form_result.showForm .nameCountry > label {
+.qa_page2 .qa_form .nameCountry > label {
   display: block;
 }
-.qa_page2 .qa_form .qa_form_result.showForm .nameCountry input[type=name] {
+.qa_page2 .qa_form .nameCountry input[type=name] {
+  width: 47%;
+  padding: 1.5%;
+  font-size: 16px;
+  margin-right: 3%;
+  border: 1px solid #383838;
+  background: #fff;
+  opacity: 0.5;
+}
+.qa_page2 .qa_form .nameCountry > select {
   width: 48%;
   padding: 1.5%;
   font-size: 16px;
-  margin-right: 2.8%;
   background: #fff;
-  opacity: 65%;
+  opacity: 0.5;
 }
-.qa_page2 .qa_form .qa_form_result.showForm .nameCountry > select {
-  width: 48%;
-  padding: 1.5%;
-  font-size: 16px;
-  background: #fff;
-  opacity: 65%;
-}
-.qa_page2 .qa_form .qa_form_result.showForm textarea {
+.qa_page2 .qa_form textarea {
   width: 90%;
   outline: none;
   font-size: 24px;
+  border: 1px solid #666;
   padding: 1%;
   margin-top: 1%;
   background: #fff;
-  opacity: 65%;
+  opacity: 0.5;
 }
-.qa_page2 .qa_form .qa_form_result.showForm .submit_sec input[type=submit] {
-  width: 20%;
+.qa_page2 .qa_form textarea::-moz-placeholder {
+  font-size: 16px;
+}
+.qa_page2 .qa_form textarea::placeholder {
+  font-size: 16px;
+}
+.qa_page2 .qa_form .submit_sec input[type=submit] {
   margin-top: 3%;
   border: none;
-  background: #000;
+  background: #222;
   color: #fff;
   font-size: 20px;
+  padding: 9px 30px;
 }
-.qa_page2 .qa_form .qa_form_result.showForm .submit_sec p {
+.qa_page2 .qa_form .submit_sec p {
   display: inline-block;
   font-size: 16px;
-  margin-left: 25px;
+  margin-left: 15px;
 }
-.qa_page2 .qa_form .qa_form_result.showForm .submit_sec p span {
+.qa_page2 .qa_form .submit_sec p span {
   cursor: pointer;
   text-decoration: underline;
 }
@@ -601,8 +614,24 @@ footer .footer_inner .footer_contents .footer_content p span {
     height: 100vh;
     width: 100%;
   }
+  .qa_page2 .qa_info .consulting_box {
+    width: 350px;
+    padding-left: 15%;
+  }
+  .qa_page2 .qa_info .company_information {
+    width: 350px;
+    padding: 7% 15%;
+  }
+  .qa_page2 .qa_info .help_box {
+    width: 280px;
+  }
+  .qa_page2 .qa_info .help_box a {
+    width: 250px;
+    height: 65px;
+    line-height: 65px;
+  }
   .qa_page2 .qa_form label {
-    font-size: 20px;
+    font-size: 16px;
   }
   .qa_page2 .qa_form select[name=ask] {
     padding: 2.5%;
@@ -611,11 +640,11 @@ footer .footer_inner .footer_contents .footer_content p span {
     padding: 2.5%;
   }
   .qa_page2 .qa_form .qa_form_result .nameCountry input[type=name] {
-    width: 48.8%;
+    width: 46%;
     padding: 2.5%;
   }
   .qa_page2 .qa_form .qa_form_result .nameCountry select {
-    width: 47%;
+    width: 46%;
     padding: 2.5%;
   }
   .query_version .mini_ask {
@@ -636,7 +665,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     height: 50vh;
   }
   .container .qa_page2 {
-    height: 130vh;
+    height: 80vh;
   }
   .container.removeContainer {
     display: none;
@@ -645,8 +674,8 @@ footer .footer_inner .footer_contents .footer_content p span {
     z-index: 99;
   }
   .query_version .mini_ask.show {
-    width: 85%;
-    height: 80%;
+    width: 75%;
+    height: 70%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -667,7 +696,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     height: 150px;
   }
   header .gift_top h4 {
-    font-size: 16px;
+    font-size: 12px;
   }
   header .gift_top h4::after {
     margin-left: 5px;
@@ -900,16 +929,46 @@ footer .footer_inner .footer_contents .footer_content p span {
     flex-direction: column;
     gap: 10%;
   }
+  .qa_page2 .qa_info {
+    width: 100%;
+    padding: 0 2%;
+  }
+  .qa_page2 .qa_info .consulting_box {
+    width: 100%;
+  }
+  .qa_page2 .qa_info .company_information {
+    width: 100%;
+    height: 40%;
+  }
+  .qa_page2 .qa_info .help_box {
+    width: 100%;
+  }
+  .qa_page2 .qa_info .help_box a {
+    width: 60%;
+  }
   .qa_page2 .qa_form {
     width: 100%;
     font-size: 16px;
-    padding: 5%;
+    padding: 2%;
+    justify-content: flex-start;
   }
   .qa_page2 .qa_form select[name=ask] {
-    width: 60%;
-  }
-  .qa_page2 .qa_form .qa_form_result input {
     width: 100%;
+    padding: 2%;
+  }
+  .qa_page2 .qa_form .qa_form_result {
+    width: 100%;
+  }
+  .qa_page2 .qa_form .qa_form_result select[name=order],
+  .qa_page2 .qa_form .qa_form_result select[name=product],
+  .qa_page2 .qa_form .qa_form_result select[name=return],
+  .qa_page2 .qa_form .qa_form_result select[name=client] {
+    width: 100%;
+    padding: 2%;
+  }
+  .qa_page2 .qa_form .qa_form_result input[type=email] {
+    width: 100%;
+    padding: 2%;
   }
   .qa_page2 .qa_form .qa_form_result .nameCountry {
     width: 100%;
@@ -942,6 +1001,9 @@ footer .footer_inner .footer_contents .footer_content p span {
   footer {
     width: 100%;
     height: 670px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
   footer .footer_inner {
     padding: 30px 10px 0 40px;
@@ -962,5 +1024,10 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   footer .footer_inner .footer_contents .footer_content:last-child p {
     line-height: 1.7rem;
+  }
+}
+@media all and (max-width: 349px) {
+  header {
+    border: 1px solid #f00;
   }
 }/*# sourceMappingURL=qa-style.css.map */

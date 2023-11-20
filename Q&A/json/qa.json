@@ -24,11 +24,6 @@
       "data": "client",
       "value": "client",
       "listName": "고객정보 문의"
-    },
-    {
-      "data": "etc",
-      "value": "etc",
-      "listName": "기타문의"
     }
   ],
   "orderQuestion": [
@@ -51,7 +46,7 @@
       "list": "CLick and Collect"
     }
   ],
-  "product": [
+  "productQuestion": [
     {
       "list": "제품 문의 또는 제품 추천 "
     },
@@ -77,7 +72,7 @@
       "list": "펌프 또는 비커 요청"
     }
   ],
-  "return": [
+  "returnQuestion": [
     {
       "list": "온라인 구매 반품 "
     },
@@ -94,7 +89,7 @@
       "list": "반품 정책 T&C"
     }
   ],
-  "client": [
+  "clientQuestion": [
     {
       "list": "데이터 엑세스 요청"
     },

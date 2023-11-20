@@ -1,47 +1,3 @@
-// back to top + nav scroll
-const btn = document.querySelector(".back_to_top");
-const html = document.querySelector("html");
-let offset;
-let scrollPos;
-let documentHeight;
-
-// 문서 높이 계산
-documentHeight = Math.max(html.offsetHeight, html.scrollHeight);
-if (documentHeight != 0) {
-  offset = documentHeight / 16;
-}
-scrollPos = html.scrollTop;
-
-let previousScrollPos = 0;
-
-// 스크롤 이벤트
-window.addEventListener("scroll", () => {
-  scrollPos = html.scrollTop;
-
-  if (scrollPos > offset) {
-    btn.classList.add("btt_show");
-  } else {
-    btn.classList.remove("btt_show");
-  }
-
-  const header = document.querySelector("header");
-  const giftTop = document.querySelector(".gift_top");
-
-  if (scrollPos <= previousScrollPos) {
-    header.classList.add("scrollEffect");
-    console.log("Scrolling Up");
-  }
-  if (scrollPos > previousScrollPos) {
-    header.classList.remove("scrollEffect");
-    console.log("Scrolling Down");
-  }
-  if (scrollPos < 45) {
-    header.classList.remove("scrollEffect");
-  }
-  // 현재 스크롤 위치를 저장
-  previousScrollPos = scrollPos;
-});
-
 // ======================== GiftTop ====================================
 const giftTop = document.querySelector(".gift_top");
 window.addEventListener("load", () => {
@@ -82,7 +38,7 @@ fetch(headerUrl)
       cartShow.classList.add("showCart");
       setTimeout(() => {
         cartShow.classList.remove("showCart");
-      },2500)
+      },2100)
     });
 
     // ==================== nav_detail_list =========================
@@ -164,6 +120,49 @@ fetch(headerUrl)
   })
   .catch((err) => console.log(err));
 
+  // back to top + nav scroll
+const btn = document.querySelector(".back_to_top");
+const html = document.querySelector("html");
+let offset;
+let scrollPos;
+let documentHeight;
+
+// 문서 높이 계산
+documentHeight = Math.max(html.offsetHeight, html.scrollHeight);
+if (documentHeight != 0) {
+  offset = documentHeight / 16;
+}
+scrollPos = html.scrollTop;
+
+let previousScrollPos = 0;
+
+// 스크롤 이벤트
+window.addEventListener("scroll", () => {
+  scrollPos = html.scrollTop;
+
+  if (scrollPos > offset) {
+    btn.classList.add("btt_show");
+  } else {
+    btn.classList.remove("btt_show");
+  }
+
+  const header = document.querySelector("header");
+  const giftTop = document.querySelector(".gift_top");
+
+  if (scrollPos <= previousScrollPos) {
+    header.classList.add("scrollEffect");
+    console.log("Scrolling Up");
+  }
+  if (scrollPos > previousScrollPos) {
+    header.classList.remove("scrollEffect");
+    console.log("Scrolling Down");
+  }
+  if (scrollPos < 45) {
+    header.classList.remove("scrollEffect");
+  }
+  // 현재 스크롤 위치를 저장
+  previousScrollPos = scrollPos;
+});
 //======================= 오른 쪽 작은 문의사항 창 =============================
 const queryBtn = document.querySelector("#query");
 const miniBox = document.querySelector(".mini_ask");
