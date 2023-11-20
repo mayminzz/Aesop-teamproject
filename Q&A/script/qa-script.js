@@ -1,18 +1,31 @@
 // 버튼 태그 hover 스타일
-const btns = document.querySelectorAll(".qa_text button");
-const a = document.querySelectorAll(".qa_text button > a");
+const consultBox = document.querySelector(".consulting_box");
+const spanEl = consultBox.querySelector("span");
+const pEl = consultBox.querySelector("p");
+const qaForm = document.querySelector(".qa_form");
+const helpBtn = document.querySelector(".help_box a");
 
-btns.forEach((btn) => {
-  btn.addEventListener("mouseover", () => {
-    btn.style.background = "#222";
-    btn.querySelector("a").style.color = "#fff";
-    btn.style.transition = "0.3s";
-  });
-  btn.addEventListener("mouseout", () => {
-    btn.style.background = "";
-    btn.querySelector("a").style.color = "";
-    btn.style.transition = "0.3s";
-  });
+consultBox.addEventListener("mouseover", () => {
+  consultBox.style.background = "#222";
+  consultBox.style.opacity = "0.9";
+  spanEl.style.color = "#fff";
+  pEl.style.color = "#fff";
+});
+consultBox.addEventListener("mouseout", () => {
+  consultBox.style.background = "";
+  consultBox.style.opacity = "";
+  spanEl.style.color = "";
+  pEl.style.color = "";
+});
+consultBox.addEventListener("click", () => {
+  qaForm.style.display = "block";
+});
+
+helpBtn.addEventListener("mouseover", () => {
+  helpBtn.style.opacity = "1";
+});
+helpBtn.addEventListener("mouseout", () => {
+  helpBtn.style.opacity = "";
 });
 
 // 제출하기 버튼 이벤트
@@ -52,22 +65,37 @@ fetch(askUrl)
     const orderSelect = document.createElement("select");
     orderSelect.setAttribute("name", "orderList");
     orderSelect.innerHTML = orderOutput;
+    const labelEl = document.createElement("label");
 
-    const options = document.querySelectorAll("option");
-    const nameCountry = document.querySelector(".nameCountry");
+    // /////
+    
+
+
+
 
     const displaySelect = () => {
       let selectedEl = askSelected.options[askSelected.selectedIndex];
+
       if (selectedEl.value === "blank") {
         resultForm.style.display = "none";
       }
       if (selectedEl.value === "order") {
         resultForm.classList.add("showForm");
-      } else {
-        resultForm.classList.remove("showForm");
-      } 
+        resultForm.insertBefore(orderSelect, resultForm.firstChild);
+        labelEl.innerHTML = `<label for="orderList">문의하과자 하는 질문을 선택해주세요.</label>`
+        resultForm.insertBefore(labelEl, resultForm.firstChild)
+      }
+
+
+      // if (selectedEl.value === "return") {
+      //   resultForm.classList.add("showForm");
+      // }
+      // if (selectedEl.value === "client") {
+      //   resultForm.classList.add("showForm");
+      // }
+      // if (selectedEl.value === "etc") {
+      //   resultForm.classList.add("showForm");
+      // }
     };
     askSelected.addEventListener("change", displaySelect);
   });
-
-
