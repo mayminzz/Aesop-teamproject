@@ -10,12 +10,13 @@
       src="https://kit.fontawesome.com/bd0a8925a1.js"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom CSS & Js -->
     <link rel="stylesheet" href="./css/qa-style.css" />
     <script defer src="./script/qa-script.js"></script>
-    <!-- common Js -->
     <script defer src="./script/Common-script.js"></script>
   </head>
   <body>
+    <!-- header -->
     <header>
       <div class="gift_top"></div>
       <nav>
@@ -27,6 +28,7 @@
       </nav>
       <div class="qa_nav_list"></div>
     </header>
+    <!-- gift_top_box 왼쪽 사이드에서 나오는 박스 -->
     <aside>
       <div class="gift_top_box">
         <div>
@@ -41,14 +43,17 @@
         <div class="gift_top_list"></div>
       </div>
     </aside>
+    <!-- 카트 눌렀을 때 나오는 알림 -->
     <aside>
       <div id="cart_alarm">
         <span>카트가 비어있습니다.</span>
       </div>
     </aside>
+    <!-- nav detail list -->
     <aside id="nav_detail_list">
       <iframe id="contentFrame"></iframe>
     </aside>
+    <!-- 모바일에서의 토글버튼 클릭시 나오는 gnb -->
     <aside id="mobile_gnb_list">
       <div class="gnb_list_bottom">
         <figure>
@@ -56,14 +61,23 @@
         </figure>
         <figcaption>
           <span>재생목록</span>
-          <h3><a href="https://www.aesop.com/kr/r/the-athenaeum/sound-of-aesop/"></a>이솝의 사운드</a></h3>
+          <h3>
+            <a
+              href="https://www.aesop.com/kr/r/the-athenaeum/sound-of-aesop/"
+              terget="_blank"
+              >이솝의 사운드</a
+            >
+          </h3>
         </figcaption>
       </div>
     </aside>
+    <!-- container -->
     <div class="container" id="qa">
+      <!-- page_1 -->
       <section class="qa_page1">
         <div class="qa_page1_heading"></div>
       </section>
+      <!-- page_2 -->
       <section class="qa_page2">
         <div class="qa_info">
           <div class="company_information">
@@ -84,7 +98,9 @@
           </div>
           <div class="help_box">
             <h1>도움말 센터 살펴보기</h1>
-            <a href="https://assistance.aesop.com/hc/ko" target="_blank">도움말</a>
+            <a href="https://assistance.aesop.com/hc/ko" target="_blank"
+              >도움말</a
+            >
           </div>
         </div>
         <div class="qa_form">
@@ -132,12 +148,14 @@
           </div>
         </div>
       </section>
+      <!-- footer -->
       <footer>
         <div class="footer_inner">
           <div class="footer_contents"></div>
         </div>
       </footer>
     </div>
+    <!-- query version -->
     <div class="query_version">
       <div class="fixed_side_icon">
         <img id="query" src="./img/common/ask_button.png" alt="miniBox" />
