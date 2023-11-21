@@ -29,7 +29,17 @@ async function init() {
   });
 
   const quotationBoxes = document.querySelectorAll(".quotation");
+  const cart = document.querySelector(".cart");
 
+  const cartShow = document.querySelector("#cart_alarm");
+
+  cart.addEventListener("click", () => {
+    const cartShow = document.querySelector("#cart_alarm");
+    cartShow.classList.add("showCart");
+    setTimeout(() => {
+      cartShow.classList.remove("showCart");
+    }, 2100);
+  });
   quotationBoxes.forEach((quotationBox, index) => {
     let quotationText = "";
     const homeContent = homeContents.quote[index];

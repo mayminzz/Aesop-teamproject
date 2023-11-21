@@ -29,6 +29,17 @@ window.addEventListener("scroll", () => {
 
   const header = document.querySelector("header");
   const giftTop = document.querySelector(".gift_top");
+  const cart = document.querySelector(".cart");
+
+  const cartShow = document.querySelector("#cart_alarm");
+
+  cart.addEventListener("click", () => {
+    const cartShow = document.querySelector("#cart_alarm");
+    cartShow.classList.add("showCart");
+    setTimeout(() => {
+      cartShow.classList.remove("showCart");
+    }, 2100);
+  });
 
   if (scrollPos <= previousScrollPos) {
     header.classList.add("scrollEffect");
@@ -61,11 +72,12 @@ fetch(headerUrl)
       leftOutput += `
       <li class=${list.class}><a href="#">${list.category}</a></li>`;
     });
+
     const ulGnb = document.createElement("ul");
     const divGnb = document.querySelector(".gnb");
-    console.log(divGnb);
     divGnb.appendChild(ulGnb);
     ulGnb.innerHTML = leftOutput;
+
     // ====================== right Gnb =================================
     let rightOutput = "";
 

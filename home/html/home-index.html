@@ -12,9 +12,8 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- custom -->
   <link rel="stylesheet" href="../css/Home-style.css">
-  <!-- <link rel="stylesheet" href="../css/qa-style.css"> -->
   <script defer src="../script/home-script.js"></script>
-  <script defer src="../script/Common-script .js"></script>
+  <script defer src="../script/Common-script.js"></script>
 </head>
 <body>
   <header>
@@ -28,6 +27,11 @@
     </nav>
     <div class="qa_nav_list"></div>
   </header>
+  <aside>
+    <div id="cart_alarm">
+      <span>카트가 비어있습니다.</span>
+    </div>
+  </aside>
   <aside id="nav_detail_list">
     <iframe id="contentFrame"></iframe>
   </aside>
@@ -160,47 +164,47 @@
         </div>
       </section>
     </main> 
-    <!-- Footer -->
-    <footer>
-      <div class="footer_inner">
-        <div class="footer_contents"></div>
-      </div>
-    </footer>
-  </div>
-  <div class="query_version">
-    <div class="fixed_side_icon">
-      <img id="query" src="../img/icon/ask.png" alt="miniBox" />
+      <!--footer-->
+      <footer>
+        <div class="footer_inner">
+          <div class="footer_contents"></div>
+        </div>
+      </footer>
+    </div>
+    <div class="query_version">
+      <div class="fixed_side_icon">
+        <img id="query" src="/home/img/icon/ask.png" alt="miniBox" />
         <a class="back_to_top" href="#">
           <i class="fas fa-angle-up"></i>
         </a>
+      </div>
+      <div class="mini_ask">
+        <h1>1:1 채팅상담 하기</h1>
+        <p>
+          1:1 채팅상담<br />상담을 시작하기에 앞서, 이용약관, 개인정보 수집 및
+          이용에 대하여 고객님의 동의가 필요합니다. <br />
+          상담 전 고객님의 동의여부 확인 후 상담이 시작됩니다.
+          <br /><span
+            >※이용약관, 개인정보 수집 및 동의에 대하여 동의를 거부할 수 있으며,
+            이 경우 1:1 채팅상담 서비스 이용이 불가합니다.</span
+          >
+        </p>
+        <form class="mini_ask_form">
+          <label for="">이름(선택사항)<em>*</em></label>
+          <input type="name" id="name" required />
+          <label for="email">이메일(선택사항)<em>*</em></label>
+          <input type="email" id="email" required />
+          <label for="message">메세지<em>*</em></label
+          ><textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input id="submitBtn" type="submit" value="제출하기" />
+        </form>
+      </div>
     </div>
-    <div class="mini_ask">
-      <h1>1:1 채팅상담 하기</h1>
-      <p>
-        1:1 채팅상담<br />상담을 시작하기에 앞서, 이용약관, 개인정보 수집 및
-        이용에 대하여 고객님의 동의가 필요합니다. <br />
-        상담 전 고객님의 동의여부 확인 후 상담이 시작됩니다.
-        <br /><span
-          >※이용약관, 개인정보 수집 및 동의에 대하여 동의를 거부할 수 있으며,
-          이 경우 1:1 채팅상담 서비스 이용이 불가합니다.</span
-        >
-      </p>
-      <form class="mini_ask_form">
-        <label for="">이름(선택사항)<em>*</em></label>
-        <input type="name" id="name" required />
-        <label for="email">이메일(선택사항)<em>*</em></label>
-        <input type="email" id="email" required />
-        <label for="message">메세지<em>*</em></label
-        ><textarea
-          name="message"
-          id="message"
-          cols="30"
-          rows="10"
-          required
-        ></textarea>
-        <input id="submitBtn" type="submit" value="제출하기" />
-      </form>
-    </div>
-  </div>
 </body>
 </html>
