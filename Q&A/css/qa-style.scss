@@ -10,7 +10,7 @@
 $font-size: (
   xsmall: 12px,
   small: 14px,
-  base: 16px,
+  base: 17px,
   medium: 20px,
   large: 24px,
   xlarge: 32px,
@@ -64,6 +64,7 @@ a {
     right: 40px;
   }
 }
+
 #cart_alarm.showCart {
   display: block;
   width: 100%;
@@ -113,7 +114,7 @@ a {
 
   .mini_ask.show {
     display: block;
-    width:350px;
+    width: 350px;
     height: 630px;
     position: fixed;
     bottom: 5%;
@@ -176,7 +177,81 @@ a {
     }
   }
 }
-
+  // giftTop
+  .gift_top_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    margin-left: -100%;
+    height: 143vh;
+    // overflow: hidden;
+    background: #e7ddc9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 99;
+    transition: all 0.5s;
+    div {
+      padding: 20px 0;
+      border-bottom: 1px solid gray;
+      width: 70%;
+      span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: map-get($font-size, medium);
+      }
+    
+      &:nth-child(1) {
+        height: 100px;
+        .fas {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          font-size: map-get($font-size, large);
+        }
+      }
+      &:nth-child(2) {
+        height: 160px;
+        p {
+          text-align: left;
+          display: flex;
+          justify-content: space-between;
+          color: rgb(100, 99, 99);
+          > span {
+            font-size: map-get($font-size, base);
+          }
+          &:nth-of-type(2) {
+            margin-top: 40px;
+          }
+      }
+    }
+    &:nth-child(3) {
+      border: none;
+    }
+  }
+  .gift_top_list {
+    section {
+      width: 100%;
+      height: 170px;
+      padding: 20px 0;
+      border-bottom: 1px solid gray;
+      span {
+        font-size: map-get($font-size, medium);
+        display: block;
+        margin-bottom: 30px;
+      }
+      p {
+        color: rgb(100, 99, 99);
+      }
+    }
+  }
+  }
+  .gift_top_box.show {
+    margin-left: 0%;
+  }
 // ======== header SCSS =========
 header {
   width: 100%;
@@ -191,8 +266,9 @@ header {
     background: #222;
     color: map-get($font-color, wh);
     h4 {
-      font-size: map-get($font-size, base);
+      font-size: map-get($font-size, medium);
       font-weight: normal;
+      cursor: pointer;
       &::after {
         content: "+";
         color: map-get($font-color, wh);
@@ -619,9 +695,9 @@ footer {
 // ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 // ========= tablet version ==========
 @media screen and (min-width: 768px) and (max-width: 1200px) {
- .container {
-  height: 170vh;
- }
+  .container {
+    height: 170vh;
+  }
   header {
     width: 100%;
     height: 145px;
@@ -642,13 +718,14 @@ footer {
   .qa_page2 {
     height: 90vh;
     width: 100%;
+    gap: 40px;
     .qa_info {
       .consulting_box {
-        width: 350px;
-        padding-left: 15%;
+        width: 370px;
+        padding-left: 12%;
       }
       .company_information {
-        width: 350px;
+        width: 370px;
         padding: 7% 15%;
       }
       .help_box {
@@ -661,6 +738,7 @@ footer {
       }
     }
     .qa_form {
+      padding: 0;
       label {
         font-size: map-get($font-size, base);
       }
@@ -691,7 +769,7 @@ footer {
       height: 60%;
       .fixed_side_icon {
         width: 45px;
-        height: 45px;      
+        height: 45px;
       }
     }
   }
@@ -756,11 +834,87 @@ footer {
       }
     }
   }
+
+  // giftTop
+  .gift_top_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-left: -100%;
+    height: 143vh;
+    // overflow: hidden;
+    background: #e7ddc9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 99;
+    transition: all 0.5s;
+    div {
+      padding: 20px 0;
+      border-bottom: 1px solid gray;
+      width: 90%;
+      span {
+        display: block;
+        margin-bottom: 10px;
+        font-size: map-get($font-size, medium);
+      }
+    
+      &:nth-child(1) {
+        height: 100px;
+        .fas {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          font-size: map-get($font-size, large);
+        }
+      }
+      &:nth-child(2) {
+        height: 160px;
+        p {
+          text-align: left;
+          display: flex;
+          justify-content: space-between;
+          color: rgb(100, 99, 99);
+          > span {
+            font-size: map-get($font-size, base);
+          }
+          &:nth-of-type(2) {
+            margin-top: 40px;
+          }
+      }
+    }
+    &:nth-child(3) {
+      border: none;
+    }
+  }
+  .gift_top_list {
+    section {
+      width: 100%;
+      height: 170px;
+      padding: 20px 0;
+      border-bottom: 1px solid gray;
+      span {
+        font-size: map-get($font-size, medium);
+        display: block;
+        margin-bottom: 30px;
+      }
+      p {
+        color: rgb(100, 99, 99);
+      }
+    }
+  }
+  }
+  .gift_top_box.show {
+    margin-left: 0%;
+  }
   // ======== header SCSS ========
   header {
     .gift_top {
       h4 {
-        font-size: map-get($font-size, xsmall);
+        font-size: map-get($font-size, base);
         &::after {
           margin-left: 5px;
         }
@@ -854,7 +1008,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 110vh;
+    height: 130vh;
     top: 0;
     z-index: 6;
     opacity: 1;
@@ -1078,7 +1232,7 @@ footer {
   //======== footer SCSS =========
   footer {
     width: 100%;
-    height: 670px;
+    height: 700px;
     position: absolute;
     bottom: 0;
     left: 0;

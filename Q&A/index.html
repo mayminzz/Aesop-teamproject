@@ -10,23 +10,37 @@
       src="https://kit.fontawesome.com/bd0a8925a1.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../css/qa-style.css" />
-    <script defer src="../script/qa-script.js"></script>
+    <link rel="stylesheet" href="./css/qa-style.css" />
+    <script defer src="./script/qa-script.js"></script>
     <!-- common Js -->
-    <script defer src="../script/Common-script.js"></script>
+    <script defer src="./script/Common-script.js"></script>
   </head>
   <body>
     <header>
       <div class="gift_top"></div>
       <nav>
         <div class="logo">
-          <a href=""><img src="../img/common/logo_black.png" alt="logo" /></a>
+          <a href=""><img src="./img/common/logo_black.png" alt="logo" /></a>
         </div>
         <div class="gnb"></div>
         <div class="gnb_right"></div>
       </nav>
       <div class="qa_nav_list"></div>
     </header>
+    <aside>
+      <div class="gift_top_box">
+        <div>
+          <i class="fas fa-xmark"></i>
+          <span>전 구매 무료 배송</span>
+        </div>
+        <div>
+          <span>CJ 대한통운</span>
+          <p><span>전 제품</span><span>무료 배송</span></p>
+          <p><span>전 지역</span><span>영업일 기준, 2-3일</span></p>
+        </div>
+        <div class="gift_top_list"></div>
+      </div>
+    </aside>
     <aside>
       <div id="cart_alarm">
         <span>카트가 비어있습니다.</span>
@@ -38,47 +52,31 @@
     <aside id="mobile_gnb_list">
       <div class="gnb_list_bottom">
         <figure>
-          <img src="../img/common/mobile_nav_img.jpg" alt="" />
+          <img src="./img/common/mobile_nav_img.jpg" alt="" />
         </figure>
         <figcaption>
-          <span><a href="">재생목록</a></span>
-          <h3>이솝의 사운드</h3>
+          <span>재생목록</span>
+          <h3><a href="https://www.aesop.com/kr/r/the-athenaeum/sound-of-aesop/"></a>이솝의 사운드</a></h3>
         </figcaption>
       </div>
     </aside>
     <div class="container" id="qa">
       <section class="qa_page1">
-        <div class="qa_page1_heading">
-          <div class="qa_box">
-            <div class="qa_text">
-              <h1>고객센터</h1>
-              <div class="qa_text_detail">
-                <span>전화연결</span>
-                <span>대표번호: 1800-1987</span>
-                <span>고객서비스팀: 0300-8321-0480</span>
-                <br />
-                <span>운영시간</span>
-                <span>평일 오전 10시 - 오후 5시 (주말 및 공휴일 제외)</span>
-                <span
-                  >*고객서비스팀과 연결이 어려운 경우, 이메일 문의를
-                  <br />남겨주시기 바랍니다.
-                </span>
-              </div>
-              <button><a href="#">도움말</a></button>
-              <button><a href="#">문의하기</a></button>
-            </div>
-          </div>
-        </div>
+        <div class="qa_page1_heading"></div>
       </section>
       <section class="qa_page2">
         <div class="qa_info">
-          <!-- <img src="../img/Q&A/QA_logo.png" alt="" /> -->
           <div class="company_information">
             <span>전화연결</span>
             <span>대표번호 : 1800-1987</span>
             <span>고객서비스팀 : 0300-8321-0480</span>
-            <span>운영시간 : 평일 오전 10시 - 오후 5시 (주말 및 공휴일 제외)</span>
-            <span>*고객서비스팀 연결이 어려운 경우, 이메일을 문의를 남겨주시기 바랍니다.</span>
+            <span
+              >운영시간 : 평일 오전 10시 - 오후 5시 (주말 및 공휴일 제외)</span
+            >
+            <span
+              >*고객서비스팀 연결이 어려운 경우, 이메일을 문의를 남겨주시기
+              바랍니다.</span
+            >
           </div>
           <div class="consulting_box">
             <span>문의 제출하기</span>
@@ -86,13 +84,12 @@
           </div>
           <div class="help_box">
             <h1>도움말 센터 살펴보기</h1>
-            <a href="">도움말</a>
+            <a href="https://assistance.aesop.com/hc/ko" target="_blank">도움말</a>
           </div>
         </div>
         <div class="qa_form">
           <label for="ask">문의하고자 하는 질문을 선택해주세요.</label>
-          <select name="ask" id="ask">
-          </select>
+          <select name="ask" id="ask"></select>
           <div class="qa_form_result">
             <label class="blankLabel" for=""></label>
             <select class="blankSelect" name="" id=""></select>
@@ -143,10 +140,10 @@
     </div>
     <div class="query_version">
       <div class="fixed_side_icon">
-        <img id="query" src="../img/common/ask_button.png" alt="miniBox" />
-          <a class="back_to_top" href="#">
-            <i class="fas fa-angle-up"></i>
-          </a>
+        <img id="query" src="./img/common/ask_button.png" alt="miniBox" />
+        <a class="back_to_top" href="#">
+          <i class="fas fa-angle-up"></i>
+        </a>
       </div>
       <div class="mini_ask">
         <h1>1:1 채팅상담 하기</h1>

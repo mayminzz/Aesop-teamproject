@@ -1,11 +1,12 @@
 // ======================== GiftTop ====================================
 const giftTop = document.querySelector(".gift_top");
+
 window.addEventListener("load", () => {
   giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
 });
 
 //=========================== left gnb ==================================
-const headerUrl = "../json/header.json";
+const headerUrl = "./json/header.json";
 fetch(headerUrl)
   .then((response) => response.json())
   .then((json) => {
@@ -19,6 +20,35 @@ fetch(headerUrl)
     const divGnb = document.querySelector(".gnb");
     divGnb.appendChild(ulGnb);
     ulGnb.innerHTML = leftOutput;
+
+    // ================gift top box =================
+    const giftTopBox = document.querySelector(".gift_top_box");
+    const giftTopList = document.querySelector(".gift_top_list");
+
+    let giftTopBoxOutput = "";
+
+    json.giftTopList.forEach((list) => {
+      giftTopBoxOutput += `
+      <section>
+      <span>${list.title}</span>
+      <p>${list.txt}</p>
+      </section>
+      `;
+    });
+    giftTopList.innerHTML = giftTopBoxOutput;
+
+    const xBtn = document.querySelector(".fas");
+    const giftTopH4 = document.querySelector(".gift_top h4");
+    const container = document.querySelector(".container");
+
+    giftTopH4.addEventListener("click", () => {
+      giftTopBox.classList.add("show");
+      container.classList.add("removeContainer");
+    });
+    xBtn.addEventListener("click", ()=> {
+      giftTopBox.classList.remove("show");
+      container.classList.remove("removeContainer");
+    })
 
     // ====================== right Gnb =================================
     let rightOutput = "";
@@ -38,7 +68,7 @@ fetch(headerUrl)
       cartShow.classList.add("showCart");
       setTimeout(() => {
         cartShow.classList.remove("showCart");
-      },2100)
+      }, 2100);
     });
 
     // ==================== nav_detail_list =========================
@@ -120,7 +150,7 @@ fetch(headerUrl)
   })
   .catch((err) => console.log(err));
 
-  // back to top + nav scroll
+// back to top + nav scroll
 const btn = document.querySelector(".back_to_top");
 const html = document.querySelector("html");
 let offset;
@@ -175,7 +205,7 @@ queryBtn.addEventListener("click", () => {
 
 // ======================== footer =======================================
 const contents = document.querySelector(".footer_contents");
-const footerUrl = "../json/footer.json";
+const footerUrl = "./json/footer.json";
 
 fetch(footerUrl)
   .then((response) => response.json())
