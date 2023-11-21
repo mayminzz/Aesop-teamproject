@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fontawesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/bd0a8925a1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/qa-style.css" />
+    <script defer src="../script/qa-script.js"></script>
+    <!-- common Js -->
+    <script defer src="../script/Common-script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="gift_top"></div>
+      <nav>
+        <div class="logo">
+          <a href=""><img src="../img/common/logo_black.png" alt="logo" /></a>
+        </div>
+        <div class="gnb"></div>
+        <div class="gnb_right"></div>
+      </nav>
+      <div class="qa_nav_list"></div>
+    </header>
+    <aside>
+      <div id="cart_alarm">
+        <span>카트가 비어있습니다.</span>
+      </div>
+    </aside>
+    <aside id="nav_detail_list">
+      <iframe id="contentFrame"></iframe>
+    </aside>
+    <aside id="mobile_gnb_list">
+      <div class="gnb_list_bottom">
+        <figure>
+          <img src="../img/common/mobile_nav_img.jpg" alt="" />
+        </figure>
+        <figcaption>
+          <span><a href="">재생목록</a></span>
+          <h3>이솝의 사운드</h3>
+        </figcaption>
+      </div>
+    </aside>
+    <div class="container" id="qa">
+      <section class="qa_page1">
+        <div class="qa_page1_heading">
+          <div class="qa_box">
+            <div class="qa_text">
+              <h1>고객센터</h1>
+              <div class="qa_text_detail">
+                <span>전화연결</span>
+                <span>대표번호: 1800-1987</span>
+                <span>고객서비스팀: 0300-8321-0480</span>
+                <br />
+                <span>운영시간</span>
+                <span>평일 오전 10시 - 오후 5시 (주말 및 공휴일 제외)</span>
+                <span
+                  >*고객서비스팀과 연결이 어려운 경우, 이메일 문의를
+                  <br />남겨주시기 바랍니다.
+                </span>
+              </div>
+              <button><a href="#">도움말</a></button>
+              <button><a href="#">문의하기</a></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="qa_page2">
+        <div class="qa_info">
+          <!-- <img src="../img/Q&A/QA_logo.png" alt="" /> -->
+          <div class="company_information">
+            <span>전화연결</span>
+            <span>대표번호 : 1800-1987</span>
+            <span>고객서비스팀 : 0300-8321-0480</span>
+            <span>운영시간 : 평일 오전 10시 - 오후 5시 (주말 및 공휴일 제외)</span>
+            <span>*고객서비스팀 연결이 어려운 경우, 이메일을 문의를 남겨주시기 바랍니다.</span>
+          </div>
+          <div class="consulting_box">
+            <span>문의 제출하기</span>
+            <p>문의 내용을 양식에 맞게 작성해 주시기 바랍니다.</p>
+          </div>
+          <div class="help_box">
+            <h1>도움말 센터 살펴보기</h1>
+            <a href="">도움말</a>
+          </div>
+        </div>
+        <div class="qa_form">
+          <label for="ask">문의하고자 하는 질문을 선택해주세요.</label>
+          <select name="ask" id="ask">
+          </select>
+          <div class="qa_form_result">
+            <label class="blankLabel" for=""></label>
+            <select class="blankSelect" name="" id=""></select>
+            <label for="email">이메일 주소<em>*</em></label>
+            <input
+              required
+              type="email"
+              id="email"
+              placeholder="이메일"
+              required
+            />
+            <div class="nameCountry">
+              <label for="name country"
+                >이름<em>*</em>/국가 설정<em>*</em></label
+              >
+              <input required type="name" id="name" placeholder="이름" />
+              <select name="country" id="country">
+                <option value="chaina">Chaina</option>
+                <option value="japan">Japan</option>
+                <option value="us">US</option>
+                <option value="france">France</option>
+              </select>
+            </div>
+            <label for="askmore">문의사항<em>*</em></label>
+            <textarea
+              name="askmore"
+              id="askmore"
+              cols="30"
+              rows="10"
+              required
+              placeholder="문의사항을 입력해주세요!"
+            ></textarea>
+            <div class="submit_sec">
+              <input id="submitbtn" type="submit" value="제출" />
+              <p>
+                당사의 <span>개인정보처리방침</span>에 따라 귀하의 개인정보를
+                처리하고 있습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer_inner">
+          <div class="footer_contents"></div>
+        </div>
+      </footer>
+    </div>
+    <div class="query_version">
+      <div class="fixed_side_icon">
+        <img id="query" src="../img/common/ask_button.png" alt="miniBox" />
+          <a class="back_to_top" href="#">
+            <i class="fas fa-angle-up"></i>
+          </a>
+      </div>
+      <div class="mini_ask">
+        <h1>1:1 채팅상담 하기</h1>
+        <p>
+          1:1 채팅상담<br />상담을 시작하기에 앞서, 이용약관, 개인정보 수집 및
+          이용에 대하여 고객님의 동의가 필요합니다. <br />
+          상담 전 고객님의 동의여부 확인 후 상담이 시작됩니다.
+          <br /><span
+            >※이용약관, 개인정보 수집 및 동의에 대하여 동의를 거부할 수 있으며,
+            이 경우 1:1 채팅상담 서비스 이용이 불가합니다.</span
+          >
+        </p>
+        <form class="mini_ask_form">
+          <label for="">이름(선택사항)<em>*</em></label>
+          <input type="name" id="name" required />
+          <label for="email">이메일(선택사항)<em>*</em></label>
+          <input type="email" id="email" required />
+          <label for="message">메세지<em>*</em></label
+          ><textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input id="submitBtn" type="submit" value="제출하기" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

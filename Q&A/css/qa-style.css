@@ -95,8 +95,8 @@ a {
 }
 .query_version .mini_ask.show {
   display: block;
-  width: 20%;
-  height: 60%;
+  width: 350px;
+  height: 630px;
   position: fixed;
   bottom: 5%;
   right: 8%;
@@ -406,8 +406,8 @@ aside#mobile_gnb_list {
 .qa_page2 .qa_info .company_information {
   border: 1px solid;
   width: 500px;
-  height: 200px;
-  padding: 40px 50px;
+  height: 230px;
+  padding: 30px 50px;
 }
 .qa_page2 .qa_info .company_information span {
   display: block;
@@ -599,6 +599,9 @@ footer .footer_inner .footer_contents .footer_content p span {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .container {
+    height: 170vh;
+  }
   header {
     width: 100%;
     height: 145px;
@@ -611,7 +614,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     height: 70vh;
   }
   .qa_page2 {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
   }
   .qa_page2 .qa_info .consulting_box {
@@ -649,7 +652,11 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   .query_version .mini_ask {
     width: 40%;
-    height: 55%;
+    height: 60%;
+  }
+  .query_version .mini_ask .fixed_side_icon {
+    width: 45px;
+    height: 45px;
   }
   footer .footer_inner .footer_contents .footer_content h3 {
     font-size: 16px;
@@ -658,7 +665,7 @@ footer .footer_inner .footer_contents .footer_content p span {
 @media screen and (min-width: 350px) and (max-width: 767px) {
   .container {
     width: 100%;
-    height: 200vh;
+    height: 400vw;
   }
   .container .qa_page1 {
     width: 100%;
@@ -674,8 +681,8 @@ footer .footer_inner .footer_contents .footer_content p span {
     z-index: 99;
   }
   .query_version .mini_ask.show {
-    width: 75%;
-    height: 70%;
+    width: 400px;
+    height: 570px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1026,8 +1033,3 @@ footer .footer_inner .footer_contents .footer_content p span {
     line-height: 1.7rem;
   }
 }
-@media all and (max-width: 349px) {
-  header {
-    border: 1px solid #f00;
-  }
-}/*# sourceMappingURL=qa-style.css.map */

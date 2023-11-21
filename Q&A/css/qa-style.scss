@@ -113,8 +113,8 @@ a {
 
   .mini_ask.show {
     display: block;
-    width: 20%;
-    height: 60%;
+    width:350px;
+    height: 630px;
     position: fixed;
     bottom: 5%;
     right: 8%;
@@ -422,8 +422,8 @@ aside#mobile_gnb_list {
     .company_information {
       border: 1px solid map-get($font-size, dark);
       width: 500px;
-      height: 200px;
-      padding: 40px 50px;
+      height: 230px;
+      padding: 30px 50px;
       span {
         display: block;
         position: relative;
@@ -619,6 +619,9 @@ footer {
 // ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 // ========= tablet version ==========
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+ .container {
+  height: 170vh;
+ }
   header {
     width: 100%;
     height: 145px;
@@ -637,7 +640,7 @@ footer {
   }
 
   .qa_page2 {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     .qa_info {
       .consulting_box {
@@ -685,7 +688,11 @@ footer {
   .query_version {
     .mini_ask {
       width: 40%;
-      height: 55%;
+      height: 60%;
+      .fixed_side_icon {
+        width: 45px;
+        height: 45px;      
+      }
     }
   }
 
@@ -708,7 +715,7 @@ footer {
 @media screen and (min-width: 350px) and (max-width: 767px) {
   .container {
     width: 100%;
-    height: 200vh;
+    height: 400vw;
     .qa_page1 {
       width: 100%;
       height: 50vh;
@@ -725,8 +732,8 @@ footer {
       z-index: 99;
     }
     .mini_ask.show {
-      width: 75%;
-      height: 70%;
+      width: 400px;
+      height: 570px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -1096,10 +1103,5 @@ footer {
         }
       }
     }
-  }
-}
-@media all and (max-width: 349px) {
-  header {
-    border: 1px solid #f00;
   }
 }
