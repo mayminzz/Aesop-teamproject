@@ -133,14 +133,14 @@ body {
 // ======= header =======
 header {
   width: 100%;
-  height: 125px;
+  height: 145px;
   background: url("../img/common/lightback.png");
   .gift_top {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 45px;
+    height: 50px;
     // height: 35%;
     background: #222;
     color: map-get($font-color, wh);
@@ -203,7 +203,7 @@ header {
       }
       .finder {
         position: relative;
-        margin-right: 300px;
+        margin-right: 0px;
         font-size: map-get($font-size, base);
         color: map-get($font-color, dark);
         &::before {
@@ -238,7 +238,7 @@ aside#mobile_gnb_list {
   position: absolute;
   top: 120px;
   background: #fff;
-  z-index: 1;
+  z-index: 10;
   transition: 0.5s;
   #contentFrame {
     width: 100%;
@@ -265,7 +265,7 @@ main {
       position: absolute;
       z-index: 1;
       width: 150px;
-      top: 155px;
+      top: 165px;
       left: 40px;
     }
     > span {
@@ -368,14 +368,16 @@ main {
   opacity: 1;
 }
 .slick-prev {
+  border: 1px solid #000;
   position: absolute;
   left: 0;
   top: 50%;
+  background: url(../img/icon/arrow_left.png) no-repeat center center;
   transform: translateY(-50%);
   z-index: 1;
   width: 25px;
   height: 72px;
-  background: url("../img/icon/arrow_left.png") no-repeat;
+
   background-size: 25px 72px;
   opacity: 0.5;
   transition: all 0.2s ease-in;

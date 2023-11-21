@@ -9,14 +9,12 @@
       src="https://kit.fontawesome.com/06975e7be7.js"
       crossorigin="anonymous"
     ></script>
-
     <!-- 슬릭 슬라이더 CDN -->
     <link
       rel="stylesheet"
       type="text/css"
       href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-
     <!-- 최신 제이쿼리 불러오기 -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- 제이쿼리 구글 CDN -->
@@ -200,8 +198,10 @@
     </div>
     <div class="query_version">
       <div class="fixed_side_icon">
-        <img src="../img/common/version.png" alt="" />
-        <img id="query" src="../img/common/miniBox.png" alt="" />
+        <img id="query" src="../img/common/ask_button.png" alt="miniBox" />
+        <a class="back_to_top" href="#">
+          <i class="fas fa-angle-up"></i>
+        </a>
       </div>
       <div class="mini_ask">
         <h1>1:1 채팅상담 하기</h1>
@@ -214,7 +214,7 @@
             이 경우 1:1 채팅상담 서비스 이용이 불가합니다.</span
           >
         </p>
-        <div class="mini_ask_form">
+        <form class="mini_ask_form">
           <label for="">이름(선택사항)<em>*</em></label>
           <input type="name" id="name" required />
           <label for="email">이메일(선택사항)<em>*</em></label>
@@ -227,7 +227,8 @@
             rows="10"
             required
           ></textarea>
-        </div>
+          <input id="submitBtn" type="submit" value="제출하기" />
+        </form>
       </div>
     </div>
   </body>
