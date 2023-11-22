@@ -39,6 +39,7 @@ fetch(headerUrl)
 
     const xBtn = document.querySelector(".fas");
     const giftTopH4 = document.querySelector(".gift_top h4");
+    console.log(giftTopH4);
     const container = document.querySelector(".container");
     const header = document.querySelector("header");
 
@@ -69,7 +70,6 @@ fetch(headerUrl)
     const cartShow = document.querySelector("#cart_alarm");
 
     cart.addEventListener("click", () => {
-      const cartShow = document.querySelector("#cart_alarm");
       cartShow.classList.add("showCart");
       setTimeout(() => {
         cartShow.classList.remove("showCart");
@@ -241,5 +241,5 @@ fetch(footerUrl)
     spanEl.style.color = "#b8b8b8";
     spanEl.style.fontSize = "20px";
     spanEl.style.display = "block";
-    spanEl.style.margin = "10px 0";
+    spanEl.style.margin = "30px 0";
   });

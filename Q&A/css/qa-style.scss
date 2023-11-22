@@ -214,7 +214,7 @@ a {
       }
     }
     &:nth-child(2) {
-      height: 160px;
+      height: 170px;
       p {
         text-align: left;
         display: flex;
@@ -783,8 +783,6 @@ footer {
   // mini consulting
   .query_version {
     .mini_ask {
-      width: 40%;
-      height: 60%;
       .fixed_side_icon {
         width: 45px;
         height: 45px;
@@ -811,13 +809,13 @@ footer {
 @media screen and (min-width: 350px) and (max-width: 767px) {
   .container {
     width: 100%;
-    height: 400vw;
+    height: 450vw;
     .qa_page1 {
       width: 100%;
       height: 50vh;
     }
     .qa_page2 {
-      height: 80vh;
+      height: 100vh;
     }
   }
   .container.removeContainer {
@@ -1003,7 +1001,7 @@ footer {
       }
     }
   }
-
+  // ======== aside SCSS =========
   .gift_top.removeGiftTop {
     height: 0%;
     opacity: 0;
@@ -1011,7 +1009,7 @@ footer {
   #nav_detail_list {
     display: none;
   }
-  // ======== aside SCSS =========
+
   #mobile_gnb_list {
     display: none;
     position: absolute;
@@ -1138,7 +1136,7 @@ footer {
   .qa_page1 {
     .qa_page1_heading {
       width: 100%;
-      height: 90%;
+      height: 70%;
       object-fit: cover;
       object-position: center;
       .qa_box {
@@ -1249,7 +1247,7 @@ footer {
   //======== footer SCSS =========
   footer {
     width: 100%;
-    height: 700px;
+    height: 750px;
     position: absolute;
     bottom: 0;
     left: 0;

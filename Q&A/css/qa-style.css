@@ -197,7 +197,7 @@ a {
   font-size: 24px;
 }
 .gift_top_box div:nth-child(2) {
-  height: 160px;
+  height: 170px;
 }
 .gift_top_box div:nth-child(2) p {
   text-align: left;
@@ -746,10 +746,6 @@ footer .footer_inner .footer_contents .footer_content p span {
     width: 46%;
     padding: 2.5%;
   }
-  .query_version .mini_ask {
-    width: 40%;
-    height: 60%;
-  }
   .query_version .mini_ask .fixed_side_icon {
     width: 45px;
     height: 45px;
@@ -761,14 +757,14 @@ footer .footer_inner .footer_contents .footer_content p span {
 @media screen and (min-width: 350px) and (max-width: 767px) {
   .container {
     width: 100%;
-    height: 400vw;
+    height: 450vw;
   }
   .container .qa_page1 {
     width: 100%;
     height: 50vh;
   }
   .container .qa_page2 {
-    height: 80vh;
+    height: 100vh;
   }
   .container.removeContainer {
     display: none;
@@ -1065,7 +1061,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   .qa_page1 .qa_page1_heading {
     width: 100%;
-    height: 90%;
+    height: 70%;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
@@ -1173,7 +1169,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   footer {
     width: 100%;
-    height: 700px;
+    height: 750px;
     position: absolute;
     bottom: 0;
     left: 0;
