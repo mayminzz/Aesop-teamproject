@@ -468,7 +468,7 @@ aside#mobile_gnb_list {
   padding: 0 8%;
 }
 .qa_page2 .qa_info {
-  padding: 0 6%;
+  padding: 1% 6%;
 }
 .qa_page2 .qa_info .consulting_box {
   width: 500px;
@@ -499,7 +499,11 @@ aside#mobile_gnb_list {
   border: 1px solid;
   width: 500px;
   height: 230px;
-  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 50px;
 }
 .qa_page2 .qa_info .company_information span {
   display: block;

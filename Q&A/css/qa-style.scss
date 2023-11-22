@@ -487,7 +487,7 @@ aside#mobile_gnb_list {
   position: relative;
   padding: 0 8%;
   .qa_info {
-    padding: 0 6%;
+    padding: 1% 6%;
     .consulting_box {
       width: 500px;
       height: 120px;
@@ -519,7 +519,11 @@ aside#mobile_gnb_list {
       border: 1px solid map-get($font-size, dark);
       width: 500px;
       height: 230px;
-      padding: 30px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding:0 50px;
       span {
         display: block;
         position: relative;
