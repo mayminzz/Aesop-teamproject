@@ -1,63 +1,6 @@
-// back to top
-const btn = document.querySelector(".back_to_top");
-const html = document.querySelector("html");
-let offset;
-let scrollPos;
-let documentHeight;
-
-// 문서 높이 계산하기
-documentHeight = Math.max(html.offsetHeight, html.scrollHeight);
-if (documentHeight != 0) {
-  offset = documentHeight / 16;
-  console.log(offset);
-}
-scrollPos = html.scrollTop;
-console.log(scrollPos);
-
-let previousScrollPos = 0;
-
-// 스크롤 이벤트 추가
-window.addEventListener("scroll", () => {
-  scrollPos = html.scrollTop;
-  console.log(scrollPos);
-
-  if (scrollPos > offset) {
-    btn.classList.add("btt_show");
-  } else {
-    btn.classList.remove("btt_show");
-  }
-
-  const header = document.querySelector("header");
-  const giftTop = document.querySelector(".gift_top");
-  const cart = document.querySelector(".cart");
-
-  const cartShow = document.querySelector("#cart_alarm");
-
-  cart.addEventListener("click", () => {
-    const cartShow = document.querySelector("#cart_alarm");
-    cartShow.classList.add("showCart");
-    setTimeout(() => {
-      cartShow.classList.remove("showCart");
-    }, 2100);
-  });
-
-  if (scrollPos <= previousScrollPos) {
-    header.classList.add("scrollEffect");
-    console.log("Scrolling Up");
-  }
-  if (scrollPos > previousScrollPos) {
-    header.classList.remove("scrollEffect");
-    console.log("Scrolling Down");
-  }
-  if (scrollPos < 45) {
-    header.classList.remove("scrollEffect");
-  }
-  // 현재 스크롤 위치를 저장
-  previousScrollPos = scrollPos;
-});
-
 // ======================== GiftTop ====================================
 const giftTop = document.querySelector(".gift_top");
+
 window.addEventListener("load", () => {
   giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
 });
@@ -78,19 +21,60 @@ fetch(headerUrl)
     divGnb.appendChild(ulGnb);
     ulGnb.innerHTML = leftOutput;
 
+    // ================gift top box =================
+    const giftTopBox = document.querySelector(".gift_top_box");
+    const giftTopList = document.querySelector(".gift_top_list");
+
+    let giftTopBoxOutput = "";
+
+    json.giftTopList.forEach((list) => {
+      giftTopBoxOutput += `
+      <section>
+      <span>${list.title}</span>
+      <p>${list.txt}</p>
+      </section>
+      `;
+    });
+    giftTopList.innerHTML = giftTopBoxOutput;
+
+    const xBtn = document.querySelector(".fas");
+    const giftTopH4 = document.querySelector(".gift_top h4");
+    const container = document.querySelector(".container");
+    const header = document.querySelector("header");
+
+    giftTopH4.addEventListener("click", () => {
+      giftTopBox.classList.add("show");
+      container.classList.add("bgOpacity");
+      container.classList.add("removeContainer");
+      header.classList.add("bgOpacity");
+    });
+    xBtn.addEventListener("click", () => {
+      giftTopBox.classList.remove("show");
+      container.classList.remove("bgOpacity");
+      container.classList.remove("removeContainer");
+      header.classList.remove("bgOpacity");
+    });
+
     // ====================== right Gnb =================================
     let rightOutput = "";
 
     json.rightNav.forEach((list) => {
-      rightOutput += `<a href="#">${list.category}</a>`;
+      rightOutput += `<a href="#" class="${list.class}">${list.category}</a>`;
     });
 
     const gnbRight = document.querySelector(".gnb_right");
     gnbRight.innerHTML = rightOutput;
+    const cart = document.querySelector(".cart");
 
-    // const findIcon = document.createElement("a");
-    // findIcon.classList.add("finder");
-    // json.rightNav.unshift(findIcon);
+    const cartShow = document.querySelector("#cart_alarm");
+
+    cart.addEventListener("click", () => {
+      const cartShow = document.querySelector("#cart_alarm");
+      cartShow.classList.add("showCart");
+      setTimeout(() => {
+        cartShow.classList.remove("showCart");
+      }, 2100);
+    });
 
     // ==================== nav_detail_list =========================
     const gnbBtns = document.querySelectorAll(".gnb ul li");
@@ -171,6 +155,49 @@ fetch(headerUrl)
   })
   .catch((err) => console.log(err));
 
+// back to top + nav scroll
+const btn = document.querySelector(".back_to_top");
+const html = document.querySelector("html");
+let offset;
+let scrollPos;
+let documentHeight;
+
+// 문서 높이 계산
+documentHeight = Math.max(html.offsetHeight, html.scrollHeight);
+if (documentHeight != 0) {
+  offset = documentHeight / 16;
+}
+scrollPos = html.scrollTop;
+
+let previousScrollPos = 0;
+
+// 스크롤 이벤트
+window.addEventListener("scroll", () => {
+  scrollPos = html.scrollTop;
+
+  if (scrollPos > offset) {
+    btn.classList.add("btt_show");
+  } else {
+    btn.classList.remove("btt_show");
+  }
+
+  const header = document.querySelector("header");
+  const giftTop = document.querySelector(".gift_top");
+
+  if (scrollPos <= previousScrollPos) {
+    header.classList.add("scrollEffect");
+    console.log("Scrolling Up");
+  }
+  if (scrollPos > previousScrollPos) {
+    header.classList.remove("scrollEffect");
+    console.log("Scrolling Down");
+  }
+  if (scrollPos < 45) {
+    header.classList.remove("scrollEffect");
+  }
+  // 현재 스크롤 위치를 저장
+  previousScrollPos = scrollPos;
+});
 //======================= 오른 쪽 작은 문의사항 창 =============================
 const queryBtn = document.querySelector("#query");
 const miniBox = document.querySelector(".mini_ask");
