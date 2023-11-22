@@ -1,0 +1,97 @@
+{
+  "categories": [
+    { "category": "All 바디&핸드",
+    "categoryLink": "#" },
+    { "category": "바디",
+      "categoryLink": "https://www.aesop.com/kr/c/body-hand/body/"},
+    { "category": "핸드",
+      "categoryLink": "https://www.aesop.com/kr/c/body-hand/hand/" },
+    { "category": "퍼스널케어",
+    "categoryLink": "https://www.aesop.com/kr/c/body-hand/personal-care/" },
+    { "category": "번들 및 기프트",
+    "categoryLink": "https://www.aesop.com/kr/c/body-hand/hand-and-body-gifts/" }
+  ],
+
+  "searchProducts": [
+    {
+      "searchName": "신상품",
+      "searchImage": "../img/product/product_brandnew.png",
+      "searchAlt": "search1",
+      "searchLink":"#"
+    },
+    {
+      "searchName": "바디",
+      "searchImage": "../img/product/product_body.png",
+      "searchAlt": "search2",
+      "searchLink":"https://www.aesop.com/kr/c/body-hand/body/"
+    },
+    {
+      "searchName": "핸드",
+      "searchImage": "../img/product/product_hand.png",
+      "searchAlt": "search3",
+      "searchLink":"https://www.aesop.com/kr/c/body-hand/hand/"
+    },
+    {
+      "searchName": "퍼스널케어",
+      "searchImage": "../img/product/aesop_personal.png",
+      "searchAlt": "search4",
+      "searchLink":"https://www.aesop.com/kr/c/body-hand/personal-care/"
+    },
+    {
+      "searchName": "번들및 기프트",
+      "searchImage": "../img/product/product_bundle.png",
+      "searchAlt": "search5",
+      "searchLink":"https://www.aesop.com/kr/c/body-hand/hand-and-body-gifts/"
+    }
+  ],
+  "barsoapProducts": [
+    {
+      "productiImage": "../img/product/productbar1.png",
+      "productName": "너처 바 솝",
+      "productInfo": "순하면서도 효과적인 클렌징을 선사합니다.",
+      "productPrice": "₩23,000",
+      "productWeight": "150g",
+      "productAlt": "product1",
+      "productLink":"https://www.aesop.com/kr/p/body-hand/body/nurture-bar-soap/"
+    },
+    {
+      "productiImage": "../img/product/productbar2.png",
+      "productName": "폴리싱 바 솝",
+      "productInfo": "피부를 꼼꼼하게 세정하고 각질을 관리합니다.",
+      "productPrice": "₩23,000",
+      "productWeight": "150g",
+      "productAlt": "product2",
+      "productLink":"https://www.aesop.com/kr/p/body-hand/body/polish-bar-soap/"
+    },
+    {
+      "productiImage": "../img/product/productbar3.png",
+      "productName": "너처 바 솝",
+      "productInfo": "활기를 북돋우는 꼼꼼한 클렌징을 제공합니다.",
+      "productPrice": "₩23,000",
+      "productWeight": "150g",
+      "productAlt": "product3",
+      "productLink":"https://www.aesop.com/kr/p/body-hand/body/refresh-bar-soap/"
+    }
+  ],
+
+  "seasonalProducts": [
+    {
+      "seasonalImage": "../img/product/product_season1.png",
+      "seasonalName": "레쥬비네이트 인텐시브 바디 밤",
+      "seasonalInfo": "특히 메마른 피부에 이상적",
+      "seasonalPrice": "2사이즈 / ₩41,000 부터",
+      "seasonalWeight": "",
+      "seasonalAlt": "seasonal1",
+      "seasonalLink":"https://www.aesop.com/kr/p/body-hand/body/rejuvenate-intensive-body-balm/"
+    },
+    {
+      "seasonalImage": "../img/product/product_season2.png",
+      "seasonalName": "레버런스 듀엣",
+      "seasonalInfo": "우디, 흙내음, 스모키향의 제품 2종",
+      "seasonalPrice": "₩151,000",
+      "seasonalWeight": "",
+      "seasonalAlt": "seasonal2",
+      "seasonalLink":"https://www.aesop.com/kr/p/kits-travel/hand-body/reverence-duet/"
+    }
+  ]
+}
