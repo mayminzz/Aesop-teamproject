@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aesop</title>
+  <!-- fontawesome -->
+  <script defer src="https://kit.fontawesome.com/bd0a8925a1.js" crossorigin="anonymous"></script>
+  <!-- jQuery슬릭 슬라이더 CDN -->
+  <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- custom -->
+  <link rel="stylesheet" href="../css/Home-style.css">
+  <script defer src="../script/home-script.js"></script>
+  <script defer src="../script/Common-script.js"></script>
+</head>
+<body>
+    <!-- header & gnbmodal -->
+    <header>
+      <div class="gift_top"></div>
+      <nav>
+        <div class="logo">
+          <a href=""><img src="../img/common/logo_black.png" alt="logo" /></a>
+        </div>
+        <div class="gnb"></div>
+        <div class="gnb_right"></div>
+      </nav>
+      <div class="qa_nav_list"></div>
+    </header>
+    <!-- gift_top_box 왼쪽 사이드에서 나오는 박스 -->
+    <aside>
+      <div class="gift_top_box">
+        <div>
+          <i class="fas fa-xmark"></i>
+          <span>전 구매 무료 배송</span>
+        </div>
+        <div>
+          <span>CJ 대한통운</span>
+          <p><span>전 제품</span><span>무료 배송</span></p>
+          <p><span>전 지역</span><span>영업일 기준, 2-3일</span></p>
+        </div>
+        <div class="gift_top_list"></div>
+      </div>
+    </aside>
+    <!-- 카트 눌렀을 때 나오는 알림 -->
+    <aside>
+      <div id="cart_alarm">
+        <span>카트가 비어있습니다.</span>
+      </div>
+    </aside>
+    <!-- nav detail list -->
+    <aside id="nav_detail_list">
+      <iframe id="contentFrame"></iframe>
+    </aside>
+    <!-- 모바일에서의 토글버튼 클릭시 나오는 gnb -->
+    <aside id="mobile_gnb_list">
+      <div class="gnb_list_bottom">
+        <figure>
+          <img src="../img/common/mobile_nav_img.jpg" alt="" />
+        </figure>
+        <figcaption>
+          <span><a href="">재생목록</a></span>
+          <h3>이솝의 사운드</h3>
+        </figcaption>
+      </div>
+    </aside>
+  <div class="container" id="home">
+    <main>
+      <section class="home_page1">
+        <div class="page1_inner">
+          <img class="aesop" src="../img/common/logo_light.png">
+          <div class="banner">
+            <img src="../img/main/main_banner.png" alt="banner">
+            <div class="banner_heading">
+              <div class="logo">
+                <a href="#home">
+                </a>
+              </div>
+              <span>미지로 인도하는 아로마</span>
+              <p>
+                <span>아더토피아</span>
+                전통에 얽매이지 않는 프래그런스 컬렉션
+              </p>
+              <span>
+                인식 너머의 세계로 이끌어주는 강렬하고, 독특한 여섯 가지 아로마를 만나보세요.
+              </span>
+              <a href="">향수보기</a>
+            </div>
+          </div>
+
+          <!--section1==================================================-->
+            <div class="best_seller">
+              <div class="bt_txt">
+              <p>베스트셀러</p>
+              </div>
+              <div class="bt_product">
+                <div class="bestBtn">
+                  <div class="bt_prev" id="btleft"></div>
+                  <div class="bt_next" id="btright"></div>
+                </div>
+                <div class="items">
+                  <div class="item">
+                    <img src="../img/main/product01.png" alt="item01">
+                    <h5>레저렉션 아로마틱 핸드 밤</h5>
+                    <span>시트러스,우드,허브 향</span>
+                  </div>
+                  <div class="item">
+                    <img src="../img/main/product02.png" alt="item02">
+                    <h5>파슬리 씨드 안티 옥시던트 인텐스 세럼</h5>
+                    <span>민감성 피부를 포함한 대부분의 피부 타입</span>
+                  </div>
+                  <div class="item">
+                    <img src="../img/main/product03.png" alt="item03">
+                    <h5>이그절티드 아이 세럼</h5>
+                    <span>민감성 피부,수분 부족피부,칙칙하고 메마른 피부를 포함한 대부분의 피부타입</span>
+                  </div>
+                  <div class="item item4">
+                    <img src="../img/main/product04.png" alt="item04">
+                    <h5>비 트리플 씨 페이셜 밸런싱 젤</h5>
+                    <span>중성,복합성,지성 피부 덥고 습한 날씨의 피부</span>
+                  </div>
+                  <div class="item">
+                    <img src="../img/main/product05.png" alt="item05">
+                    <h5>레저렉션 아로마틱 핸드 워시</h5>
+                    <span>라벤더 오일을 함유한 부드러운 핸드 워시</span>
+                  </div>
+                  <div class="item">
+                    <img src="../img/main/product06.png" alt="item06">
+                    <h5> 컨디셔너 </h5>
+                    <span>아미노산을 풍부하게 함유한 영양이 풍부한 컨디셔너</span>
+                  </div>
+                  <div class="item">
+                    <img src="../img/main/product07.png" alt="item07">
+                    <h5>데오도란트</h5>
+                    <span>상쾌한 에센셜 오일 블렌드가 함유된 스프레이</span>
+                  </div>
+                  <div class="item">
+                    <img src="../img/main/product08.png" alt="item08">
+                    <h5>로즈 헤어 앤 스칼프 마스크</h5>
+                    <span>헤어에 윤기와 생기를 주는 트린트먼트</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </section>
+      <!--section2==================================================-->
+      <section class="home_page2 section">
+        <div class="page2_inner">
+          <div class="contents">
+            <video src="../img/common/video1.mp4" muted loop></video>
+            <div class="content_text">
+            </div>
+          </div>
+          <div class="quotation">
+          </div>
+        </div>
+      </section>
+      <!--section3==================================================-->
+      <section class="home_page3 section">
+        <div class="page3_inner">
+          <div class="contents">
+            <div class="content_text">
+            </div>
+            <img src="../img/common/commonImg.png"></img>
+          </div>
+          <div class="quotation">
+          </div>
+        </div>
+      </section>
+      <!--section4==================================================-->
+      <section class="home_page4 section">
+        <div class="page4_inner">
+          <div class="contents">
+            <video src="../img/common/video2.mp4" muted loop></video>
+            <div class="content_text">
+            </div>
+          </div>
+          <div class="quotation">
+          </div>
+        </div>
+      </section>
+    </main> 
+      <!--footer-->
+      <footer>
+        <div class="footer_inner">
+          <div class="footer_contents"></div>
+        </div>
+      </footer>
+    </div>
+    <div class="query_version">
+      <div class="fixed_side_icon">
+        <img id="query" src="../img/icon/ask.png" alt="miniBox" />
+        <a class="back_to_top" href="#">
+          <i class="fas fa-angle-up"></i>
+        </a>
+      </div>
+      <div class="mini_ask">
+        <h1>1:1 채팅상담 하기</h1>
+        <p>
+          1:1 채팅상담<br />상담을 시작하기에 앞서, 이용약관, 개인정보 수집 및
+          이용에 대하여 고객님의 동의가 필요합니다. <br />
+          상담 전 고객님의 동의여부 확인 후 상담이 시작됩니다.
+          <br /><span
+            >※이용약관, 개인정보 수집 및 동의에 대하여 동의를 거부할 수 있으며,
+            이 경우 1:1 채팅상담 서비스 이용이 불가합니다.</span
+          >
+        </p>
+        <form class="mini_ask_form">
+          <label for="">이름(선택사항)<em>*</em></label>
+          <input type="name" id="name" required />
+          <label for="email">이메일(선택사항)<em>*</em></label>
+          <input type="email" id="email" required />
+          <label for="message">메세지<em>*</em></label
+          ><textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input id="submitBtn" type="submit" value="제출하기" />
+        </form>
+      </div>
+    </div>
+</body>
+</html>

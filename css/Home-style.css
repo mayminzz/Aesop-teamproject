@@ -1155,4 +1155,91 @@ footer .footer_inner .footer_contents .footer_content p span {
   footer .footer_inner .footer_contents .footer_content:last-child p {
     line-height: 1.7rem;
   }
+}
+@media all and (min-width: 768px) and (max-width: 960px) {
+  .home_page2 {
+    margin-top: 200px;
+  }
+  .home_page2 .page2_inner .contents {
+    flex-direction: column;
+  }
+  .home_page2 .page2_inner .contents video {
+    width: 100%;
+    height: 100%;
+  }
+  .home_page2 .page2_inner .contents .content_text {
+    margin-top: 5%;
+  }
+  .home_page2 .page2_inner .contents p {
+    margin-bottom: 2%;
+  }
+  .home_page2 .page2_inner .contents a {
+    margin-top: 5%;
+    width: 30%;
+    font-size: 18px;
+  }
+  .home_page2 .page2_inner .quotation .quote_text {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .home_page2 .page2_inner .quotation .quote_person {
+    font-size: 16px;
+  }
+  .home_page3 {
+    margin-top: 200px;
+  }
+  .home_page3 .page3_inner .contents {
+    flex-direction: column;
+  }
+  .home_page3 .page3_inner .contents img {
+    width: 100%;
+    height: 100%;
+  }
+  .home_page3 .page3_inner .contents .content_text {
+    margin-top: 5%;
+  }
+  .home_page3 .page3_inner .contents p {
+    margin-bottom: 2%;
+  }
+  .home_page3 .page3_inner .contents a {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 30%;
+    font-size: 18px;
+  }
+  .home_page3 .page3_inner .quotation .quote_text {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .home_page3 .page3_inner .quotation .quote_person {
+    font-size: 16px;
+  }
+  .home_page4 {
+    margin-top: 200px;
+  }
+  .home_page4 .page4_inner .contents {
+    flex-direction: column;
+  }
+  .home_page4 .page4_inner .contents video {
+    width: 100%;
+    height: 100%;
+  }
+  .home_page4 .page4_inner .contents .content_text {
+    margin-top: 5%;
+  }
+  .home_page4 .page4_inner .contents p {
+    margin-bottom: 2%;
+  }
+  .home_page4 .page4_inner .contents a {
+    margin-top: 5%;
+    width: 30%;
+    font-size: 18px;
+  }
+  .home_page4 .page4_inner .quotation .quote_text {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .home_page4 .page4_inner .quotation .quote_person {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=Home-style.css.map */
