@@ -1,6 +1,6 @@
 // 버튼 태그 hover 스타일
 const consultBox = document.querySelector(".consulting_box");
-const spanEl = consultBox.querySelector("span");
+const aEl = consultBox.querySelector("span a");
 const pEl = consultBox.querySelector("p");
 const qaForm = document.querySelector(".qa_form");
 const helpBtn = document.querySelector(".help_box a");
@@ -8,13 +8,13 @@ const helpBtn = document.querySelector(".help_box a");
 consultBox.addEventListener("mouseover", () => {
   consultBox.style.background = "#222";
   consultBox.style.opacity = "0.9";
-  spanEl.style.color = "#fff";
+  aEl.style.color = "#fff";
   pEl.style.color = "#fff";
 });
 consultBox.addEventListener("mouseout", () => {
   consultBox.style.background = "";
   consultBox.style.opacity = "";
-  spanEl.style.color = "";
+  aEl.style.color = "";
   pEl.style.color = "";
 });
 consultBox.addEventListener("click", () => {
@@ -109,12 +109,14 @@ fetch(askUrl)
 
       if (askSelctedVal == "blank") {
         resultForm.style.display = "none";
+        if (window.innerWidth < 767) {
+          document.querySelector(".container").style.height = "300vh";
+        }
       } else {
         resultForm.style.display = "block";
         if (window.innerWidth < 767) {
-          document.querySelector(".container").style.height = "300vh";
-          qaPage2.style.height = "160vh";
-        } 
+          document.querySelector(".container").style.height = "360vh";
+        }
         if (askSelctedVal === "order") {
           blankLabel.innerText = "주문에 관련된 질문을 선택해주세요.";
           blankSelect.setAttribute("name", "order");

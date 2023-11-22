@@ -43,7 +43,7 @@ a {
 .container {
   background: url("../img/common/lightback.png") center center;
   width: 100%;
-  height: 200vh;
+  height: 220vh;
   font-family: Regular;
   position: relative;
   section {
@@ -114,8 +114,8 @@ a {
 
   .mini_ask.show {
     display: block;
-    width: 360px;
-    height: 660px;
+    width: 370px;
+    height: 630px;
     position: fixed;
     bottom: 5%;
     right: 8%;
@@ -185,7 +185,7 @@ a {
   left: 0;
   width: 50%;
   margin-left: -100%;
-  height: 1000px;
+  height: 900px;
   background: #e7ddc9;
   display: flex;
   flex-direction: column;
@@ -479,7 +479,7 @@ aside#mobile_gnb_list {
 
 //======== page 2 =========
 .qa_page2 {
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -501,12 +501,14 @@ aside#mobile_gnb_list {
         margin-bottom: 3px;
         position: relative;
         cursor: pointer;
-        &::before {
-          content: "\f0e0";
-          font-family: fontawesome;
-          position: absolute;
-          top: 1px;
-          left: -25px;
+        a {
+          &::before {
+            content: "\f0e0";
+            font-family: fontawesome;
+            position: absolute;
+            top: 1px;
+            left: -25px;
+          }
         }
       }
       p {
@@ -566,7 +568,7 @@ aside#mobile_gnb_list {
     justify-content: center;
     align-items: flex-start;
     font-size: map-get($font-size, large);
-    padding-left: 10%;
+    margin-left: 4%;
     display: none;
     label {
       display: block;
@@ -576,13 +578,13 @@ aside#mobile_gnb_list {
       }
     }
     select[name="ask"] {
-      width: 50%;
-      padding: 1.5%;
+      width: 60%;
+      padding: 1.8%;
       font-size: map-get($font-size, base);
       margin: 1% 0 3% 0;
       outline: none;
       background: #fff;
-      opacity: 0.5;
+      opacity: 0.4;
     }
     .qa_form_result {
       display: none;
@@ -593,11 +595,10 @@ aside#mobile_gnb_list {
       flex-direction: column;
     }
     input[type="email"] {
-      width: 90%;
-      padding: 1.5%;
+      width: 95%;
+      padding: 1.8%;
       outline: none;
       border: 1px solid map-get($font-color, dark);
-      margin-top: 1%;
       margin-bottom: 3%;
       background: #fff;
       opacity: 0.5;
@@ -606,63 +607,66 @@ aside#mobile_gnb_list {
     select[name="product"],
     select[name="return"],
     select[name="client"] {
-      width: 90%;
-      padding: 1.5%;
+      width: 95%;
+      padding: 1.8%;
       background: #fff;
-      opacity: 0.5;
-      margin-top: 1%;
+      opacity: 0.4;
       margin-bottom: 3%;
     }
     .nameCountry {
-      width: 90%;
+      width: 95%;
       margin-bottom: 3%;
       > label {
         display: block;
       }
       input[type="name"] {
         width: 47%;
-        padding: 1.5%;
+        padding: 2%;
         font-size: map-get($font-size, base);
-        margin-right: 3%;
+        margin-bottom: 3%;
         border: 1px solid map-get($font-color, dark);
         background: #fff;
-        opacity: 0.5;
+        opacity: 0.4;
       }
       > select {
-        width: 48%;
-        padding: 1.5%;
+        width: 40%;
+        padding: 2%;
+        float: right;
         font-size: map-get($font-size, base);
         background: #fff;
-        opacity: 0.5;
+        margin-bottom: 3%;
+        opacity: 0.4;
       }
     }
     textarea {
-      width: 90%;
+      width: 95%;
+      height: 220px;
       outline: none;
       font-size: map-get($font-size, large);
       border: 1px solid map-get($font-color, gray);
-      padding: 1%;
-      margin-top: 1%;
+      padding: 1.8%;
+      margin-bottom: 3%;
       background: #fff;
-      opacity: 0.5;
+      opacity: 0.4;
       &::placeholder {
         font-size: map-get($font-size, base);
       }
     }
     .submit_sec {
       input[type="submit"] {
-        margin-top: 3%;
+        width: 35%;
+        margin-top: 0.5%;
+        padding: 2%;
         border: none;
         background: #222;
         color: map-get($font-color, wh);
         font-size: map-get($font-size, medium);
-        padding: 9px 30px;
       }
       p {
-        display: inline-block;
+        width: 60%;
         font-size: map-get($font-size, base);
-        margin-left: 15px;
-
+        margin-left: 0px;
+        float: right;
         span {
           cursor: pointer;
           text-decoration: underline;
@@ -675,7 +679,7 @@ aside#mobile_gnb_list {
 // ========= footer SCSS =========
 footer {
   width: 100%;
-  height: 320px;
+  height: 300px;
   background: #222;
   .footer_inner {
     width: 100%;
@@ -706,8 +710,8 @@ footer {
             margin-bottom: 5px;
           }
         }
-        &:nth-of-type(5) {
-          line-height: 1.8em;
+        &:nth-of-type(5) p {
+          line-height: 1.6em;
         }
       }
     }
@@ -739,7 +743,7 @@ footer {
   .qa_page2 {
     height: 90vh;
     width: 100%;
-    gap: 40px;
+    gap: 30px;
     .qa_info {
       .consulting_box {
         width: 370px;
@@ -764,20 +768,43 @@ footer {
         font-size: map-get($font-size, base);
       }
       select[name="ask"] {
-        padding: 2.5%;
+        padding: 2%;
+        margin-bottom: 3%;
       }
       .qa_form_result {
         input {
-          padding: 2.5%;
+          width: 100%;
+          padding: 2%;
+          margin-bottom: 3%;
         }
         .nameCountry {
+          width: 100%;
           input[type="name"] {
             width: 46%;
-            padding: 2.5%;
+            padding: 2%;
+            margin-bottom: 3%;
           }
           select {
             width: 46%;
-            padding: 2.5%;
+            padding: 2%;
+            margin-bottom: 3%;
+          }
+        }
+        textarea {
+          width: 100%;
+          }
+        }
+        .submit_sec {
+          input[type="submit"] {
+            width: 30%;
+            margin-top: 0.5%;
+          }
+          p {
+            width: 60%;
+            span {
+              cursor: pointer;
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -806,22 +833,22 @@ footer {
       }
     }
   }
-}
+
 
 // ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 // ========= mobile version ==========
 @media screen and (min-width: 350px) and (max-width: 767px) {
   .container {
     width: 100%;
-    height: 300vh;
+    height: 280vh;
     .qa_page1 {
       width: 100%;
       height: 60vh;
-      border: 1px solid #f00;
     }
     .qa_page2 {
-      height: 200vh;
-      border: 1px solid #f00;
+      height: 220vh;
+      flex-direction: column;
+      justify-content: center;
       justify-content: flex-start;
     }
   }
@@ -833,7 +860,7 @@ footer {
       z-index: 99;
     }
     .mini_ask.show {
-      width: 400px;
+      width: 360px;
       height: 570px;
       top: 50%;
       left: 50%;
@@ -865,7 +892,7 @@ footer {
     left: 0;
     width: 100%;
     margin-left: -100%;
-    height: 150vh;
+    height: 180vh;
     background: #e7ddc9;
     display: flex;
     flex-direction: column;
@@ -914,7 +941,7 @@ footer {
     .gift_top_list {
       section {
         width: 100%;
-        height: 170px;
+        height: 190px;
         padding: 20px 0;
         border-bottom: 1px solid gray;
         span {
@@ -935,7 +962,7 @@ footer {
   header {
     .gift_top {
       h4 {
-        font-size: 19px;
+        font-size: 17px;
         &::after {
           margin-left: 5px;
         }
@@ -1097,10 +1124,8 @@ footer {
         order: 2;
         width: 100%;
         height: 250px;
-        padding-left: 10px;
-        border: 1px solid #f00;
         img {
-          width: 90%;
+          width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: center;
@@ -1180,16 +1205,25 @@ footer {
   .qa_page2 {
     flex-direction: column;
     gap: 10%;
+    padding: 10px;
     .qa_info {
       width: 100%;
       padding: 0 2%;
       .consulting_box {
         width: 100%;
+        span {
+          a { 
+            display: block;
+          }
+        }
       }
       .company_information {
         width: 100%;
-        height: 35%;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 25px 60px;
       }
       .help_box {
         width: 100%;
@@ -1202,9 +1236,9 @@ footer {
       }
     }
     .qa_form {
-      width: 100%;
+      width: 90%;
       font-size: map-get($font-size, base);
-      padding: 2%;
+      padding: 0px;
       justify-content: flex-start;
       select[name="ask"] {
         width: 100%;
@@ -1227,10 +1261,12 @@ footer {
           width: 100%;
           input[type="name"] {
             width: 48%;
+            padding: 2%;
           }
           > select {
-            width: 47%;
-            margin-left: 3.8px;
+            width: 40%;
+            float: right;
+            padding: 2%;
           }
         }
         textarea {
@@ -1242,11 +1278,11 @@ footer {
           justify-content: center;
           align-items: center;
           input[type="submit"] {
-            width: 30%;
+            width: 35%;
             padding: 2%;
           }
           p {
-            width: 65%;
+            width: 62%;
             font-size: map-get($font-size, small);
             margin-left: 10px;
           }
