@@ -39,7 +39,7 @@
       "category": "카트"
     }
   ],
-  "mobileGnb":[
+  "mobileGnb": [
     {
       "catagory": "읽기"
     },
@@ -56,12 +56,12 @@
       "catagory": "페이셜 어포인트먼트"
     }
   ],
-  "mobileGnbImg":[
+  "mobileGnbImg": [
     {
       "img": "../img/common/mobile_nav_img.jpg"
     }
-  ], 
-  "giftTopList":[
+  ],
+  "giftTopList": [
     {
       "title": "군부대/사서함 배송 불가 안내",
       "txt": "군부대 및 사서함으로 배송되는 주문의 경우, CJ대한통운을 통한 배송이 불가하여 별도 문자 안내와 함께 자동 주문 취소처리될 예정입니다. "

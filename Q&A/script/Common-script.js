@@ -40,15 +40,20 @@ fetch(headerUrl)
     const xBtn = document.querySelector(".fas");
     const giftTopH4 = document.querySelector(".gift_top h4");
     const container = document.querySelector(".container");
+    const header = document.querySelector("header");
 
     giftTopH4.addEventListener("click", () => {
       giftTopBox.classList.add("show");
+      container.classList.add("bgOpacity");
       container.classList.add("removeContainer");
+      header.classList.add("bgOpacity");
     });
-    xBtn.addEventListener("click", ()=> {
+    xBtn.addEventListener("click", () => {
       giftTopBox.classList.remove("show");
+      container.classList.remove("bgOpacity");
       container.classList.remove("removeContainer");
-    })
+      header.classList.remove("bgOpacity");
+    });
 
     // ====================== right Gnb =================================
     let rightOutput = "";

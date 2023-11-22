@@ -114,8 +114,8 @@ a {
 
   .mini_ask.show {
     display: block;
-    width: 350px;
-    height: 630px;
+    width: 360px;
+    height: 660px;
     position: fixed;
     bottom: 5%;
     right: 8%;
@@ -177,55 +177,55 @@ a {
     }
   }
 }
-  // giftTop
-  .gift_top_box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    margin-left: -100%;
-    height: 143vh;
-    // overflow: hidden;
-    background: #e7ddc9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    z-index: 99;
-    transition: all 0.5s;
-    div {
-      padding: 20px 0;
-      border-bottom: 1px solid gray;
-      width: 70%;
-      span {
-        display: block;
-        margin-bottom: 10px;
-        font-size: map-get($font-size, medium);
+// giftTop
+.gift_top_box {
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  margin-left: -100%;
+  height: 1000px;
+  background: #e7ddc9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  z-index: 99;
+  transition: all 0.5s;
+  div {
+    padding: 20px 0;
+    border-bottom: 1px solid gray;
+    width: 80%;
+    span {
+      display: block;
+      margin-bottom: 10px;
+      font-size: map-get($font-size, medium);
+    }
+
+    &:nth-child(1) {
+      height: 100px;
+      .fas {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: map-get($font-size, large);
       }
-    
-      &:nth-child(1) {
-        height: 100px;
-        .fas {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          font-size: map-get($font-size, large);
+    }
+    &:nth-child(2) {
+      height: 160px;
+      p {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        color: rgb(100, 99, 99);
+        > span {
+          font-size: map-get($font-size, base);
         }
-      }
-      &:nth-child(2) {
-        height: 160px;
-        p {
-          text-align: left;
-          display: flex;
-          justify-content: space-between;
-          color: rgb(100, 99, 99);
-          > span {
-            font-size: map-get($font-size, base);
-          }
-          &:nth-of-type(2) {
-            margin-top: 40px;
-          }
+        &:nth-of-type(2) {
+          margin-top: 40px;
+        }
       }
     }
     &:nth-child(3) {
@@ -248,10 +248,27 @@ a {
       }
     }
   }
+}
+.gift_top_box.show {
+  margin-left: 0%;
+}
+.container.bgOpacity,
+header.bgOpacity {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #222;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 88;
   }
-  .gift_top_box.show {
-    margin-left: 0%;
-  }
+}
+.container.bgOpacity {
+  position: fixed;
+}
 // ======== header SCSS =========
 header {
   width: 100%;
@@ -377,6 +394,7 @@ header.scrollEffect {
   background: #000;
   opacity: 1;
   border-radius: 50%;
+  scroll-behavior: smooth;
   .fas {
     color: map-get($font-color, wh);
     font-size: map-get($font-size, xlarge);
@@ -842,12 +860,11 @@ footer {
     left: 0;
     width: 100%;
     margin-left: -100%;
-    height: 143vh;
-    // overflow: hidden;
+    height: 150vh;
     background: #e7ddc9;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px;
     z-index: 99;
@@ -861,7 +878,7 @@ footer {
         margin-bottom: 10px;
         font-size: map-get($font-size, medium);
       }
-    
+
       &:nth-child(1) {
         height: 100px;
         .fas {
@@ -884,28 +901,28 @@ footer {
           &:nth-of-type(2) {
             margin-top: 40px;
           }
+        }
+      }
+      &:nth-child(3) {
+        border: none;
       }
     }
-    &:nth-child(3) {
-      border: none;
-    }
-  }
-  .gift_top_list {
-    section {
-      width: 100%;
-      height: 170px;
-      padding: 20px 0;
-      border-bottom: 1px solid gray;
-      span {
-        font-size: map-get($font-size, medium);
-        display: block;
-        margin-bottom: 30px;
-      }
-      p {
-        color: rgb(100, 99, 99);
+    .gift_top_list {
+      section {
+        width: 100%;
+        height: 170px;
+        padding: 20px 0;
+        border-bottom: 1px solid gray;
+        span {
+          font-size: map-get($font-size, medium);
+          display: block;
+          margin-bottom: 30px;
+        }
+        p {
+          color: rgb(100, 99, 99);
+        }
       }
     }
-  }
   }
   .gift_top_box.show {
     margin-left: 0%;

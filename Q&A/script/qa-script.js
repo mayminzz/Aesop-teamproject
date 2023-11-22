@@ -36,12 +36,12 @@ let textarea = document.querySelector("textarea");
 
 submitBtn.addEventListener("mouseover", () => {
   submitBtn.style.background = "#222";
-  submitBtn.style.opacity= "0.7";
+  submitBtn.style.opacity = "0.7";
   submitBtn.style.color = "#fff";
 });
 submitBtn.addEventListener("mouseout", () => {
   submitBtn.style.background = "";
-  submitBtn.style.opacity= "";
+  submitBtn.style.opacity = "";
   submitBtn.style.color = "";
 });
 submitBtn.addEventListener("click", () => {
@@ -53,7 +53,7 @@ submitBtn.addEventListener("click", () => {
 });
 
 //문의하기 form 태그 양식
-const askUrl = "../json/qa.json";
+const askUrl = "./json/qa.json";
 fetch(askUrl)
   .then((response) => response.json())
   .then((json) => {
@@ -112,7 +112,7 @@ fetch(askUrl)
       } else {
         resultForm.style.display = "block";
         if (window.innerWidth < 767) {
-          document.querySelector(".container").style.height = "300vh"
+          document.querySelector(".container").style.height = "300vh";
           qaPage2.style.height = "160vh";
         }
         if (askSelctedVal === "order") {
