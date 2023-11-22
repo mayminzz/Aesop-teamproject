@@ -145,9 +145,6 @@ body {
   outline: none;
   margin-bottom: 5px;
 }
-.query_version .mini_ask.show .mini_ask_form input::-moz-placeholder, .query_version .mini_ask.show .mini_ask_form textarea::-moz-placeholder {
-  font-size: 24px;
-}
 .query_version .mini_ask.show .mini_ask_form input::placeholder,
 .query_version .mini_ask.show .mini_ask_form textarea::placeholder {
   font-size: 24px;
@@ -401,9 +398,6 @@ header nav header.scrollEffect .gift_top {
   padding: 5px;
   outline: none;
   margin-bottom: 5px;
-}
-.query_version .mini_ask.show .mini_ask_form input::-moz-placeholder, .query_version .mini_ask.show .mini_ask_form textarea::-moz-placeholder {
-  font-size: 24px;
 }
 .query_version .mini_ask.show .mini_ask_form input::placeholder,
 .query_version .mini_ask.show .mini_ask_form textarea::placeholder {
@@ -673,14 +667,12 @@ header.bgOpacity::before {
   width: 100%;
   height: 100%;
   display: flex;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #brand-page3 .b3-center .br-slidercon .br-slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 #brand-page3 .b3-center .br-slidercon .slick-prev {
   font-size: 0;
@@ -1075,10 +1067,8 @@ footer .footer_inner .footer_contents .footer_content p span {
   #mobile_gnb_list.showModalGnb .gnb_list_bottom figure img {
     width: 500px;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
+    object-fit: cover;
+    object-position: center;
   }
   #mobile_gnb_list.showModalGnb .gnb_list_bottom figcaption {
     order: 3;
@@ -1154,10 +1144,8 @@ footer .footer_inner .footer_contents .footer_content p span {
   .home_page1 .page1_inner .banner img {
     width: inherit;
     height: inherit;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
+    object-fit: cover;
+    object-position: center;
     position: relative;
   }
   .home_page1 .page1_inner .banner img::before {
@@ -1581,10 +1569,8 @@ footer .footer_inner .footer_contents .footer_content p span {
   .home_page1 .page1_inner .banner img {
     width: inherit;
     height: inherit;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: center;
-       object-position: center;
+    object-fit: cover;
+    object-position: center;
     position: relative;
   }
   .home_page1 .page1_inner .banner img::before {

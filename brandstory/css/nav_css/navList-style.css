@@ -33,10 +33,8 @@ a {
 #wrap01 > img {
   flex: 1;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 #wrap01 > .story_list {
   flex: 4;
@@ -96,10 +94,8 @@ a {
 #wrap03 img:nth-of-type(1) {
   flex: 1;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 #wrap02 img:nth-of-type(2),
 #wrap03 img:nth-of-type(2) {
