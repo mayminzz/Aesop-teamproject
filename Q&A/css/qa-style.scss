@@ -675,7 +675,7 @@ aside#mobile_gnb_list {
 // ========= footer SCSS =========
 footer {
   width: 100%;
-  height: 270px;
+  height: 320px;
   background: #222;
   .footer_inner {
     width: 100%;
@@ -684,7 +684,7 @@ footer {
     .footer_contents {
       display: grid;
       grid-template-columns: repeat(4, 1fr) 2fr;
-      grid-template-rows: 190px;
+      grid-template-rows: 220px;
       grid-gap: 10px;
       border-bottom: 1px solid #c6c1c1;
       padding: 10px 10px;
@@ -705,6 +705,9 @@ footer {
             display: block;
             margin-bottom: 5px;
           }
+        }
+        &:nth-of-type(5) {
+          line-height: 1.8em;
         }
       }
     }
@@ -792,6 +795,7 @@ footer {
 
   // footer
   footer {
+    height: 320px;
     .footer_inner {
       .footer_contents {
         .footer_content {
@@ -809,13 +813,16 @@ footer {
 @media screen and (min-width: 350px) and (max-width: 767px) {
   .container {
     width: 100%;
-    height: 450vw;
+    height: 300vh;
     .qa_page1 {
       width: 100%;
-      height: 50vh;
+      height: 60vh;
+      border: 1px solid #f00;
     }
     .qa_page2 {
-      height: 100vh;
+      height: 200vh;
+      border: 1px solid #f00;
+      justify-content: flex-start;
     }
   }
   .container.removeContainer {
@@ -876,7 +883,6 @@ footer {
         margin-bottom: 10px;
         font-size: map-get($font-size, medium);
       }
-
       &:nth-child(1) {
         height: 100px;
         .fas {
@@ -929,7 +935,7 @@ footer {
   header {
     .gift_top {
       h4 {
-        font-size: map-get($font-size, base);
+        font-size: 19px;
         &::after {
           margin-left: 5px;
         }
@@ -1025,7 +1031,7 @@ footer {
     width: 100vw;
     height: 130vh;
     top: 0;
-    z-index: 6;
+    z-index: 8;
     opacity: 1;
     background: #fffef2;
     overflow: hidden;
@@ -1089,11 +1095,12 @@ footer {
       }
       figure {
         order: 2;
-        width: 200%;
+        width: 100%;
         height: 250px;
         padding-left: 10px;
+        border: 1px solid #f00;
         img {
-          width: 500px;
+          width: 90%;
           height: 100%;
           object-fit: cover;
           object-position: center;
@@ -1181,12 +1188,16 @@ footer {
       }
       .company_information {
         width: 100%;
-        height: 40%;
+        height: 35%;
+        padding: 0;
       }
       .help_box {
         width: 100%;
+        height: 100%;
         a {
-          width: 60%;
+          width: 300px;
+          height: 65px;
+          line-height: 65px;
         }
       }
     }
@@ -1257,7 +1268,7 @@ footer {
       .footer_contents {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 180px);
+        grid-template-rows: repeat(3, 190px);
         border-bottom: none;
         .footer_content {
           width: 90%;

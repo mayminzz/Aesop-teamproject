@@ -114,7 +114,7 @@ fetch(askUrl)
         if (window.innerWidth < 767) {
           document.querySelector(".container").style.height = "300vh";
           qaPage2.style.height = "160vh";
-        }
+        } 
         if (askSelctedVal === "order") {
           blankLabel.innerText = "주문에 관련된 질문을 선택해주세요.";
           blankSelect.setAttribute("name", "order");

@@ -39,7 +39,6 @@ fetch(headerUrl)
 
     const xBtn = document.querySelector(".fas");
     const giftTopH4 = document.querySelector(".gift_top h4");
-    console.log(giftTopH4);
     const container = document.querySelector(".container");
     const header = document.querySelector("header");
 
@@ -66,7 +65,6 @@ fetch(headerUrl)
     const gnbRight = document.querySelector(".gnb_right");
     gnbRight.innerHTML = rightOutput;
     const cart = document.querySelector(".cart");
-
     const cartShow = document.querySelector("#cart_alarm");
 
     cart.addEventListener("click", () => {
@@ -241,5 +239,5 @@ fetch(footerUrl)
     spanEl.style.color = "#b8b8b8";
     spanEl.style.fontSize = "20px";
     spanEl.style.display = "block";
-    spanEl.style.margin = "30px 0";
+    spanEl.style.margin = "20px 0";
   });
