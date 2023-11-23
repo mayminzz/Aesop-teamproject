@@ -80,12 +80,12 @@ fetch(headerUrl)
     const iframe = document.querySelector("iframe");
 
     const navHtml = [
-      "./nav-html/1-index.html",
-      "./nav-html/2-index.html",
-      "./nav-html/3-index.html",
-      "./nav-html/4-index.html",
-      "./nav-html/5-index.html",
-      "./nav-html/6-index.html",
+      "https://nav-1-b790b.web.app",
+      "https://nav-2-6e30f.web.app",
+      "https://nav-3-3a238.web.app",
+      "https://nav-4-3b4da.web.app",
+      "https://nav-5-66904.web.app",
+      " https://nav-6-58f7e.web.app",
     ];
 
     const gnbDel = document.querySelector(".gnb ul");
