@@ -23,6 +23,7 @@ $font-color: (
   light: #b9ae91,
   ask: #271100,
   gray: #666,
+  brownbottle: rgba(39, 17, 0, 0.47),
 );
 /*reset CSS*/
 
@@ -207,12 +208,11 @@ button {
   }
 
   &:hover {
-    background: map-get($font-color, $key: dark);
-    border: 1px solid map-get($map: $font-color, $key: wh);
-    color: map-get($map: $font-color, $key: wh);
+    border: 1px solid map-get($map: $font-color, $key: gray);
+    color: map-get($map: $font-color, $key: gray);
 
     span {
-      background: url(../img/arrow_right_light.png) no-repeat center center;
+      background: url("../img/common/arrow_gray.png") no-repeat center center;
       width: 24px;
       height: 24px;
     }
@@ -311,7 +311,102 @@ button {
     }
   }
 }
+// 로그인
+.login_modal {
+  display: none;
 
+}
+.login_modal.loginShow {
+  display: block;
+  width: 600px;
+  height: 700px;
+  background: #e7ddc9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 100;
+  .login_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+    > .fas {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 1px solid map-get($font-color, gray);
+        padding-bottom: 2px;
+        font-size: map-get($font-size, medium);
+        &:nth-of-type(1) {
+          margin-bottom: 50px;
+        }
+        &::placeholder {
+          font-size: map-get($font-size, medium);
+        }
+      }
+      > span {
+        display: block;
+        text-align: right;
+        margin-bottom: 50px;
+      }
+      input[type="submit"] {
+        border: 1px solid map-get($font-color, gray);
+        padding: 3.2% 0;
+        background: #000;
+        opacity: 1;
+        color: map-get($font-color, wh);
+        &:hover {
+          background: #111;
+          opacity: 0.85;
+        }
+      }
+    }
+    h2 {
+      font-size: map-get($font-size, large);
+      font-weight: normal;
+    }
+    p {
+      font-size: map-get($font-size, base);
+      color: map-get($font-color,gray );
+      line-height: 1.6em;
+    }
+    a {
+      text-decoration: none;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      color: map-get($font-color, $key:gray );
+      border: 1px solid map-get($font-color, $key: gray);
+      &:hover {
+        background: rgba(225,225,225,0.4);
+      }
+    }
+  }
+}
+.login_modal.loginShow .container {
+  position: fixed;
+}
 header {
   width: 100%;
   height: 145px;
@@ -501,6 +596,16 @@ aside#mobile_gnb_list {
       border: 1px solid map-get($font-color, $key: wh);
       font-size: map-get($font-size, $key: medium);
       word-spacing: 5px;
+        &:hover {
+    border: 1px solid map-get($map: $font-color, $key: gray);
+    color: map-get($map: $font-color, $key: gray);
+
+    span {
+      background: url(../img/common/arrow_gray.png) no-repeat center center;
+      width: 24px;
+      height: 24px;
+    }
+  }
       span {
         background: url("../img/arrow_right_light.png");
       }
@@ -510,7 +615,7 @@ aside#mobile_gnb_list {
 /*skin_type section CSS*/
 .skin_type {
   background: url("../img/skin_bg_light.png") no-repeat center center;
-  height: 120vh;
+  height: 150vh;
   h1 {
     font-size: map-get($font-size, $key: medium);
     font-weight: 200;
@@ -566,10 +671,12 @@ aside#mobile_gnb_list {
       position: relative;
       margin: 60px;
       flex: 1;
+      padding: 20px;
 
       &:hover {
-        background: rgba(39,17,0, 0.3);
+        background: map-get($font-color, brownbottle );
         transition: 0.3s;
+        color: map-get($font-color, $key:wh );
       }
 
       .mid {
@@ -588,6 +695,20 @@ aside#mobile_gnb_list {
         position: absolute;
         bottom: 10%;
         font-size: map-get($font-size, $key: medium);
+        
+        &:hover {
+          background: map-get($font-color, $key:brownbottle );
+          border: 1px solid map-get($map: $font-color, $key: wh);
+          color: map-get($map: $font-color, $key: wh);
+      
+          span {
+            background: url(../img/arrow_right_light.png) no-repeat center center;
+            width: 24px;
+            height: 24px;
+          }
+        }
+        
+        
       }
     }
   }
@@ -627,7 +748,7 @@ aside#mobile_gnb_list {
       text-indent: 0;
     }
     button.active:hover {
-      background: map-get($font-color, $key: dark) !important;
+      background: map-get($font-color, $key: brownbottle) !important;
       border: 1px solid map-get($map: $font-color, $key: wh) !important;
       color: map-get($map: $font-color, $key: wh) !important;
     }
@@ -635,16 +756,15 @@ aside#mobile_gnb_list {
       font-weight: map-get($font-size, $key:medium );
       color: map-get($font-color, $key:dark );
       text-align: center;
-    }
-    a {
-     display: none;
+      position: absolute;
+      top: 10%;
     }
   }
 
   .skin_quiz_result {
     position: absolute;
     left: 5%;
-    bottom: 20%;
+    bottom: 40%;
 
     h3 {
       font-size: map-get($font-size, $key: large);
@@ -680,11 +800,11 @@ aside#mobile_gnb_list {
       }
     }
     a.on:hover {
-      background: map-get($font-color, $key: dark);
-      color: map-get($font-color, $key: wh);
+      color: map-get($font-color, $key: gray);
+      border:1px solid map-get($font-color, $key:gray );
 
       span {
-        background: url("../img/arrow_right_light.png") no-repeat center center;
+        background: url("../img/common/arrow_gray.png") no-repeat center center;
       }
     }
   }
@@ -713,7 +833,7 @@ aside#mobile_gnb_list {
       height: 80vh;
     }
     .product {
-      width: 20%;
+      width: 100%;
       height: 100%;
       margin: 0 auto;
       display: flex;
@@ -780,7 +900,7 @@ aside#mobile_gnb_list {
         }
       }
       & img {
-        width: 150%;
+        width:100%;
       }
     }
   }
@@ -933,6 +1053,31 @@ footer {
       }
     }
   }
+  .login_modal.loginShow {
+    width: 360px;
+    height: 570px;
+    transform: translate(-50%, -45%);
+    .login_inner {
+      gap: 20px;
+      padding: 30px;
+      h1{
+        font-size: 30px;
+      }
+      form {
+        gap: 10px;
+        > span {
+          display: block;
+          text-align: right;
+          margin-bottom: 20px;
+        }
+      }
+      p {
+        font-size: map-get($font-size, small);
+        color: map-get($font-color,gray );
+        line-height: 1.3em;
+      }
+    }
+  }
   header {
     .gift_top {
       h4 {
@@ -1030,7 +1175,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 110vh;
+    height: 140vh;
     top: 0;
     z-index: 6;
     opacity: 1;
@@ -1073,6 +1218,9 @@ footer {
           display: inline-block;
           width: 49%;
           padding: 10px 0;
+          &:last-child {
+            width: 60%;
+          }
           > a {
             position: relative;
             font-size: map-get($font-size, medium);
@@ -1181,7 +1329,7 @@ footer {
   }
   /*skin_type section CSS*/
   .skin_type {
-    height: 400vh;
+    height: 420vh;
     h1 {
       font-size: map-get($font-size, $key: large);
       font-weight: 200;
@@ -1197,10 +1345,10 @@ footer {
       font-weight: 300;
       
       h2 {
-        font-size: map-get($font-size, $key: medium);
+        font-size: map-get($font-size, $key: xlarge);
         font-weight: 600;
         margin: 0 auto;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
       }
 
       p {
@@ -1219,11 +1367,11 @@ footer {
         "oil";
       position: absolute;
       top: 30%;
-      left: 5%;
+      left: 1%;
       transform: translateX(0);
       justify-items: center;
       align-items: center;
-      gap: 0;
+      gap: 50px;
       text-align: start;
 
       .skin_grid {
@@ -1233,10 +1381,11 @@ footer {
 
         &:hover {
           background: transparent;
+          color: map-get($font-color, $key:dark );
         }
         button {
           position: absolute;
-          bottom: 20%;
+          bottom: 10%;
           height: 50px;
           width: 90%;
         }
@@ -1271,12 +1420,11 @@ footer {
   }
   /*skin_type quiz CSS*/
   .skin_quiz {
-    // background: url("../img/skin_bg_light.png") repeat-y;
-    height: 250vh;
+    height: 200vh;
     h1 {
       width: 100%;
       position: absolute;
-      top: 5%;
+      top: 10%;
       left: 50%;
       transform: translateX(-50%);
       font-size: map-get($font-size, $key: medium);
@@ -1286,7 +1434,7 @@ footer {
 
     .skin_quiz_box {
       position: absolute;
-      top: 12%;
+      top: 20%;
       left: 5%;
       width: 90%;
 
@@ -1313,11 +1461,12 @@ footer {
         color: map-get($map: $font-color, $key: wh) !important;
       }
       .resulth2 {
-        font-weight: map-get($font-size, $key:medium );
+        top: 0%;
+        left: 2%;
+        font-weight: map-get($font-size, $key:large);
         color: map-get($font-color, $key:dark );
-        text-align: center;
         display: block;
-        
+        letter-spacing: -1px;
       }
 
       a {
@@ -1334,17 +1483,18 @@ footer {
     .skin_quiz_result {
       position: absolute;
       left: 7%;
-      bottom: 25%;
+      top: 30%;
 
       h3 {
         font-size: map-get($font-size, $key: large);
         margin-bottom: 20px;
-        width: 65%;
+        width: 90%;
         line-height: 2;
+        letter-spacing: -1px;
       }
       p {
         margin-bottom: 20px;
-        line-height: 2.5;
+        line-height: 3;
         font-size: map-get($font-size, $key: medium);
         width: 90%;
       }
@@ -1358,7 +1508,7 @@ footer {
   }
   /*skin_result rec CSS*/
   .skin_result_rec {
-    height: 420vh;
+    height: 500vh;
     background: url("../img/skin_bg_light.png");
     .quote {
       position: absolute;
@@ -1389,7 +1539,7 @@ footer {
           background-size: cover;
         }
         .product {
-          width: 90%;
+          width: 100%;
           height: 100%;
           margin: 0 auto;
           display: flex;
@@ -1432,7 +1582,7 @@ footer {
               .buy {
                 background: #000;
                 color: map-get($font-color, $key: wh);
-                padding: 15px 100px;
+                padding: 15px 50px;
                 border: none;
                 font-size: map-get($font-size, $key: xsmall);
                 bottom: 10px;
@@ -1446,7 +1596,7 @@ footer {
             }
           }
           img {
-            width: 120%;
+            width: 100%;
           }
         }
       }
@@ -1480,12 +1630,20 @@ footer {
 
 //TABLET
 @media all and (min-width: 768px) and (max-width: 960px) {
+ 
   .product_page_wrap {
     height: 500vh;
     width: 100%;
     background: url("../img/skin_bg_light.png") repeat-y;
   }
-
+    // login 
+    .login_modal.loginShow {
+      width: 550px;
+      height: 700px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   header {
     width: 100%;
     height: 145px;
@@ -1575,7 +1733,7 @@ footer {
         "oil";
       position: absolute;
       top: 20%;
-      left: 5%;
+      left: 2%;
       transform: translateX(0);
       justify-items: center;
       align-items: center;
@@ -1589,6 +1747,7 @@ footer {
 
         &:hover {
           background: transparent;
+          color: map-get($font-color, $key:dark );
         }
         button {
           position: absolute;
@@ -1677,7 +1836,7 @@ footer {
     .skin_quiz_result {
       position: absolute;
       left: 5%;
-      top: 70%;
+      top: 15%;
       padding-top: 20%;
       margin-bottom: 20%;
       z-index: 5;
@@ -1687,6 +1846,7 @@ footer {
         margin-bottom: 20px;
         width: 65%;
         line-height: 2;
+       
       }
       p {
         margin-bottom: 100px;
@@ -1704,7 +1864,7 @@ footer {
   }
 
   .skin_result_rec {
-    height: 450vh;
+    height: 520vh;
     background: url("../img/skin_bg_light.png");
 
     .quote {
@@ -1767,7 +1927,7 @@ footer {
           }
 
           img {
-            width: 80%;
+            width: 100%;
           }
         }
       }

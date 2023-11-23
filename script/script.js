@@ -138,15 +138,13 @@ const loadQuestion = () => {
       } else {
         document.querySelector(".quiz_quest").innerText = ""
         showResult();
-        optionsContainer.innerHTML= `<h2 class="resulth2">피부타입 진단이 완료되었습니다</h2>
-        <a href="#skinResult">결과 확인하기</a>`
+        optionsContainer.innerHTML= `<h2 class="resulth2">피부타입 진단이 완료되었습니다</h2>`
       }
     };
     button.addEventListener("click", activate);
-    optionsContainer.appendChild(button);
+    optionsContainer.appendChild(button); 
   });
 };
-
 
 function evaluateResult(userAnswers) {
   const scoring = {
@@ -193,9 +191,10 @@ function evaluateResult(userAnswers) {
     return "지성";
   }
 }
+
 const skinInfoURL = "../json/resultInfo.json";
 const recPage = document.querySelector(".products");
-console.log(recPage);
+
 function showResult() {
   const result = evaluateResult(userAnswers);
   resultElement.innerHTML = `<h3> 당신의 피부타입은: ${result}입니다</h3>`;
@@ -232,8 +231,8 @@ function showResult() {
             </p>
             <span>₩55,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -250,8 +249,8 @@ function showResult() {
             </p>
             <span>₩107,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -266,13 +265,14 @@ function showResult() {
             </p>
             <span>₩67,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
             `;
         });
+    
       });
   }
   if (result == "복합성") {
@@ -305,8 +305,8 @@ function showResult() {
             </p>
             <span>₩67,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -324,8 +324,8 @@ function showResult() {
             </p>
             <span>₩80,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -342,8 +342,8 @@ function showResult() {
             </p>
             <span>₩29,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -379,8 +379,8 @@ function showResult() {
             </p>
             <span>₩29,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -395,8 +395,8 @@ function showResult() {
             </p>
             <span>₩37,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -409,8 +409,8 @@ function showResult() {
             </p>
             <span>₩23,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -447,8 +447,8 @@ function showResult() {
             </p>
             <span>₩60,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -463,8 +463,8 @@ function showResult() {
             </p>
             <span>₩107,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
@@ -477,13 +477,15 @@ function showResult() {
             </p>
             <span>₩95,000</span>
             <div class="prod_btns">
-              <button class="prod">카트 추가</button>
-              <button class="buy">바로 구매</button>
+            <button class="prod" onclick="alert('카트에 추가되었습니다.')">카트 추가</button>
+            <button class="buy" onclick="alert('구매하기 창으로 이동합니다')">바로 구매</button>
             </div>
           </div>
         </div>
             `;
+         
         });
+
       });
   }
 }

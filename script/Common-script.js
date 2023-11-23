@@ -37,8 +37,9 @@ fetch(headerUrl)
     });
     giftTopList.innerHTML = giftTopBoxOutput;
 
-    const xBtn = document.querySelector(".fas");
+    const xBtn = document.querySelector(".gift_top_box .fas");
     const giftTopH4 = document.querySelector(".gift_top h4");
+    console.log(giftTopH4)
     const container = document.querySelector(".container");
     const header = document.querySelector("header");
 
@@ -55,26 +56,61 @@ fetch(headerUrl)
       header.classList.remove("bgOpacity");
     });
 
-    // ====================== right Gnb =================================
-    let rightOutput = "";
+        // ====================== right Gnb =================================
+        let rightOutput = "";
 
-    json.rightNav.forEach((list) => {
-      rightOutput += `<a href="#" class="${list.class}">${list.category}</a>`;
-    });
+        json.rightNav.forEach((list) => {
+          rightOutput += `<a href="" class="${list.class}">${list.category}</a>`;
+        });
+         
+        const gnbRight = document.querySelector(".gnb_right");
+        gnbRight.innerHTML = rightOutput;
+        const wishlist = document.querySelector(".wishlist")
+        wishlist.setAttribute("href", "https://www.aesop.com/kr/cabinet/");
+        wishlist.setAttribute("target", "_blank");
 
-    const gnbRight = document.querySelector(".gnb_right");
-    gnbRight.innerHTML = rightOutput;
-    const cart = document.querySelector(".cart");
 
-    const cartShow = document.querySelector("#cart_alarm");
-
-    cart.addEventListener("click", () => {
-      const cartShow = document.querySelector("#cart_alarm");
-      cartShow.classList.add("showCart");
-      setTimeout(() => {
-        cartShow.classList.remove("showCart");
-      }, 2100);
-    });
+        const cart = document.querySelector(".cart");
+    
+        const cartShow = document.querySelector("#cart_alarm");
+    
+        cart.addEventListener("click", (e) => {
+         e.preventDefault()
+          cartShow.classList.add("showCart");
+          setTimeout(() => {
+            cartShow.classList.remove("showCart");
+          }, 2100);
+        });
+        // 로그인
+        const login = document.querySelector(".login");
+        const loginModal = document.querySelector(".login_modal");
+        const delLogin = document.querySelector(".login_inner > .fas");
+    
+        login.addEventListener("click", (e) => {
+          e.preventDefault()
+          loginModal.classList.add("loginShow");
+          container.classList.add("bgOpacity");
+          header.classList.add("bgOpacity");
+        });
+        delLogin.addEventListener("click", () => {
+          loginModal.classList.remove("loginShow");
+          container.classList.remove("bgOpacity");
+          header.classList.remove("bgOpacity");
+        });
+    
+        const loginSubmit = document.querySelector(
+          ".login_inner input[type=submit]"
+        );
+        const userEmail = document.querySelector("#login_email");
+    
+        loginSubmit.addEventListener("click", (e) => {
+        e.preventDefault()
+          let alarm =
+            userEmail.value !== "" && userEmail.value !== ""
+              ? "이솝에 방문하신 걸 환영합니다!"
+              : "이메일과 비밀번호를 입력해주세요!";
+          alert(alarm);
+        });
 
     // ==================== nav_detail_list =========================
     const gnbBtns = document.querySelectorAll(".gnb ul li");
@@ -82,12 +118,12 @@ fetch(headerUrl)
     const iframe = document.querySelector("iframe");
 
     const navHtml = [
-      "./nav-html/1-index.html",
-      "./nav-html/2-index.html",
-      "./nav-html/3-index.html",
-      "./nav-html/4-index.html",
-      "./nav-html/5-index.html",
-      "./nav-html/6-index.html",
+      "https://nav-1-b790b.web.app",
+      "https://nav-2-6e30f.web.app",
+      "https://nav-3-3a238.web.app",
+      "https://nav-4-3b4da.web.app",
+      "https://nav-5-66904.web.app",
+      "https://nav-6-58f7e.web.app",
     ];
 
     const gnbDel = document.querySelector(".gnb ul");

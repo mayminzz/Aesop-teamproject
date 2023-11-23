@@ -188,12 +188,11 @@ button span {
   height: 24px;
 }
 button:hover {
-  background: #383838;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid #666;
+  color: #666;
 }
 button:hover span {
-  background: url(../img/arrow_right_light.png) no-repeat center center;
+  background: url("../img/common/arrow_gray.png") no-repeat center center;
   width: 24px;
   height: 24px;
 }
@@ -287,6 +286,106 @@ button:hover span {
 }
 .query_version .mini_ask.show .mini_ask_form #submitBtn:hover {
   background: #767676;
+}
+
+.login_modal {
+  display: none;
+}
+
+.login_modal.loginShow {
+  display: block;
+  width: 600px;
+  height: 700px;
+  background: #e7ddc9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 100;
+}
+.login_modal.loginShow .login_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+}
+.login_modal.loginShow .login_inner > .fas {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.login_modal.loginShow .login_inner h1 {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.login_modal.loginShow .login_inner form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login_modal.loginShow .login_inner form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #666;
+  padding-bottom: 2px;
+  font-size: 20px;
+}
+.login_modal.loginShow .login_inner form input:nth-of-type(1) {
+  margin-bottom: 50px;
+}
+.login_modal.loginShow .login_inner form input::-moz-placeholder {
+  font-size: 20px;
+}
+.login_modal.loginShow .login_inner form input::placeholder {
+  font-size: 20px;
+}
+.login_modal.loginShow .login_inner form > span {
+  display: block;
+  text-align: right;
+  margin-bottom: 50px;
+}
+.login_modal.loginShow .login_inner form input[type=submit] {
+  border: 1px solid #666;
+  padding: 3.2% 0;
+  background: #000;
+  opacity: 1;
+  color: #fff;
+}
+.login_modal.loginShow .login_inner form input[type=submit]:hover {
+  background: #111;
+  opacity: 0.85;
+}
+.login_modal.loginShow .login_inner h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+.login_modal.loginShow .login_inner p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6em;
+}
+.login_modal.loginShow .login_inner a {
+  text-decoration: none;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #666;
+  border: 1px solid #666;
+}
+.login_modal.loginShow .login_inner a:hover {
+  background: rgba(225, 225, 225, 0.4);
+}
+
+.login_modal.loginShow .container {
+  position: fixed;
 }
 
 header {
@@ -481,6 +580,17 @@ aside#mobile_gnb_list {
   font-size: 20px;
   word-spacing: 5px;
 }
+.banner .btns .skin_info:hover,
+.banner .btns .skin_test:hover {
+  border: 1px solid #666;
+  color: #666;
+}
+.banner .btns .skin_info:hover span,
+.banner .btns .skin_test:hover span {
+  background: url(../img/common/arrow_gray.png) no-repeat center center;
+  width: 24px;
+  height: 24px;
+}
 .banner .btns .skin_info span,
 .banner .btns .skin_test span {
   background: url("../img/arrow_right_light.png");
@@ -489,7 +599,7 @@ aside#mobile_gnb_list {
 /*skin_type section CSS*/
 .skin_type {
   background: url("../img/skin_bg_light.png") no-repeat center center;
-  height: 120vh;
+  height: 150vh;
 }
 .skin_type h1 {
   font-size: 20px;
@@ -542,10 +652,12 @@ aside#mobile_gnb_list {
   position: relative;
   margin: 60px;
   flex: 1;
+  padding: 20px;
 }
 .skin_type .skin_type_grid .skin_grid:hover {
-  background: rgba(39, 17, 0, 0.3);
+  background: rgba(39, 17, 0, 0.47);
   transition: 0.3s;
+  color: #fff;
 }
 .skin_type .skin_type_grid .skin_grid .mid {
   grid-area: mid;
@@ -563,6 +675,16 @@ aside#mobile_gnb_list {
   position: absolute;
   bottom: 10%;
   font-size: 20px;
+}
+.skin_type .skin_type_grid .skin_grid button:hover {
+  background: rgba(39, 17, 0, 0.47);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.skin_type .skin_type_grid .skin_grid button:hover span {
+  background: url(../img/arrow_right_light.png) no-repeat center center;
+  width: 24px;
+  height: 24px;
 }
 
 /*skin_type quiz CSS*/
@@ -600,7 +722,7 @@ aside#mobile_gnb_list {
   text-indent: 0;
 }
 .skin_quiz .skin_quiz_box button.active:hover {
-  background: #383838 !important;
+  background: rgba(39, 17, 0, 0.47) !important;
   border: 1px solid #fff !important;
   color: #fff !important;
 }
@@ -608,14 +730,13 @@ aside#mobile_gnb_list {
   font-weight: 20px;
   color: #383838;
   text-align: center;
-}
-.skin_quiz .skin_quiz_box a {
-  display: none;
+  position: absolute;
+  top: 10%;
 }
 .skin_quiz .skin_quiz_result {
   position: absolute;
   left: 5%;
-  bottom: 20%;
+  bottom: 40%;
 }
 .skin_quiz .skin_quiz_result h3 {
   font-size: 24px;
@@ -649,11 +770,11 @@ aside#mobile_gnb_list {
   height: 24px;
 }
 .skin_quiz .skin_quiz_result a.on:hover {
-  background: #383838;
-  color: #fff;
+  color: #666;
+  border: 1px solid #666;
 }
 .skin_quiz .skin_quiz_result a.on:hover span {
-  background: url("../img/arrow_right_light.png") no-repeat center center;
+  background: url("../img/common/arrow_gray.png") no-repeat center center;
 }
 
 /*skin_result rec CSS*/
@@ -682,7 +803,7 @@ aside#mobile_gnb_list {
   height: 80vh;
 }
 .skin_result_rec .products .product {
-  width: 20%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -747,7 +868,7 @@ aside#mobile_gnb_list {
   color: #000;
 }
 .skin_result_rec .products .product img {
-  width: 150%;
+  width: 100%;
 }
 
 footer {
@@ -889,6 +1010,31 @@ footer .footer_inner .footer_contents .footer_content p span {
   .query_version .mini_ask.show .mini_ask_form textarea {
     height: 150px;
   }
+  .login_modal.loginShow {
+    width: 360px;
+    height: 570px;
+    transform: translate(-50%, -45%);
+  }
+  .login_modal.loginShow .login_inner {
+    gap: 20px;
+    padding: 30px;
+  }
+  .login_modal.loginShow .login_inner h1 {
+    font-size: 30px;
+  }
+  .login_modal.loginShow .login_inner form {
+    gap: 10px;
+  }
+  .login_modal.loginShow .login_inner form > span {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .login_modal.loginShow .login_inner p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.3em;
+  }
   header .gift_top h4 {
     font-size: 16px;
   }
@@ -975,7 +1121,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 110vh;
+    height: 140vh;
     top: 0;
     z-index: 6;
     opacity: 1;
@@ -1021,6 +1167,9 @@ footer .footer_inner .footer_contents .footer_content p span {
     display: inline-block;
     width: 49%;
     padding: 10px 0;
+  }
+  #mobile_gnb_list.showModalGnb .gnb_list_bottom .modal_bottom_mini_list > li:last-child {
+    width: 60%;
   }
   #mobile_gnb_list.showModalGnb .gnb_list_bottom .modal_bottom_mini_list > li > a {
     position: relative;
@@ -1127,7 +1276,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   /*skin_type section CSS*/
   .skin_type {
-    height: 400vh;
+    height: 420vh;
   }
   .skin_type h1 {
     font-size: 24px;
@@ -1144,10 +1293,10 @@ footer .footer_inner .footer_contents .footer_content p span {
     font-weight: 300;
   }
   .skin_type .define_skin h2 {
-    font-size: 20px;
+    font-size: 32px;
     font-weight: 600;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
   .skin_type .define_skin p {
     line-height: 2.5;
@@ -1160,11 +1309,11 @@ footer .footer_inner .footer_contents .footer_content p span {
     grid-template-areas: "mid" "com" "dry" "oil";
     position: absolute;
     top: 30%;
-    left: 5%;
+    left: 1%;
     transform: translateX(0);
     justify-items: center;
     align-items: center;
-    gap: 0;
+    gap: 50px;
     text-align: start;
   }
   .skin_type .skin_type_grid .skin_grid {
@@ -1174,10 +1323,11 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   .skin_type .skin_type_grid .skin_grid:hover {
     background: transparent;
+    color: #383838;
   }
   .skin_type .skin_type_grid .skin_grid button {
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     height: 50px;
     width: 90%;
   }
@@ -1208,12 +1358,12 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   /*skin_type quiz CSS*/
   .skin_quiz {
-    height: 250vh;
+    height: 200vh;
   }
   .skin_quiz h1 {
     width: 100%;
     position: absolute;
-    top: 5%;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
@@ -1222,7 +1372,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   .skin_quiz .skin_quiz_box {
     position: absolute;
-    top: 12%;
+    top: 20%;
     left: 5%;
     width: 90%;
   }
@@ -1249,10 +1399,12 @@ footer .footer_inner .footer_contents .footer_content p span {
     color: #fff !important;
   }
   .skin_quiz .skin_quiz_box .resulth2 {
-    font-weight: 20px;
+    top: 0%;
+    left: 2%;
+    font-weight: 24px;
     color: #383838;
-    text-align: center;
     display: block;
+    letter-spacing: -1px;
   }
   .skin_quiz .skin_quiz_box a {
     display: block;
@@ -1266,17 +1418,18 @@ footer .footer_inner .footer_contents .footer_content p span {
   .skin_quiz .skin_quiz_result {
     position: absolute;
     left: 7%;
-    bottom: 25%;
+    top: 30%;
   }
   .skin_quiz .skin_quiz_result h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    width: 65%;
+    width: 90%;
     line-height: 2;
+    letter-spacing: -1px;
   }
   .skin_quiz .skin_quiz_result p {
     margin-bottom: 20px;
-    line-height: 2.5;
+    line-height: 3;
     font-size: 20px;
     width: 90%;
   }
@@ -1287,7 +1440,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   /*skin_result rec CSS*/
   .skin_result_rec {
-    height: 420vh;
+    height: 500vh;
     background: url("../img/skin_bg_light.png");
   }
   .skin_result_rec .quote {
@@ -1319,7 +1472,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     background-size: cover;
   }
   .skin_result_rec .product_wrapper .products .product {
-    width: 90%;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -1359,7 +1512,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   .skin_result_rec .product_wrapper .products .product .product_txt .prod_btns .buy {
     background: #000;
     color: #fff;
-    padding: 15px 100px;
+    padding: 15px 50px;
     border: none;
     font-size: 12px;
     bottom: 10px;
@@ -1372,7 +1525,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     color: #000;
   }
   .skin_result_rec .product_wrapper .products .product img {
-    width: 120%;
+    width: 100%;
   }
   footer {
     width: 100%;
@@ -1404,6 +1557,13 @@ footer .footer_inner .footer_contents .footer_content p span {
     height: 500vh;
     width: 100%;
     background: url("../img/skin_bg_light.png") repeat-y;
+  }
+  .login_modal.loginShow {
+    width: 550px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   header {
     width: 100%;
@@ -1488,7 +1648,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     grid-template-areas: "mid" "com" "dry" "oil";
     position: absolute;
     top: 20%;
-    left: 5%;
+    left: 2%;
     transform: translateX(0);
     justify-items: center;
     align-items: center;
@@ -1502,6 +1662,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   .skin_type .skin_type_grid .skin_grid:hover {
     background: transparent;
+    color: #383838;
   }
   .skin_type .skin_type_grid .skin_grid button {
     position: absolute;
@@ -1583,7 +1744,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   .skin_quiz .skin_quiz_result {
     position: absolute;
     left: 5%;
-    top: 70%;
+    top: 15%;
     padding-top: 20%;
     margin-bottom: 20%;
     z-index: 5;
@@ -1606,7 +1767,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     border: 1px solid #383838;
   }
   .skin_result_rec {
-    height: 450vh;
+    height: 520vh;
     background: url("../img/skin_bg_light.png");
   }
   .skin_result_rec .quote {
@@ -1663,7 +1824,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     font-size: 20px;
   }
   .skin_result_rec .product_wrapper .products .product img {
-    width: 80%;
+    width: 100%;
   }
   .query_version .mini_ask {
     width: 40%;
