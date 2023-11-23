@@ -816,6 +816,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   margin-bottom: 5px;
 }
 
+/****************************************************************************/
 @media all and (min-width: 360px) and (max-width: 767px) {
   .container.removeContainer {
     display: none;
@@ -948,7 +949,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   header nav .gnb_right {
     position: absolute;
     right: 2%;
-    z-index: 9;
+    z-index: 99;
   }
   header nav .gnb_right a {
     color: #383838;

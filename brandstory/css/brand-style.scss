@@ -53,6 +53,7 @@ body {
     height: auto;
   }
 }
+// cart
 #cart_alarm {
   display: none;
   height: 0px;
@@ -853,7 +854,9 @@ footer {
   }
 }
 
-// ----- Mobile ver -----
+/****************************************************************************/
+// ======================== Mobile version =================================
+
 @media all and (min-width: 360px) and (max-width: 767px) {
   .container.removeContainer {
     display: none;
@@ -999,7 +1002,7 @@ footer {
       .gnb_right {
         position: absolute;
         right: 2%;
-        z-index: 9;
+        z-index: 99;
         a {
           color: map-get($font-color, dark);
         }
