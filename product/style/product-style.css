@@ -839,6 +839,7 @@ aside#mobile_gnb_list {
   flex-direction: column;
   justify-content: space-between;
   width: 25%;
+  padding: 10% 0;
 }
 #product_page4 .page_under .product_page_recommend_btn h3 {
   font-size: 32px;

@@ -1,9 +1,7 @@
 // ======================== GiftTop ====================================
 const giftTop = document.querySelector(".gift_top");
 
-window.addEventListener("load", () => {
-  giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
-});
+giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
 
 //=========================== left gnb ==================================
 const headerUrl = "./json/header.json";

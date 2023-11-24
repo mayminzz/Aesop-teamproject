@@ -1,9 +1,7 @@
 // ======================== GiftTop ====================================
 const giftTop = document.querySelector(".gift_top");
 
-window.addEventListener("load", () => {
   giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
-});
 
 //=========================== left gnb ==================================
 const headerUrl = "../json/header.json";
@@ -37,7 +35,7 @@ fetch(headerUrl)
     });
     giftTopList.innerHTML = giftTopBoxOutput;
 
-    const xBtn = document.querySelector(".fas");
+    const xBtn = document.querySelector(".gift_top_box .fas");
     const giftTopH4 = document.querySelector(".gift_top h4");
     const container = document.querySelector(".container");
     const header = document.querySelector("header");
@@ -59,21 +57,56 @@ fetch(headerUrl)
     let rightOutput = "";
 
     json.rightNav.forEach((list) => {
-      rightOutput += `<a href="#" class="${list.class}">${list.category}</a>`;
+      rightOutput += `<a href="" class="${list.class}">${list.category}</a>`;
     });
 
     const gnbRight = document.querySelector(".gnb_right");
     gnbRight.innerHTML = rightOutput;
-    const cart = document.querySelector(".cart");
 
+    const wishlist = document.querySelector(".wishlist");
+    console.log(wishlist);
+    wishlist.setAttribute("href", "https://www.aesop.com/kr/cabinet/");
+    wishlist.setAttribute("target", "_blank");
+
+    const cart = document.querySelector(".cart");
     const cartShow = document.querySelector("#cart_alarm");
 
-    cart.addEventListener("click", () => {
-      const cartShow = document.querySelector("#cart_alarm");
+    cart.addEventListener("click", (e) => {
+      e.preventDefault();
       cartShow.classList.add("showCart");
       setTimeout(() => {
         cartShow.classList.remove("showCart");
       }, 2100);
+    });
+    // 로그인
+    const login = document.querySelector(".login");
+    const loginModal = document.querySelector(".login_modal");
+    const delLogin = document.querySelector(".login_inner > .fas");
+
+    login.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginModal.classList.add("loginShow");
+      container.classList.add("bgOpacity");
+      header.classList.add("bgOpacity");
+    });
+    delLogin.addEventListener("click", () => {
+      loginModal.classList.remove("loginShow");
+      container.classList.remove("bgOpacity");
+      header.classList.remove("bgOpacity");
+    });
+
+    const loginSubmit = document.querySelector(
+      ".login_inner input[type=submit]"
+    );
+    const userEmail = document.querySelector("#login_email");
+
+    loginSubmit.addEventListener("click", (e) => {
+      e.preventDefault();
+      let alarm =
+        userEmail.value !== "" && userEmail.value !== ""
+          ? "이솝에 방문하신 걸 환영합니다!"
+          : "이메일과 비밀번호를 입력해주세요!";
+      alert(alarm);
     });
 
     // ==================== nav_detail_list =========================
@@ -89,7 +122,6 @@ fetch(headerUrl)
       "https://nav-5-66904.web.app",
       " https://nav-6-58f7e.web.app",
     ];
-
 
     const gnbDel = document.querySelector(".gnb ul");
     console.log(gnbDel);
@@ -159,6 +191,7 @@ fetch(headerUrl)
 // back to top + nav scroll
 const btn = document.querySelector(".back_to_top");
 const html = document.querySelector("html");
+// 버튼이 나타날 스크롤 위치
 let offset;
 let scrollPos;
 let documentHeight;
@@ -170,6 +203,7 @@ if (documentHeight != 0) {
 }
 scrollPos = html.scrollTop;
 
+// 스크롤 방향을 판별하기 위해서 이전 스크롤 위치를 변수에 저장
 let previousScrollPos = 0;
 
 // 스크롤 이벤트
@@ -242,5 +276,5 @@ fetch(footerUrl)
     spanEl.style.color = "#b8b8b8";
     spanEl.style.fontSize = "20px";
     spanEl.style.display = "block";
-    spanEl.style.margin = "10px 0";
+    spanEl.style.margin = "20px 0";
   });

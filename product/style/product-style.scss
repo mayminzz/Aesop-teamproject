@@ -853,6 +853,7 @@ aside#mobile_gnb_list {
       flex-direction: column;
       justify-content: space-between;
       width: 25%;
+      padding: 10% 0;
       h3 {
         font-size: map-get($font-size, xlarge);
         padding-bottom: 2%;
