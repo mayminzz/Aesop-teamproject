@@ -275,6 +275,8 @@ fetch(footerUrl)
     spanEl.style.display = "block";
     spanEl.style.margin = "10px 0";
   });
+
+  
 //main============================================
 async function init() {
   const response = await fetch("./json/productNav.json");

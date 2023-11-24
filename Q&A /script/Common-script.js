@@ -193,6 +193,7 @@ fetch(headerUrl)
 // back to top + nav scroll
 const btn = document.querySelector(".back_to_top");
 const html = document.querySelector("html");
+// 버튼이 나타날 스크롤 위치
 let offset;
 let scrollPos;
 let documentHeight;
@@ -204,6 +205,7 @@ if (documentHeight != 0) {
 }
 scrollPos = html.scrollTop;
 
+// 스크롤 방향을 판별하기 위해서 이전 스크롤 위치를 변수에 저장
 let previousScrollPos = 0;
 
 // 스크롤 이벤트

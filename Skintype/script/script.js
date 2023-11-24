@@ -1,5 +1,5 @@
 //SKIN TYPE SECTION
-const skinTypeUrl = "../json/skintype.json";
+const skinTypeUrl = "./json/skintype.json";
 const skinIntro = document.querySelector(".define_skin");
 const skinGridMid = document.querySelector(".mid");
 const skinGridCom = document.querySelector(".com");
@@ -192,7 +192,7 @@ function evaluateResult(userAnswers) {
   }
 }
 
-const skinInfoURL = "../json/resultInfo.json";
+const skinInfoURL = "./json/resultInfo.json";
 const recPage = document.querySelector(".products");
 
 function showResult() {
@@ -483,7 +483,6 @@ function showResult() {
           </div>
         </div>
             `;
-         
         });
 
       });

@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
 });
 
 //=========================== left gnb ==================================
-const headerUrl = "../json/header.json";
+const headerUrl = "./json/header.json";
 fetch(headerUrl)
   .then((response) => response.json())
   .then((json) => {
@@ -246,7 +246,7 @@ queryBtn.addEventListener("click", () => {
 
 // ======================== footer =======================================
 const contents = document.querySelector(".footer_contents");
-const footerUrl = "../json/footer.json";
+const footerUrl = "./json/footer.json";
 
 fetch(footerUrl)
   .then((response) => response.json())
