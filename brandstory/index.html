@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brandstory</title>
+    <title>Brandstory | Aesop</title>
+    <link
+      rel="shortcut icon"
+      href="./img/common/favicon.png"
+      type="image/x-icon"
+    />
     <!-- font awsome -->
     <script
       src="https://kit.fontawesome.com/06975e7be7.js"
@@ -13,56 +18,53 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <!-- 최신 제이쿼리 불러오기 -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <!-- 제이쿼리 구글 CDN -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- 슬릭 슬라이더 CDN -->
     <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
     <!-- custom css -->
-    <link rel="stylesheet" href="../css/brand-style.css" />
-    <script defer src="../script/brand-script.js"></script>
-    <script defer src="../script/Common-script.js"></script>
+    <link rel="stylesheet" href="./css/brand-style.css" />
+    <script defer src="./script/brand-script.js"></script>
+    <script defer src="./script/Common-script.js"></script>
   </head>
   <body>
-    <!-- header & gnbmodal -->
     <header>
       <div class="gift_top"></div>
       <nav>
         <div class="logo">
-          <a href=""><img src="../img/common/logo_black.png" alt="logo" /></a>
+          <a href="https://aesop-home.web.app/">
+            <img src="./img/common/logo_black.png" alt="logo"
+          /></a>
         </div>
         <div class="gnb"></div>
         <div class="gnb_right"></div>
       </nav>
       <div class="qa_nav_list"></div>
     </header>
-       <!-- login -->
-       <aside class="login_modal">
-        <div class="login_inner">
-          <i class="fas fa-xmark"></i>
-          <h1>로그인</h1>
-          <form action="">
-            <input id="login_email" type="email" placeholder="이메일 주소" />
-            <input type="password" type="password" placeholder="비밀번호" />
-            <span>비밀번호 재설정하기</span>
-            <input type="submit" value="로그인" />
-          </form>
-          <h2>회원이 아니신가요?</h2>
-          <p>
-            회원가입을 통해 주문내역을 확인하고 위시리스트에 관심 제품을
-            저장하거나,저장된 정보를 사용하여더 빠른 온라인 결제 경험을 즐기실 수
-            있습니다.
-          </p>
-          <a href="#">회원가입</a>
-        </div>
-      </aside>
-    <!-- gift_top_box 왼쪽 사이드에서 나오는 박스 -->
+    <!— login —>
+    <aside class="login_modal">
+      <div class="login_inner">
+        <i class="fas fa-xmark"></i>
+        <h1>로그인</h1>
+        <form action="">
+          <input id="login_email" type="email" placeholder="이메일 주소" />
+          <input type="password" type="password" placeholder="비밀번호" />
+          <span>비밀번호 재설정하기</span>
+          <input type="submit" value="로그인" />
+        </form>
+        <h2>회원이 아니신가요?</h2>
+        <p>
+          회원가입을 통해 주문내역을 확인하고 위시리스트에 관심 제품을
+          저장하거나,저장된 정보를 사용하여더 빠른 온라인 결제 경험을 즐기실 수
+          있습니다.
+        </p>
+        <a href="#">회원가입</a>
+      </div>
+    </aside>
     <aside>
       <div class="gift_top_box">
         <div>
@@ -91,7 +93,7 @@
     <aside id="mobile_gnb_list">
       <div class="gnb_list_bottom">
         <figure>
-          <img src="../img/common/mobile_nav_img.jpg" alt="" />
+          <img src="./img/common/mobile_nav_img.jpg" alt="" />
         </figure>
         <figcaption>
           <span><a href="">재생목록</a></span>
@@ -106,11 +108,7 @@
           <div class="brand1-up">
             <div class="b1-left">
               <div class="b1-logo">
-                <img
-                  src="../img/common/logo_black.png"
-                  alt="logo"
-                  alt="aesop"
-                />
+                <img src="./img/common/logo_black.png" alt="logo" alt="aesop" />
               </div>
               <div class="story-txt">
                 <span class="bolder">브랜드 스토리</span>
@@ -122,13 +120,13 @@
               </div>
             </div>
             <div class="b1-right">
-              <img src="../img/brandstory/story01.png" alt="story1" />
+              <img src="./img/brandstory/story01.png" alt="story1" />
             </div>
           </div>
           <!-- b1-down -->
           <div class="brand1-down">
             <div class="bd1-left">
-              <img src="../img/brandstory/story02.png" alt="story2" />
+              <img src="./img/brandstory/story02.png" alt="story2" />
             </div>
             <div class="bd1-right">
               <div class="story-txt">
@@ -154,8 +152,8 @@
                 class="story-btn"
               >
                 이솝의 제품철학
-                <img src="../img/icon/arrow_bk.png" />
-                <img src="../img/icon/arrow_gray.png" />
+                <img src="./img/icon/arrow_bk.png" />
+                <img src="./img/icon/arrow_gray.png" />
               </a>
             </div>
           </div>
@@ -175,23 +173,25 @@
                   class="story-btn"
                 >
                   이솝의 디자인 철학
-                  <img src="../img/icon/arrow_bk.png" />
-                  <img src="../img/icon/arrow_gray.png" />
+                  <img src="./img/icon/arrow_bk.png" />
+                  <img src="./img/icon/arrow_gray.png" />
                 </a>
               </div>
             </div>
             <!-- right -->
             <div class="b2-right">
-              <img src="../img/brandstory/story03.png" alt="story4" />
+              <img src="./img/brandstory/story03.png" alt="story4" />
             </div>
           </div>
           <div class="brand2-down">
             <div class="bd2-left">
-              <p>
+              <span class="bolder">
                 새로운 스토어의 장소를 찾을 때 지역과 어울리지 않는 공간이
                 되기보다는, 그 지역의 거리 속 한 구성원으로 조화롭게 가치를
-                더하는 것이 이솝의 진정한 의의입니다.<br />
-                <br />
+                더하는 것이 이솝의 진정한 의의입니다.
+              </span>
+              <br />
+              <p>
                 이솝은 2003년 멜버른 베이사이드 교외의 세인트 킬다의 작은 지하
                 코너에 위치한 스토어에서 첫 고객을 맞이했습니다. 이곳은 지하
                 주차장으로 이어지는 좁은 비탈길에 위치한 작은 스토어였지만,
@@ -206,8 +206,8 @@
                 class="story-btn"
               >
                 이솝 스토어 찾기
-                <img src="../img/icon/arrow_bk.png" />
-                <img src="../img/icon/arrow_gray.png" />
+                <img src="./img/icon/arrow_bk.png" />
+                <img src="./img/icon/arrow_gray.png" />
               </a>
             </div>
             <div class="bd2-right"></div>
@@ -218,16 +218,16 @@
           <div class="b3-center">
             <div class="br-slidercon">
               <div class="br-slide">
-                <img src="../img/brandstory/story1.png" alt="sroty1" />
+                <img src="./img/brandstory/story1.png" alt="sroty1" />
               </div>
               <div class="br-slide">
-                <img src="../img/brandstory/story2.png" alt="sroty2" />
+                <img src="./img/brandstory/story2.png" alt="sroty2" />
               </div>
               <div class="br-slide">
-                <img src="../img/brandstory/stroy3.png" alt="sroty3" />
+                <img src="./img/brandstory/stroy3.png" alt="sroty3" />
               </div>
               <div class="br-slide">
-                <img src="../img/brandstory/story4.png" alt="sroty4" />
+                <img src="./img/brandstory/story4.png" alt="sroty4" />
               </div>
             </div>
             <div class="center-txt">
@@ -249,7 +249,7 @@
     </div>
     <div class="query_version">
       <div class="fixed_side_icon">
-        <img id="query" src="../img/common/ask_button.png" alt="miniBox" />
+        <img id="query" src="./img/common/ask_button.png" alt="miniBox" />
         <a class="back_to_top" href="#">
           <i class="fas fa-angle-up"></i>
         </a>

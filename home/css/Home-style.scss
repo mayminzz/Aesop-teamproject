@@ -18,9 +18,10 @@ $font-size: (
 $font-color: (
   wh: #fff,
   medium: #717171,
-  /*footer 폰트 컬러*/ dark: #383838,
-  /*light 버전 폰트 컬러*/ naklight: #b9ae91,
-  /*이거는 낙영언니 페이지 If the path 폰트  컬러*/ ask: #271100,
+  dark: #383838,
+  naklight: #b9ae91,
+  ask: #271100,
+  gray: #666,
 );
 
 //========= reset ===========
@@ -39,7 +40,7 @@ a {
 }
 
 body {
-  background: url("../img/common/lightback.png") center center; //전체 백그라운드
+  background: url("../img/common/lightback.png") center center;
 }
 // ========= Common SCSS ==========
 .container {
@@ -51,99 +52,6 @@ body {
   }
 }
 
-// 로그인
-.login_modal {
-  display: none;
-}
-.login_modal.loginShow {
-  display: block;
-  width: 600px;
-  height: 700px;
-  background: #e7ddc9;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  z-index: 100;
-  .login_inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 40px;
-    > .fas {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    h1 {
-      font-size: 40px;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-    form {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      input {
-        width: 100%;
-        border: none;
-        outline: none;
-        background: transparent;
-        border-bottom: 1px solid map-get($font-color, gray);
-        padding-bottom: 2px;
-        font-size: map-get($font-size, medium);
-        &:nth-of-type(1) {
-          margin-bottom: 50px;
-        }
-        &::placeholder {
-          font-size: map-get($font-size, medium);
-        }
-      }
-      > span {
-        display: block;
-        text-align: right;
-        margin-bottom: 50px;
-      }
-      input[type="submit"] {
-        border: 1px solid map-get($font-color, gray);
-        padding: 3.2% 0;
-        background: #000;
-        opacity: 1;
-        color: map-get($font-color, wh);
-        &:hover {
-          background: #111;
-          opacity: 0.85;
-        }
-      }
-    }
-    h2 {
-      font-size: map-get($font-size, large);
-      font-weight: normal;
-    }
-    p {
-      font-size: map-get($font-size, base);
-      color: map-get($font-color, gray);
-      line-height: 1.6em;
-    }
-    a {
-      width: 100%;
-      height: 60px;
-      line-height: 60px;
-      text-align: center;
-      border: 1px solid map-get($font-color, gray);
-      &:hover {
-        background: rgba(225, 225, 225, 0.4);
-      }
-    }
-  }
-}
-.login_modal.loginShow .container {
-  position: fixed;
-}
 // ======= header =======
 header {
   width: 100%;
@@ -251,6 +159,99 @@ header {
     }
   }
 }
+// 로그인
+.login_modal {
+  display: none;
+}
+.login_modal.loginShow {
+  display: block;
+  width: 600px;
+  height: 700px;
+  background: #e7ddc9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 100;
+  .login_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+    > .fas {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 1px solid map-get($font-color, gray);
+        padding-bottom: 2px;
+        font-size: map-get($font-size, medium);
+        &:nth-of-type(1) {
+          margin-bottom: 50px;
+        }
+        &::placeholder {
+          font-size: map-get($font-size, medium);
+        }
+      }
+      > span {
+        display: block;
+        text-align: right;
+        margin-bottom: 50px;
+      }
+      input[type="submit"] {
+        border: 1px solid map-get($font-color, gray);
+        padding: 3.2% 0;
+        background: #000;
+        opacity: 1;
+        color: map-get($font-color, wh);
+        &:hover {
+          background: #111;
+          opacity: 0.85;
+        }
+      }
+    }
+    h2 {
+      font-size: map-get($font-size, large);
+      font-weight: normal;
+    }
+    p {
+      font-size: map-get($font-size, base);
+      color: map-get($font-color, gray);
+      line-height: 1.6em;
+    }
+    a {
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border: 1px solid map-get($font-size, gray);
+      &:hover {
+        background: rgba(225, 225, 225, 0.4);
+      }
+    }
+  }
+}
+.login_modal.loginShow .container {
+  position: fixed;
+}
 // back to top
 .back_to_top {
   display: none;
@@ -273,7 +274,32 @@ header {
     color: map-get($font-color, wh);
     font-size: map-get($font-size, xlarge);
   }
-} // cart alarm
+}
+// ======== aside SCSS =========
+aside#mobile_gnb_list {
+  display: none;
+}
+
+#nav_detail_list {
+  display: none;
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  top: 140px;
+  background: #fff;
+  z-index: 1;
+  transition: 0.5s;
+  #contentFrame {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+#nav_detail_list.pc_gnb_show {
+  display: block;
+  height: 500px;
+}
+// cart alarm
 #cart_alarm {
   display: none;
   height: 0px;
@@ -338,7 +364,7 @@ header {
   .mini_ask.show {
     display: block;
     width: 360px;
-    height: 660px;
+    height: 600px;
     position: fixed;
     bottom: 5%;
     right: 8%;
@@ -346,6 +372,13 @@ header {
     color: map-get($font-color, wh);
     opacity: 0.9;
     z-index: 99px;
+    > .fas {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: map-get($font-color, dark);
+      font-size: map-get($font-size, medium);
+    }
     label {
       em {
         color: #f00;
@@ -424,7 +457,7 @@ header {
     span {
       display: block;
       margin-bottom: 10px;
-      font-size: map-get($font-size, medium);
+      font-size: map-get($font-size, large);
     }
 
     &:nth-child(1) {
@@ -492,31 +525,7 @@ header.bgOpacity {
 .container.bgOpacity {
   position: fixed;
 }
-// ========= aside SCSS =========
-#mobile_gnb_list {
-  display: none;
-}
-#nav_detail_list {
-  display: none;
-  width: 100%;
-  height: 0px;
-  position: absolute;
-  top: 140px;
-  background: #fff;
-  z-index: 10;
-  transition: 0.5s;
-  #contentFrame {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
-}
-#nav_detail_list.pc_gnb_show {
-  display: block;
 
-  height: 500px;
-}
-// --------- Main hyunkung  -----------
 // ---------  PC ver  -----------
 main {
   display: flex;
@@ -532,7 +541,7 @@ main {
       position: absolute;
       z-index: 1;
       width: 150px;
-      top: 27%;
+      top: 180px;
       left: 40px;
     }
     > span {
@@ -562,6 +571,7 @@ main {
         object-fit: cover;
         object-position: center;
         position: relative;
+        filter: brightness(0.7);
         &::before {
           content: "";
           width: 100%;
@@ -577,40 +587,46 @@ main {
         top: 50%;
         transform: translateY(-50%);
         left: 15%;
-        > span {
+        span.first_span {
+          font-size: 20px;
           color: map-get($font-color, wh);
-          font-size: map-get($font-size, medium);
+          display: block;
         }
-        p {
+        span.other {
+          margin-top: 20px;
+          font-size: 24px;
           color: map-get($font-color, wh);
-          font-size: map-get($font-size, large);
-          margin: 26px 0 5px 0;
-          span {
-            display: block;
-            font-weight: bold;
-          }
+          display: block;
+        }
+        span.texthome {
+          margin-top: 20px;
+          display: inline-block;
+          font-size: 20px;
+          color: map-get($font-color, wh);
         }
         .logo {
           position: absolute;
           top: 5px;
           left: 0;
           margin-bottom: 23px;
-          a {
-            top: 0;
-            width: 150px;
-          }
         }
+        a {
+          top: 0;
+          width: 150px;
+        }
+        // }
         > a {
           display: block;
-          width: 150px;
+          width: 133px;
           height: 42px;
           text-align: left;
           padding: 10px;
-          margin-top: 24px;
+          margin-top: 30px;
           color: map-get($font-color, wh);
           border: 1px solid #fff;
-          &:hover {
-            border: 1px solid #717171;
+          &::after {
+            content: "";
+            font-family: fontawesome;
           }
         }
       }
@@ -635,38 +651,37 @@ main {
   opacity: 1;
 }
 .slick-prev {
-  border: 1px solid #000;
   position: absolute;
   left: 0;
   top: 50%;
   background: url(../img/icon/arrow_left.png) no-repeat center center;
   transform: translateY(-50%);
-  z-index: 1;
-  width: 25px;
-  height: 72px;
-
+  z-index: 2;
+  width: 80px;
+  height: 100px;
   background-size: 25px 72px;
   opacity: 0.5;
   transition: all 0.2s ease-in;
-  border: 0;
   cursor: pointer;
-  font-size: 0;
+  text-indent: -9999px;
+  border: 0;
 }
 .slick-next {
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
-  z-index: 0;
-  width: 25px;
-  height: 72px;
   background: url("../img/icon/arrow_right.png") no-repeat;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 80px;
+  height: 100px;
   background-size: 25px 72px;
+  background-position: 25px 0px;
   opacity: 0.5;
   transition: all 0.2s ease-in;
-  border: 0;
   cursor: pointer;
-  font-size: 0;
+  text-indent: -9999px;
+  border: 0;
 }
 .best_seller {
   display: flex;
@@ -674,8 +689,8 @@ main {
   .bt_txt {
     p {
       text-decoration: underline;
-      font-size: map-get($map: $font-size, $key: xlarge); //32px
-      color: map-get($map: $font-color, $key: dark); ///#38
+      font-size: map-get($map: $font-size, $key: xlarge);
+      color: map-get($map: $font-color, $key: dark);
     }
   }
   .bt_product {
@@ -695,6 +710,10 @@ main {
       .item {
         padding: 20px;
         margin: 0 auto;
+        transition: all 0.5s;
+        &:hover {
+          transform: scale(1.1);
+        }
         img {
           width: 100%;
           height: 250px;
@@ -706,13 +725,13 @@ main {
         h5 {
           padding: 15px 0 0 0;
           font-weight: bold;
-          font-size: map-get($map: $font-size, $key: base); //16px
-          color: map-get($map: $font-color, $key: dark); ///#38
+          font-size: map-get($map: $font-size, $key: base);
+          color: map-get($map: $font-color, $key: dark);
         }
         span {
           padding: 5px;
-          font-size: map-get($map: $font-size, $key: xsmall); //12px
-          color: map-get($map: $font-color, $key: dark); ///#38
+          font-size: map-get($map: $font-size, $key: xsmall);
+          color: map-get($map: $font-color, $key: dark);
         }
       }
     }
@@ -721,7 +740,7 @@ main {
 
 //section2================================
 .home_page2 {
-  margin-top: 200px; //위 bestseller랑 간격 떨어트림
+  margin-top: 200px;
   .page2_inner {
     .contents {
       video {
@@ -751,14 +770,15 @@ main {
     p {
       font-size: map-get($font-size, medium);
       margin-bottom: 15%;
-      line-height: 1.5em;
+      line-height: 1.7em;
     }
     a {
       display: flex;
       align-items: center;
       width: 60%;
       height: 8%;
-      padding:4% 0 4% 2%;
+      padding: 15px 20px;
+      padding-left: 1%;
       font-size: map-get($font-size, base);
       font-weight: bold;
       color: map-get($font-color, dark);
@@ -776,6 +796,7 @@ main {
   color: map-get($font-color, medium);
   font-weight: bold;
   .quote_text {
+    margin-left: 5%;
     font-size: map-get($font-size, xlarge);
   }
   .quote_person {
@@ -809,7 +830,7 @@ main {
 }
 // *** footer ***
 footer {
-  margin-top: 100px; //
+  margin-top: 100px;
   width: 100%;
   height: 270px;
   background: #222;
@@ -853,38 +874,14 @@ footer {
   .container.removeContainer {
     display: none;
   }
-  .login_modal.loginShow {
-    width: 360px;
-    height: 570px;
-    transform: translate(-50%, -45%);
-    .login_inner {
-      gap: 20px;
-      padding: 30px;
-      h1 {
-        font-size: 30px;
-      }
-      form {
-        gap: 10px;
-        > span {
-          display: block;
-          text-align: right;
-          margin-bottom: 20px;
-        }
-      }
-      p {
-        font-size: map-get($font-size, small);
-        color: map-get($font-color, gray);
-        line-height: 1.3em;
-      }
-    }
-  }
+
   //mini consulting
   .query_version {
     .fixed_side_icon {
       z-index: 99;
     }
     .mini_ask.show {
-      width: 400px;
+      width: 360px;
       height: 570px;
       top: 50%;
       left: 50%;
@@ -982,11 +979,38 @@ footer {
   .gift_top_box.show {
     margin-left: 0%;
   }
+  //login mobile
+  .login_modal.loginShow {
+    width: 360px;
+    height: 570px;
+    transform: translate(-50%, -45%);
+    .login_inner {
+      gap: 20px;
+      padding: 30px;
+      h1 {
+        font-size: 30px;
+      }
+      form {
+        gap: 10px;
+        > span {
+          display: block;
+          text-align: right;
+          margin-bottom: 20px;
+        }
+      }
+      p {
+        font-size: map-get($font-size, small);
+        color: map-get($font-color, gray);
+        line-height: 1.3em;
+      }
+    }
+  }
   // ======== header SCSS ========
   header {
     .gift_top {
       h4 {
-        font-size: 11px;
+        font-size: map-get($font-size, xsmall);
+        text-align: center;
         &::after {
           margin-left: 5px;
         }
@@ -1068,7 +1092,7 @@ footer {
   #nav_detail_list {
     display: none;
   }
-  // ======== aside SCSS =========
+
   #mobile_gnb_list {
     display: none;
     position: absolute;
@@ -1084,7 +1108,7 @@ footer {
     width: 100vw;
     height: 130vh;
     top: 0;
-    z-index: 6;
+    z-index: 8;
     opacity: 1;
     background: #fffef2;
     overflow: hidden;
@@ -1109,7 +1133,6 @@ footer {
         }
       }
     }
-
     .gnb_list_bottom {
       order: 2;
       display: flex;
@@ -1148,11 +1171,10 @@ footer {
       }
       figure {
         order: 2;
-        width: 200%;
+        width: 100%;
         height: 250px;
-        padding-left: 10px;
         img {
-          width: 500px;
+          width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: center;
@@ -1190,6 +1212,27 @@ footer {
       }
     }
   }
+  .page1_inner {
+    .aesop {
+      margin-top: 4%;
+    }
+    .banner_heading {
+      margin: 10% 12% 0 0;
+      span.first_span {
+        font-size: 24px;
+      }
+      span.other {
+        font-size: 20px;
+        padding: 10px 0;
+        display: block;
+      }
+      span.texthome {
+        font-size: 15px;
+        display: inline-block;
+        margin-bottom: 10%;
+      }
+    }
+  }
   //=============section Scss==
 
   .contents {
@@ -1221,8 +1264,8 @@ footer {
     .bt_txt {
       p {
         text-decoration: underline;
-        font-size: map-get($map: $font-size, $key: xlarge); //32px
-        color: map-get($map: $font-color, $key: dark); ///#38
+        font-size: map-get($map: $font-size, $key: xlarge);
+        color: map-get($map: $font-color, $key: dark);
       }
     }
     .bt_product {
@@ -1251,14 +1294,13 @@ footer {
           h5 {
             padding: 15px 0 0 0;
             font-weight: bold;
-            font-size: map-get($map: $font-size, $key: base); //16px
-            color: map-get($map: $font-color, $key: dark); ///#38
+            font-size: map-get($map: $font-size, $key: base);
+            color: map-get($map: $font-color, $key: dark);
           }
           span {
             padding: 5px;
-            font-size: map-get($map: $font-size, $key: xsmall); //12px
-            color: map-get($map: $font-color, $key: dark); ///#38
-            border: 1px solid #f00;
+            font-size: map-get($map: $font-size, $key: xsmall);
+            color: map-get($map: $font-color, $key: dark);
           }
         }
       }
@@ -1273,6 +1315,7 @@ footer {
     text-align: center;
     .quote_text {
       font-size: map-get($font-size, base);
+      margin-left: 10%;
     }
     .quote_person {
       margin-top: 5px;
@@ -1357,116 +1400,115 @@ footer {
       }
     }
   }
-}
 
-// ta ======================
-
-//sec2======================================
-@media all and (min-width: 768px) and (max-width: 960px) {
-  .login_modal.loginShow {
-    width: 550px;
-    height: 700px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .home_page2 {
-    margin-top: 200px;
-    .page2_inner {
-      .contents {
-        flex-direction: column;
-        video {
-          width: 100%;
-          height: 100%;
-        }
-        .content_text {
-          margin-top: 5%;
-        }
-        p {
-          margin-bottom: 2%;
-        }
-        a {
-          margin-top: 5%;
-          width: 30%;
-          font-size: 18px;
-        }
-      }
-      .quotation {
-        .quote_text {
-          font-size: map-get($font-size, medium);
-          margin-bottom: 10px;
-        }
-        .quote_person {
-          font-size: map-get($font-size, base);
-        }
-      }
+  //sec2======================================tablet
+  @media all and (min-width: 768px) and (max-width: 960px) {
+    // login
+    .login_modal.loginShow {
+      width: 550px;
+      height: 700px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-  }
-
-  //sec3======================================
-  .home_page3 {
-    margin-top: 200px;
-    .page3_inner {
-      .contents {
-        flex-direction: column;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-        .content_text {
-          margin-top: 5%;
-        }
-        p {
-          margin-bottom: 2%;
-        }
-        a {
-          margin-top: 5%;
-          margin-bottom: 10%;
-          width: 30%;
-          font-size: 18px;
-        }
-      }
-      .quotation {
-        .quote_text {
-          font-size: map-get($font-size, medium);
-          margin-bottom: 10px;
-        }
-        .quote_person {
-          font-size: map-get($font-size, base);
-        }
-      }
-    }
-  }
-
-  //sec4======================================
-  .home_page4 {
-    margin-top: 200px;
-    .page4_inner {
-      .contents {
-        flex-direction: column;
-        video {
-          width: 100%;
-          height: 100%;
-        }
-        .content_text {
-          margin-top: 5%;
-        }
-        p {
-          margin-bottom: 2%;
-        }
-        a {
-          margin-top: 5%;
-          width: 30%;
-          font-size: 18px;
+    .container {
+      .home_page2 {
+        margin-top: 200px;
+        .page2_inner {
+          .contents {
+            flex-direction: column;
+            video {
+              width: 100%;
+              height: 100%;
+            }
+            .content_text {
+              margin-top: 5%;
+            }
+            p {
+              margin-bottom: 2%;
+            }
+            a {
+              margin-top: 5%;
+              width: 30%;
+              font-size: 18px;
+            }
+          }
+          .quotation {
+            .quote_text {
+              font-size: map-get($font-size, medium);
+              margin-bottom: 10px;
+            }
+            .quote_person {
+              font-size: map-get($font-size, base);
+            }
+          }
         }
       }
-      .quotation {
-        .quote_text {
-          font-size: map-get($font-size, medium);
-          margin-bottom: 10px;
+      //sec3======================================
+      .home_page3 {
+        margin-top: 200px;
+        .page3_inner {
+          .contents {
+            flex-direction: column;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+            .content_text {
+              margin-top: 5%;
+            }
+            p {
+              margin-bottom: 2%;
+            }
+            a {
+              margin-top: 5%;
+              margin-bottom: 10%;
+              width: 30%;
+              font-size: 18px;
+            }
+          }
+          .quotation {
+            .quote_text {
+              font-size: map-get($font-size, medium);
+              margin-bottom: 10px;
+            }
+            .quote_person {
+              font-size: map-get($font-size, base);
+            }
+          }
         }
-        .quote_person {
-          font-size: map-get($font-size, base);
+      }
+      //sec4======================================
+      .home_page4 {
+        margin-top: 200px;
+        .page4_inner {
+          .contents {
+            flex-direction: column;
+            video {
+              width: 100%;
+              height: 100%;
+            }
+            .content_text {
+              margin-top: 5%;
+            }
+            p {
+              margin-bottom: 2%;
+            }
+            a {
+              margin-top: 5%;
+              width: 30%;
+              font-size: 18px;
+            }
+          }
+          .quotation {
+            .quote_text {
+              font-size: map-get($font-size, medium);
+              margin-bottom: 10px;
+            }
+            .quote_person {
+              font-size: map-get($font-size, base);
+            }
+          }
         }
       }
     }

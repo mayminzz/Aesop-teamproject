@@ -6,7 +6,6 @@
   font-family: Medium;
   src: url("/home_last/font/SuisseIntl-Medium-WebS.5ee1ad41.woff2");
 }
-/*mapget*/
 * {
   margin: 0;
   padding: 0;
@@ -33,102 +32,6 @@ body {
 .container section {
   width: 100%;
   height: auto;
-}
-
-.login_modal {
-  display: none;
-}
-
-.login_modal.loginShow {
-  display: block;
-  width: 600px;
-  height: 700px;
-  background: #e7ddc9;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  z-index: 100;
-}
-.login_modal.loginShow .login_inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  padding: 40px;
-}
-.login_modal.loginShow .login_inner > .fas {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-}
-.login_modal.loginShow .login_inner h1 {
-  font-size: 40px;
-  font-weight: normal;
-  margin-bottom: 20px;
-}
-.login_modal.loginShow .login_inner form {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.login_modal.loginShow .login_inner form input {
-  width: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-  border-bottom: 1px solid;
-  padding-bottom: 2px;
-  font-size: 20px;
-}
-.login_modal.loginShow .login_inner form input:nth-of-type(1) {
-  margin-bottom: 50px;
-}
-.login_modal.loginShow .login_inner form input::-moz-placeholder {
-  font-size: 20px;
-}
-.login_modal.loginShow .login_inner form input::placeholder {
-  font-size: 20px;
-}
-.login_modal.loginShow .login_inner form > span {
-  display: block;
-  text-align: right;
-  margin-bottom: 50px;
-}
-.login_modal.loginShow .login_inner form input[type=submit] {
-  padding: 3.2% 0;
-  background: #000;
-  opacity: 1;
-  color: #fff;
-}
-.login_modal.loginShow .login_inner form input[type=submit]:hover {
-  background: #111;
-  opacity: 0.85;
-}
-.login_modal.loginShow .login_inner h2 {
-  font-size: 24px;
-  font-weight: normal;
-}
-.login_modal.loginShow .login_inner p {
-  font-size: 16px;
-  line-height: 1.6em;
-}
-.login_modal.loginShow .login_inner a {
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  border: 1px solid;
-}
-.login_modal.loginShow .login_inner a:hover {
-  background: rgba(225, 225, 225, 0.4);
-}
-
-.login_modal.loginShow .container {
-  position: fixed;
 }
 
 #cart_alarm {
@@ -193,8 +96,8 @@ body {
 }
 .query_version .mini_ask.show {
   display: block;
-  width: 20%;
-  height: 60%;
+  width: 360px;
+  height: 660px;
   position: fixed;
   bottom: 5%;
   right: 8%;
@@ -364,6 +267,104 @@ header nav header.scrollEffect .gift_top {
   display: none;
 }
 
+.login_modal {
+  display: none;
+}
+
+.login_modal.loginShow {
+  display: block;
+  width: 600px;
+  height: 700px;
+  background: #e7ddc9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 100;
+}
+.login_modal.loginShow .login_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px;
+}
+.login_modal.loginShow .login_inner > .fas {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.login_modal.loginShow .login_inner h1 {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.login_modal.loginShow .login_inner form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login_modal.loginShow .login_inner form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #666;
+  padding-bottom: 2px;
+  font-size: 20px;
+}
+.login_modal.loginShow .login_inner form input:nth-of-type(1) {
+  margin-bottom: 50px;
+}
+.login_modal.loginShow .login_inner form input::-moz-placeholder {
+  font-size: 20px;
+}
+.login_modal.loginShow .login_inner form input::placeholder {
+  font-size: 20px;
+}
+.login_modal.loginShow .login_inner form > span {
+  display: block;
+  text-align: right;
+  margin-bottom: 50px;
+}
+.login_modal.loginShow .login_inner form input[type=submit] {
+  border: 1px solid #666;
+  padding: 3.2% 0;
+  background: #000;
+  opacity: 1;
+  color: #fff;
+}
+.login_modal.loginShow .login_inner form input[type=submit]:hover {
+  background: #111;
+  opacity: 0.85;
+}
+.login_modal.loginShow .login_inner h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+.login_modal.loginShow .login_inner p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6em;
+}
+.login_modal.loginShow .login_inner a {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid;
+}
+.login_modal.loginShow .login_inner a:hover {
+  background: rgba(225, 225, 225, 0.4);
+}
+
+.login_modal.loginShow .container {
+  position: fixed;
+}
+
 .back_to_top {
   display: none;
   opacity: 0.4;
@@ -424,14 +425,6 @@ header nav header.scrollEffect .gift_top {
     height: 0;
   }
 }
-.login_modal.loginShow {
-  width: 550px;
-  height: 700px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .query_version {
   position: fixed;
   width: 100%;
@@ -742,7 +735,14 @@ header.bgOpacity::before {
 #brand-page2 .brand2-down .bd2-left br {
   display: block;
 }
+#brand-page2 .brand2-down .bd2-left span.bolder {
+  display: block;
+  margin-top: 0;
+  font-size: 24px;
+  color: #383838;
+}
 #brand-page2 .brand2-down .bd2-left p {
+  line-height: 1.7em;
   font-size: 20px;
   color: #383838;
 }
@@ -796,12 +796,13 @@ header.bgOpacity::before {
   transform: translateY(-50%);
   width: 27px;
   height: 76px;
-  background: url(/brandstory/img/icon/arrow_left.png) no-repeat center center;
+  background: url("../img/icon/arrow_left.png") no-repeat center center;
   cursor: pointer;
   opacity: 0.6;
 }
 #brand-page3 .b3-center .br-slidercon .slick-prev:hover {
   opacity: 1;
+  background: #8d8d8d;
 }
 #brand-page3 .b3-center .br-slidercon .slick-next {
   font-size: 0;
@@ -813,7 +814,7 @@ header.bgOpacity::before {
   transform: translateY(-50%);
   width: 27px;
   height: 76px;
-  background: url(/brandstory/img/icon/arrow_right.png) no-repeat center center;
+  background: url("../img/icon/arrow_right.png") no-repeat center center;
   cursor: pointer;
   opacity: 0.6;
 }
@@ -925,35 +926,11 @@ footer .footer_inner .footer_contents .footer_content p span {
   .container.removeContainer {
     display: none;
   }
-  .login_modal.loginShow {
-    width: 360px;
-    height: 570px;
-    transform: translate(-50%, -45%);
-  }
-  .login_modal.loginShow .login_inner {
-    gap: 20px;
-    padding: 30px;
-  }
-  .login_modal.loginShow .login_inner h1 {
-    font-size: 30px;
-  }
-  .login_modal.loginShow .login_inner form {
-    gap: 10px;
-  }
-  .login_modal.loginShow .login_inner form > span {
-    display: block;
-    text-align: right;
-    margin-bottom: 20px;
-  }
-  .login_modal.loginShow .login_inner p {
-    font-size: 14px;
-    line-height: 1.3em;
-  }
   .query_version .fixed_side_icon {
     z-index: 99;
   }
   .query_version .mini_ask.show {
-    width: 400px;
+    width: 360px;
     height: 570px;
     top: 50%;
     left: 50%;
@@ -1044,8 +1021,34 @@ footer .footer_inner .footer_contents .footer_content p span {
   .gift_top_box.show {
     margin-left: 0%;
   }
+  .login_modal.loginShow {
+    width: 360px;
+    height: 570px;
+    transform: translate(-50%, -45%);
+  }
+  .login_modal.loginShow .login_inner {
+    gap: 20px;
+    padding: 30px;
+  }
+  .login_modal.loginShow .login_inner h1 {
+    font-size: 30px;
+  }
+  .login_modal.loginShow .login_inner form {
+    gap: 10px;
+  }
+  .login_modal.loginShow .login_inner form > span {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .login_modal.loginShow .login_inner p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.3em;
+  }
   header .gift_top h4 {
-    font-size: 11px;
+    font-size: 12px;
+    text-align: center;
   }
   header .gift_top h4::after {
     margin-left: 5px;
@@ -1132,7 +1135,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     width: 100vw;
     height: 130vh;
     top: 0;
-    z-index: 6;
+    z-index: 8;
     opacity: 1;
     background: #fffef2;
     overflow: hidden;
@@ -1180,6 +1183,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   #mobile_gnb_list.showModalGnb .gnb_list_bottom .modal_bottom_mini_list > li > a {
     position: relative;
     font-size: 20px;
+    color: #666;
   }
   #mobile_gnb_list.showModalGnb .gnb_list_bottom .modal_bottom_mini_list > li > a::before {
     content: "";
@@ -1196,12 +1200,11 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   #mobile_gnb_list.showModalGnb .gnb_list_bottom figure {
     order: 2;
-    width: 200%;
+    width: 100%;
     height: 250px;
-    padding-left: 10px;
   }
   #mobile_gnb_list.showModalGnb .gnb_list_bottom figure img {
-    width: 500px;
+    width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1218,6 +1221,7 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   #mobile_gnb_list.showModalGnb .gnb_list_bottom figcaption span a {
     font-size: 20px;
+    color: #666;
   }
   #mobile_gnb_list.showModalGnb .gnb_list_bottom figcaption h3 {
     font-size: 24px;
@@ -1534,7 +1538,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     transform: translateY(-50%);
     width: 20px;
     height: 50px;
-    background: url(/brandstory/img/icon/arrow_left.png) no-repeat center center;
+    background: url("../img/icon/arrow_left.png") no-repeat center center;
     cursor: pointer;
     opacity: 0.6;
   }
@@ -1551,7 +1555,7 @@ footer .footer_inner .footer_contents .footer_content p span {
     transform: translateY(-50%);
     width: 20px;
     height: 50px;
-    background: url(/brandstory/img/icon/arrow_right.png) no-repeat center center;
+    background: url("../img/icon/arrow_right.png") no-repeat center center;
     cursor: pointer;
     opacity: 0.6;
   }
@@ -1671,6 +1675,13 @@ footer .footer_inner .footer_contents .footer_content p span {
   header nav .gnb_right .active span:nth-child(2) {
     transform: rotate(-45deg);
     top: 50%;
+  }
+  .login_modal.loginShow {
+    width: 550px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   main {
     display: flex;

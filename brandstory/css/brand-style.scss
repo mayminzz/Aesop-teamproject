@@ -7,7 +7,6 @@
   src: url("/home_last/font/SuisseIntl-Medium-WebS.5ee1ad41.woff2");
 }
 
-/*mapget*/
 $font-size: (
   xsmall: 12px,
   small: 14px,
@@ -23,6 +22,7 @@ $font-color: (
   naklight: #b9ae91,
   quotation: #717171,
   ask: #271100,
+  gray: #666,
 );
 $background-color: (
   lightback: #222,
@@ -52,99 +52,6 @@ body {
     width: 100%;
     height: auto;
   }
-}
-
-// 로그인
-.login_modal {
-  display: none;
-}
-.login_modal.loginShow {
-  display: block;
-  width: 600px;
-  height: 700px;
-  background: #e7ddc9;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -45%);
-  z-index: 100;
-  .login_inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 40px;
-    > .fas {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-    }
-    h1 {
-      font-size: 40px;
-      font-weight: normal;
-      margin-bottom: 20px;
-    }
-    form {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      input {
-        width: 100%;
-        border: none;
-        outline: none;
-        background: transparent;
-        border-bottom: 1px solid map-get($font-color, gray);
-        padding-bottom: 2px;
-        font-size: map-get($font-size, medium);
-        &:nth-of-type(1) {
-          margin-bottom: 50px;
-        }
-        &::placeholder {
-          font-size: map-get($font-size, medium);
-        }
-      }
-      > span {
-        display: block;
-        text-align: right;
-        margin-bottom: 50px;
-      }
-      input[type="submit"] {
-        padding: 3.2% 0;
-        background: #000;
-        opacity: 1;
-        color: map-get($font-color, wh);
-        &:hover {
-          background: #111;
-          opacity: 0.85;
-        }
-      }
-    }
-    h2 {
-      font-size: map-get($font-size, large);
-      font-weight: normal;
-    }
-    p {
-      font-size: map-get($font-size, base);
-      color: map-get($font-color, gray);
-      line-height: 1.6em;
-    }
-    a {
-      width: 100%;
-      height: 60px;
-      line-height: 60px;
-      text-align: center;
-      border: 1px solid map-get($font-color, gray);
-      &:hover {
-        background: rgba(225, 225, 225, 0.4);
-      }
-    }
-  }
-}
-.login_modal.loginShow .container {
-  position: fixed;
 }
 // cart
 #cart_alarm {
@@ -181,7 +88,6 @@ body {
     height: 0;
   }
 }
-//mini consulting
 .query_version {
   position: fixed;
   width: 100%;
@@ -208,8 +114,8 @@ body {
 
   .mini_ask.show {
     display: block;
-    width: 20%;
-    height: 60%;
+    width: 360px;
+    height: 660px;
     position: fixed;
     bottom: 5%;
     right: 8%;
@@ -378,7 +284,99 @@ header {
     }
   }
 }
-
+// 로그인
+.login_modal {
+  display: none;
+}
+.login_modal.loginShow {
+  display: block;
+  width: 600px;
+  height: 700px;
+  background: #e7ddc9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  z-index: 100;
+  .login_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px;
+    > .fas {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    h1 {
+      font-size: 40px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: transparent;
+        border-bottom: 1px solid map-get($font-color, gray);
+        padding-bottom: 2px;
+        font-size: map-get($font-size, medium);
+        &:nth-of-type(1) {
+          margin-bottom: 50px;
+        }
+        &::placeholder {
+          font-size: map-get($font-size, medium);
+        }
+      }
+      > span {
+        display: block;
+        text-align: right;
+        margin-bottom: 50px;
+      }
+      input[type="submit"] {
+        border: 1px solid map-get($font-color, gray);
+        padding: 3.2% 0;
+        background: #000;
+        opacity: 1;
+        color: map-get($font-color, wh);
+        &:hover {
+          background: #111;
+          opacity: 0.85;
+        }
+      }
+    }
+    h2 {
+      font-size: map-get($font-size, large);
+      font-weight: normal;
+    }
+    p {
+      font-size: map-get($font-size, base);
+      color: map-get($font-color, gray);
+      line-height: 1.6em;
+    }
+    a {
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border: 1px solid map-get($font-size, gray);
+      &:hover {
+        background: rgba(225, 225, 225, 0.4);
+      }
+    }
+  }
+}
+.login_modal.loginShow .container {
+  position: fixed;
+}
 // back to top
 .back_to_top {
   display: none;
@@ -401,7 +399,7 @@ header {
     color: map-get($font-color, wh);
     font-size: map-get($font-size, xlarge);
   }
-} // cart alarm
+}
 #cart_alarm {
   display: none;
   height: 0px;
@@ -438,16 +436,6 @@ header {
   }
 }
 
-// login
-.login_modal.loginShow {
-  width: 550px;
-  height: 700px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-//mini consulting
 .query_version {
   position: fixed;
   width: 100%;
@@ -537,7 +525,7 @@ header {
     }
   }
 }
-// giftTop
+
 .gift_top_box {
   overflow-y: auto;
   position: fixed;
@@ -674,8 +662,8 @@ header.bgOpacity {
   }
   .b1-logo {
     img {
-      width: 8.13em; //130px
-      height: 2.81em; //45px
+      width: 8.13em;
+      height: 2.81em;
     }
   }
   .story-txt {
@@ -683,11 +671,11 @@ header.bgOpacity {
       display: block;
       margin: 35px 0;
       // map-gat
-      font-size: map-get($map: $font-size, $key: large); //24px
+      font-size: map-get($map: $font-size, $key: large);
       color: map-get($map: $font-color, $key: dark);
     }
     p {
-      font-size: map-get($map: $font-size, $key: medium); //20px
+      font-size: map-get($map: $font-size, $key: medium);
       color: map-get($map: $font-color, $key: dark);
       line-height: 2rem;
     }
@@ -696,7 +684,6 @@ header.bgOpacity {
     width: 50%;
     img {
       width: 100%;
-      // height: 351px;
     }
   }
   .brand1-down {
@@ -718,12 +705,11 @@ header.bgOpacity {
         span.bolder {
           display: block;
           margin-top: 0;
-          // map-gat
-          font-size: map-get($map: $font-size, $key: large); //24px
+          font-size: map-get($map: $font-size, $key: large);
           color: map-get($map: $font-color, $key: dark);
         }
         p {
-          font-size: map-get($map: $font-size, $key: medium); //20px
+          font-size: map-get($map: $font-size, $key: medium);
           color: map-get($map: $font-color, $key: dark);
         }
       }
@@ -745,7 +731,7 @@ header.bgOpacity {
       width: 30%;
       .story-txt {
         margin-bottom: 35px;
-        font-size: map-get($map: $font-size, $key: large); //24px
+        font-size: map-get($map: $font-size, $key: large);
         color: map-get($map: $font-color, $key: dark);
       }
     }
@@ -768,12 +754,20 @@ header.bgOpacity {
       }
       width: 60%;
       margin-bottom: 35px;
+      span.bolder {
+        display: block;
+        margin-top: 0;
+        font-size: map-get($map: $font-size, $key: large);
+        color: map-get($map: $font-color, $key: dark);
+      }
       p {
-        font-size: map-get($map: $font-size, $key: medium); //20px medium
+        line-height: 1.7em;
+        font-size: map-get($map: $font-size, $key: medium);
         color: map-get($map: $font-color, $key: dark);
       }
     }
   }
+
   .bd2-right {
     width: 40%;
     margin-left: 181px;
@@ -811,7 +805,7 @@ header.bgOpacity {
           object-fit: cover;
         }
       }
-      // slick btn
+      // Slick Slider
       .slick-prev {
         font-size: 0;
         border: none;
@@ -822,12 +816,12 @@ header.bgOpacity {
         transform: translateY(-50%);
         width: 27px;
         height: 76px;
-        background: url(/brandstory/img/icon/arrow_left.png) no-repeat center
-          center;
+        background: url("../img/icon/arrow_left.png") no-repeat center center;
         cursor: pointer;
         opacity: 0.6;
         &:hover {
           opacity: 1;
+          background: #8d8d8d;
         }
       }
       .slick-next {
@@ -840,8 +834,7 @@ header.bgOpacity {
         transform: translateY(-50%);
         width: 27px;
         height: 76px;
-        background: url(/brandstory/img/icon/arrow_right.png) no-repeat center
-          center;
+        background: url("../img/icon/arrow_right.png") no-repeat center center;
         cursor: pointer;
         opacity: 0.6;
         &:hover {
@@ -890,10 +883,10 @@ header.bgOpacity {
 .story-btn {
   width: 209px;
   height: 40px;
-  border: 1px solid map-get($map: $font-color, $key: dark); //#383838
+  border: 1px solid map-get($map: $font-color, $key: dark);
   color: black;
   margin-top: 167px;
-  font-size: map-get($map: $font-size, $key: base); //16px
+  font-size: map-get($map: $font-size, $key: base);
   background-color: transparent;
   font-weight: bold;
   display: flex;
@@ -901,7 +894,6 @@ header.bgOpacity {
   justify-content: space-between;
   padding: 20px 10px;
   cursor: pointer;
-  // 버튼 오버효과
   &:hover {
     :nth-child(1) {
       display: none;
@@ -963,32 +955,6 @@ footer {
   .container.removeContainer {
     display: none;
   }
-  // login
-  .login_modal.loginShow {
-    width: 360px;
-    height: 570px;
-    transform: translate(-50%, -45%);
-    .login_inner {
-      gap: 20px;
-      padding: 30px;
-      h1 {
-        font-size: 30px;
-      }
-      form {
-        gap: 10px;
-        > span {
-          display: block;
-          text-align: right;
-          margin-bottom: 20px;
-        }
-      }
-      p {
-        font-size: map-get($font-size, small);
-        color: map-get($font-color, gray);
-        line-height: 1.3em;
-      }
-    }
-  }
 
   //mini consulting
   .query_version {
@@ -996,7 +962,7 @@ footer {
       z-index: 99;
     }
     .mini_ask.show {
-      width: 400px;
+      width: 360px;
       height: 570px;
       top: 50%;
       left: 50%;
@@ -1020,7 +986,6 @@ footer {
       }
     }
   }
-  // giftTop
   .gift_top_box {
     position: absolute;
     top: 0;
@@ -1094,11 +1059,39 @@ footer {
   .gift_top_box.show {
     margin-left: 0%;
   }
+
+  //login mobile
+  .login_modal.loginShow {
+    width: 360px;
+    height: 570px;
+    transform: translate(-50%, -45%);
+    .login_inner {
+      gap: 20px;
+      padding: 30px;
+      h1 {
+        font-size: 30px;
+      }
+      form {
+        gap: 10px;
+        > span {
+          display: block;
+          text-align: right;
+          margin-bottom: 20px;
+        }
+      }
+      p {
+        font-size: map-get($font-size, small);
+        color: map-get($font-color, gray);
+        line-height: 1.3em;
+      }
+    }
+  }
   // ======== header SCSS ========
   header {
     .gift_top {
       h4 {
-        font-size: 11px;
+        font-size: map-get($font-size, xsmall);
+        text-align: center;
         &::after {
           margin-left: 5px;
         }
@@ -1179,7 +1172,7 @@ footer {
   #nav_detail_list {
     display: none;
   }
-  // ======== aside SCSS =========
+
   #mobile_gnb_list {
     display: none;
     position: absolute;
@@ -1195,7 +1188,7 @@ footer {
     width: 100vw;
     height: 130vh;
     top: 0;
-    z-index: 6;
+    z-index: 8;
     opacity: 1;
     background: #fffef2;
     overflow: hidden;
@@ -1259,11 +1252,10 @@ footer {
       }
       figure {
         order: 2;
-        width: 200%;
+        width: 100%;
         height: 250px;
-        padding-left: 10px;
         img {
-          width: 500px;
+          width: 100%;
           height: 100%;
           object-fit: cover;
           object-position: center;
@@ -1416,8 +1408,8 @@ footer {
       }
       .b1-logo {
         img {
-          width: 8.13em; //130px
-          height: 2.81em; //45px
+          width: 8.13em;
+          height: 2.81em;
         }
       }
       .story-txt {
@@ -1426,11 +1418,11 @@ footer {
         span.bolder {
           display: block;
           margin: 35px 0;
-          font-size: map-get($map: $font-size, $key: large); //24px
+          font-size: map-get($map: $font-size, $key: large);
           color: map-get($map: $font-color, $key: dark);
         }
         p {
-          font-size: map-get($map: $font-size, $key: base); //16px
+          font-size: map-get($map: $font-size, $key: base);
           color: map-get($map: $font-color, $key: dark);
           br {
             display: none;
@@ -1471,21 +1463,21 @@ footer {
           margin-top: 20px;
           span.bolder {
             display: block;
-            font-size: map-get($map: $font-size, $key: large); //24px
+            font-size: map-get($map: $font-size, $key: large);
             color: map-get($map: $font-color, $key: dark);
           }
           p {
             line-height: 1.7em;
-            font-size: map-get($map: $font-size, $key: base); //16px
+            font-size: map-get($map: $font-size, $key: base);
             color: map-get($map: $font-color, $key: dark);
           }
         }
         button.story-btn {
           width: 100%;
           height: 60px;
-          border: 1px solid map-get($map: $font-color, $key: dark); //#383838
+          border: 1px solid map-get($map: $font-color, $key: dark);
           margin-top: 30px;
-          font-size: map-get($map: $font-size, $key: base); //16px
+          font-size: map-get($map: $font-size, $key: base);
           background-color: transparent;
           font-weight: bold;
           display: flex;
@@ -1507,7 +1499,7 @@ footer {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-left: 0px; //40px
+      margin-left: 0px;
       .b2-left {
         width: 100%;
         margin-top: 100px;
@@ -1519,15 +1511,15 @@ footer {
           }
           p {
             line-height: 1.5em;
-            font-size: map-get($map: $font-size, $key: large); //24px
+            font-size: map-get($map: $font-size, $key: large);
             color: map-get($map: $font-color, $key: dark);
           }
           button.story-btn {
             width: 100%;
             height: 60px;
-            border: 1px solid map-get($map: $font-color, $key: dark); //#383838
+            border: 1px solid map-get($map: $font-color, $key: dark);
             margin-top: 60px;
-            font-size: map-get($map: $font-size, $key: base); //16px
+            font-size: map-get($map: $font-size, $key: base);
             background-color: transparent;
             font-weight: bold;
             display: flex;
@@ -1559,15 +1551,15 @@ footer {
         margin-top: 60px;
         p {
           line-height: 1.7em;
-          font-size: map-get($map: $font-size, $key: base); //16px
+          font-size: map-get($map: $font-size, $key: base);
           color: map-get($map: $font-color, $key: dark);
         }
         button.story-btn {
           width: 100%;
           height: 60px;
-          border: 1px solid map-get($map: $font-color, $key: dark); //#383838
+          border: 1px solid map-get($map: $font-color, $key: dark);
           margin-top: 50px;
-          font-size: map-get($map: $font-size, $key: base); //16px
+          font-size: map-get($map: $font-size, $key: base);
           background-color: transparent;
           font-weight: bold;
           display: flex;
@@ -1598,7 +1590,7 @@ footer {
             height: 300px;
           }
         }
-        // slick btn
+        // Slick Slider
         .slick-prev {
           font-size: 0;
           border: none;
@@ -1609,8 +1601,7 @@ footer {
           transform: translateY(-50%);
           width: 20px;
           height: 50px;
-          background: url(/brandstory/img/icon/arrow_left.png) no-repeat center
-            center;
+          background: url("../img/icon/arrow_left.png") no-repeat center center;
           cursor: pointer;
           opacity: 0.6;
           &:hover {
@@ -1627,8 +1618,7 @@ footer {
           transform: translateY(-50%);
           width: 20px;
           height: 50px;
-          background: url(/brandstory/img/icon/arrow_right.png) no-repeat center
-            center;
+          background: url("../img/icon/arrow_right.png") no-repeat center center;
           cursor: pointer;
           opacity: 0.6;
           &:hover {
@@ -1660,7 +1650,7 @@ footer {
     font-weight: bold;
     text-align: center;
     p.b-top {
-      font-size: map-get($map: $font-size, $key: large); //24px
+      font-size: map-get($map: $font-size, $key: large);
       color: map-get($map: $font-color, $key: medium);
       span {
         color: map-get($map: $font-color, $key: naklight);
@@ -1668,7 +1658,7 @@ footer {
       margin: 0px 0px 20px;
     }
     p.b-under {
-      font-size: map-get($map: $font-size, $key: base); //16px
+      font-size: map-get($map: $font-size, $key: base);
       color: map-get($map: $font-color, $key: medium);
     }
   }
@@ -1762,6 +1752,14 @@ footer {
         }
       }
     }
+  }
+  // login
+  .login_modal.loginShow {
+    width: 550px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   main {
     display: flex;
@@ -1883,8 +1881,8 @@ footer {
     }
     .b1-logo {
       img {
-        width: 8.13em; //130px
-        height: 2.81em; //45px
+        width: 8.13em;
+        height: 2.81em;
       }
     }
     .story-txt {
@@ -1893,11 +1891,11 @@ footer {
       span.bolder {
         display: block;
         margin: 35px 0;
-        font-size: map-get($map: $font-size, $key: large); //24px
+        font-size: map-get($map: $font-size, $key: large);
         color: map-get($map: $font-color, $key: dark);
       }
       p {
-        font-size: map-get($map: $font-size, $key: base); //16px
+        font-size: map-get($map: $font-size, $key: base);
         color: map-get($map: $font-color, $key: dark);
       }
     }
@@ -1937,9 +1935,9 @@ footer {
           width: 50%;
           height: 60px;
           padding: 10px;
-          border: 1px solid map-get($map: $font-color, $key: dark); //#383838
+          border: 1px solid map-get($map: $font-color, $key: dark);
           margin-top: 30px;
-          font-size: map-get($map: $font-size, $key: small); //14px
+          font-size: map-get($map: $font-size, $key: small);
           background-color: transparent;
           font-weight: bold;
           display: flex;
@@ -1961,7 +1959,7 @@ footer {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-left: 0px; //40px
+      margin-left: 0px;
       .b2-left {
         width: 100%;
         margin-top: 100px;
@@ -1973,15 +1971,15 @@ footer {
             br {
               display: none;
             }
-            font-size: map-get($map: $font-size, $key: xlarge); //32px
+            font-size: map-get($map: $font-size, $key: xlarge);
             color: map-get($map: $font-color, $key: dark);
           }
           button.story-btn {
             width: 50%;
             height: 60px;
-            border: 1px solid map-get($map: $font-color, $key: dark); //#383838
+            border: 1px solid map-get($map: $font-color, $key: dark);
             margin-top: 30px;
-            font-size: map-get($map: $font-size, $key: small); //14px
+            font-size: map-get($map: $font-size, $key: small);
             background-color: transparent;
             font-weight: bold;
             display: flex;
@@ -2011,15 +2009,15 @@ footer {
         width: 100%;
         margin-top: 60px;
         p {
-          font-size: map-get($map: $font-size, $key: base); //16px 하하
+          font-size: map-get($map: $font-size, $key: base);
           color: map-get($map: $font-color, $key: dark);
         }
         button.story-btn {
           width: 50%;
           height: 60px;
-          border: 1px solid map-get($map: $font-color, $key: dark); //#383838
+          border: 1px solid map-get($map: $font-color, $key: dark);
           margin-top: 30px;
-          font-size: map-get($map: $font-size, $key: small); //14px
+          font-size: map-get($map: $font-size, $key: small);
           background-color: transparent;
           font-weight: bold;
           display: flex;
@@ -2086,7 +2084,7 @@ footer {
       margin: 130px 0;
       p.b-top {
         padding-bottom: 30px;
-        font-size: map-get($map: $font-size, $key: xlarge); //32px
+        font-size: map-get($map: $font-size, $key: xlarge);
         color: map-get($map: $font-color, $key: medium);
         span {
           color: map-get($map: $font-color, $key: naklight);
@@ -2095,7 +2093,7 @@ footer {
       p.b-under {
         margin-top: 10px;
         font-weight: 800;
-        font-size: map-get($map: $font-size, $key: small); //14px
+        font-size: map-get($map: $font-size, $key: small);
         color: map-get($map: $font-color, $key: medium);
       }
     }

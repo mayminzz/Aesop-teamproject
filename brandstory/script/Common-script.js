@@ -1,10 +1,10 @@
 // ======================== GiftTop ====================================
 const giftTop = document.querySelector(".gift_top");
 
-  giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
+giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
 
 //=========================== left gnb ==================================
-const headerUrl = "../json/header.json";
+const headerUrl = "./json/header.json";
 fetch(headerUrl)
   .then((response) => response.json())
   .then((json) => {
@@ -57,27 +57,26 @@ fetch(headerUrl)
     let rightOutput = "";
 
     json.rightNav.forEach((list) => {
-      rightOutput += `<a href="" class="${list.class}">${list.category}</a>`;
+      rightOutput += `<a href="#" class="${list.class}">${list.category}</a>`;
     });
 
     const gnbRight = document.querySelector(".gnb_right");
     gnbRight.innerHTML = rightOutput;
-
     const wishlist = document.querySelector(".wishlist");
-    console.log(wishlist);
     wishlist.setAttribute("href", "https://www.aesop.com/kr/cabinet/");
     wishlist.setAttribute("target", "_blank");
-
     const cart = document.querySelector(".cart");
+
     const cartShow = document.querySelector("#cart_alarm");
 
-    cart.addEventListener("click", (e) => {
-      e.preventDefault();
+    cart.addEventListener("click", () => {
+      const cartShow = document.querySelector("#cart_alarm");
       cartShow.classList.add("showCart");
       setTimeout(() => {
         cartShow.classList.remove("showCart");
       }, 2100);
     });
+    //===================
     // 로그인
     const login = document.querySelector(".login");
     const loginModal = document.querySelector(".login_modal");
@@ -120,7 +119,7 @@ fetch(headerUrl)
       "https://nav-3-3a238.web.app",
       "https://nav-4-3b4da.web.app",
       "https://nav-5-66904.web.app",
-      " https://nav-6-58f7e.web.app",
+      "https://nav-6-58f7e.web.app",
     ];
 
     const gnbDel = document.querySelector(".gnb ul");
@@ -191,7 +190,6 @@ fetch(headerUrl)
 // back to top + nav scroll
 const btn = document.querySelector(".back_to_top");
 const html = document.querySelector("html");
-// 버튼이 나타날 스크롤 위치
 let offset;
 let scrollPos;
 let documentHeight;
@@ -203,7 +201,6 @@ if (documentHeight != 0) {
 }
 scrollPos = html.scrollTop;
 
-// 스크롤 방향을 판별하기 위해서 이전 스크롤 위치를 변수에 저장
 let previousScrollPos = 0;
 
 // 스크롤 이벤트
@@ -245,7 +242,7 @@ queryBtn.addEventListener("click", () => {
 
 // ======================== footer =======================================
 const contents = document.querySelector(".footer_contents");
-const footerUrl = "../json/footer.json";
+const footerUrl = "./json/footer.json";
 
 fetch(footerUrl)
   .then((response) => response.json())
@@ -276,5 +273,5 @@ fetch(footerUrl)
     spanEl.style.color = "#b8b8b8";
     spanEl.style.fontSize = "20px";
     spanEl.style.display = "block";
-    spanEl.style.margin = "20px 0";
+    spanEl.style.margin = "10px 0";
   });
