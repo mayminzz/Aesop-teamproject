@@ -6,26 +6,25 @@ const qaForm = document.querySelector(".qa_form");
 const helpBtn = document.querySelector(".help_box a");
 
 consultBox.addEventListener("mouseover", () => {
-  consultBox.style.background = "#222";
-  consultBox.style.opacity = "0.9";
-  aEl.style.color = "#fff";
-  pEl.style.color = "#fff";
+  consultBox.classList.add("hoverEffect");
+  aEl.classList.add("hoverEffect");
+  pEl.classList.add("hoverEffect");
 });
 consultBox.addEventListener("mouseout", () => {
-  consultBox.style.background = "";
-  consultBox.style.opacity = "";
-  aEl.style.color = "";
-  pEl.style.color = "";
+  consultBox.classList.remove("hoverEffect");
+  aEl.classList.remove("hoverEffect");
+  pEl.classList.remove("hoverEffect");
 });
 consultBox.addEventListener("click", () => {
   qaForm.style.display = "block";
 });
 
 helpBtn.addEventListener("mouseover", () => {
-  helpBtn.style.opacity = "1";
+  helpBtn.classList.add("hoverEffect");
 });
-helpBtn.addEventListener("mouseout", () => {
-  helpBtn.style.opacity = "";
+
+helpBtn.addEventListener("mouseleave", () => {
+  helpBtn.classList.remove("hoverEffect");
 });
 
 // 제출하기 버튼 이벤트
@@ -33,7 +32,6 @@ const submitBtn = document.querySelector("#submitbtn");
 let userName = document.querySelector("#name");
 let userEmail1 = document.querySelector("#ask_email");
 let textarea = document.querySelector("textarea");
-
 
 submitBtn.addEventListener("mouseover", () => {
   submitBtn.style.background = "#222";
@@ -118,7 +116,7 @@ fetch(askUrl)
         resultForm.style.display = "block";
         if (window.innerWidth < 767) {
           document.querySelector(".container").style.height = "360vh";
-        } 
+        }
         if (askSelctedVal === "order") {
           blankLabel.innerText = "주문에 관련된 질문을 선택해주세요.";
           blankSelect.setAttribute("name", "order");

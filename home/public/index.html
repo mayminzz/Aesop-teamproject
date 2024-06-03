@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aesop</title>
+    <link
+      rel="shortcut icon"
+      href="./img/common/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- fontawesome -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/bd0a8925a1.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script defer src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="./css/Home-style.css" />
+    <script defer src="./script/Common-script.js"></script>
+  </head>
+  <body>
+    <!-- login -->
+    <aside class="login_modal">
+      <div class="login_inner">
+        <i class="fas fa-xmark"></i>
+        <h1>로그인</h1>
+        <form action="">
+          <input id="login_email" type="email" placeholder="이메일 주소" />
+          <input type="password" type="password" placeholder="비밀번호" />
+          <span>비밀번호 재설정하기</span>
+          <input type="submit" value="로그인" />
+        </form>
+        <h2>회원이 아니신가요?</h2>
+        <p>
+          회원가입을 통해 주문내역을 확인하고 위시리스트에 관심 제품을
+          저장하거나,저장된 정보를 사용하여더 빠른 온라인 결제 경험을 즐기실 수
+          있습니다.
+        </p>
+        <a href="#">회원가입</a>
+      </div>
+    </aside>
+    <aside>
+      <div class="gift_top_box">
+        <div>
+          <i class="fas fa-xmark"></i>
+          <span>전 구매 무료 배송</span>
+        </div>
+        <div>
+          <span>CJ 대한통운</span>
+          <p><span>전 제품</span><span>무료 배송</span></p>
+          <p><span>전 지역</span><span>영업일 기준, 2-3일</span></p>
+        </div>
+        <div class="gift_top_list">
+          <section>
+            <span>군부대/사서함 배송 불가 안내</span>
+            <p>
+              군부대 및 사서함으로 배송되는 주문의 경우, CJ대한통운을 통한
+              배송이 불가하여 별도 문자 안내와 함께 자동 주문 취소처리될
+              예정입니다.
+            </p>
+          </section>
+          <section>
+            <span>무료 선물 포장 서비스</span>
+            <p>
+              주문하신 제품을 기프트 메시지와 함께 선물 포장해 드립니다. 기프트
+              메시지는 주문 시에 작성하실 수 있습니다.
+            </p>
+          </section>
+
+          <section>
+            <span>샘플 & 코튼 백 증정</span>
+            <p>
+              이솝 공식 온라인 몰의 모든 주문 건에 무료 샘플과 코튼 백을 제공해
+              드립니다. 제공되는 코튼 백의 사이즈는 제품의 크기에 따라 다릅니다.
+              샘플은 재고 상황에 따라 변경될 수 있으며 임의 지정은 불가합니다.
+            </p>
+          </section>
+          <section>
+            <span>교환 및 반품</span>
+            <p>
+              이솝 공식 온가인 몰에서 구매하신 미개봉 제품은 구매 후 30일 이내
+              무료 반품이 가능하며 교환은 반품 후 재주문 또는 전국 이솝 매장에서
+              가능합니다. 자세한 내용은 자주 묻는 질문을 참고해주세요.
+            </p>
+          </section>
+          <section>
+            <span>탄소중립 배송</span>
+            <p>
+              이솝 온라인 몰의 주문 배송 건은 탄소중립을 지키기 위해 노력하고
+              있습니다.
+            </p>
+          </section>
+          <section>
+            <span>온라인 패키징</span>
+            <p>
+              이솝은 환경에 미치는 영향을 최소화하기 위한 초장재를 사용하며
+              내부에는 재활용이 가능한 종이 완충재를 선택해 사용하고 있습니다.
+            </p>
+          </section>
+        </div>
+      </div>
+    </aside>
+    <aside>
+      <div id="cart_alarm">
+        <span>카트가 비어있습니다.</span>
+      </div>
+    </aside>
+    <aside id="mobile_gnb_list">
+      <ul class="modal_top_gnb_list">
+        <li><a href="">스킨케어</a></li>
+        <li><a href="">바디&핸드</a></li>
+        <li><a href="">헤어</a></li>
+        <li><a href="">홈케어</a></li>
+        <li><a href="">키트&트래블</a></li>
+        <li><a href="">이솝이야기</a></li>
+      </ul>
+      <div class="gnb_list_bottom">
+        <ul class="modal_bottom_mini_list">
+          <li><a href="">읽기</a></li>
+          <li><a href="">로그인</a></li>
+          <li><a href="">스토어</a></li>
+          <li><a href="">문의하기</a></li>
+          <li><a href="">페이셜 어포인트먼트</a></li>
+        </ul>
+        <figure>
+          <img src="./img/common/mobile_nav_img.jpg" alt="" />
+        </figure>
+        <figcaption>
+          <span>재생목록</span>
+          <h3>
+            <a
+              href="https://www.aesop.com/kr/r/the-athenaeum/sound-of-aesop/"
+              target="_blank"
+              >이솝의 사운드</a
+            >
+          </h3>
+        </figcaption>
+      </div>
+    </aside>
+    <header>
+      <div class="gift_top">
+        <h4>
+          전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을
+          즐겨보세요.
+        </h4>
+      </div>
+      <nav>
+        <div class="logo">
+          <a href="https://aesop-46c37.web.app"
+            ><img src="./img/common/logo_black.png" alt="logo"
+          /></a>
+        </div>
+        <ul class="gnb">
+          <li>
+            <a href="">스킨케어</a>
+            <div class="gnb_detail_box">
+              <div class="gnb_detail_box_inner">
+                <img src="./img/kit/category_skin.png" alt="category_skin" />
+                <div class="gnb_detail_list">
+                  <ul>
+                    <li>
+                      <a class="bold" class="bold clickItem" href=""
+                        >스킨케어 전체보기</a
+                      >
+                    </li>
+                    <li><a href="">페이셜 케어</a></li>
+                    <li><a href="">모이스쳐</a></li>
+                    <li><a href="">쉐이빙</a></li>
+                    <li><a href="">선 케어</a></li>
+                  </ul>
+                  <ul>
+                    <li><a class="bold" href="">번들 & 기프트</a></li>
+                    <li><a href="">사랑받는 제품</a></li>
+                  </ul>
+                  <ul>
+                    <li><a class="bold" href="">자세히 살펴보기</a></li>
+                    <li><a class="clickItem" href="https://teamproject-skintype.web.app" target="blank">내 피부 이해하기</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="">바디&핸드</a>
+            <div class="gnb_detail_box">
+              <div class="gnb_detail_box_inner">
+                <img src="./img/kit/category_hand.png" alt="category_hand" />
+                <div class="gnb_detail_list">
+                  <ul>
+                    <li>
+                      <a class="bold clickItem" href="https://teamproject-product.web.app" target="_blank">핸드 & 바디 전체보기</a>
+                    </li>
+                    <li><a href="">핸드</a></li>
+                    <li><a href="">바디</a></li>
+                    <li><a href="">퍼스널 컬러</a></li>
+                    <li><a href="">번들</a></li>
+                  </ul>
+                  <ul>
+                    <li><a class="bold" href="">번들 & 기프트</a></li>
+                    <li><a href="">사랑받는 제품</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="">헤어</a>
+            <div class="gnb_detail_box">
+              <div class="gnb_detail_box_inner">
+                <img src="./img/kit/category_hair.png" alt="category_hair" />
+                <div class="gnb_detail_list">
+                  <ul>
+                    <li>
+                      <a class="bold" href="">헤어 전체보기</a>
+                    </li>
+                    <li><a href="">샴푸</a></li>
+                    <li><a href="">컨디셔너</a></li>
+                    <li><a href="">트리트먼트</a></li>
+                    <li><a href="">그루밍</a></li>
+                  </ul>
+                  <ul>
+                    <li><a class="bold" href="">번들 & 기프트</a></li>
+                    <li><a href="">사랑받는 제품</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="">홈케어</a>
+            <div class="gnb_detail_box">
+              <div class="gnb_detail_box_inner">
+                <img src="./img/kit/category_home.png" alt="category_home" />
+                <div class="gnb_detail_list">
+                  <ul>
+                    <li>
+                      <a class="bold clickItem" href="https://aesop-46c37.web.app" target="blank">홈 전체보기</a>
+                    </li>
+                    <li><a href="">홈</a></li>
+                    <li><a href="">문학</a></li>
+                    <li><a href="">홈 케어 기프트</a></li>
+                  </ul>
+                  <ul>
+                    <li><a class="bold" href="">번들 & 기프트</a></li>
+                    <li><a href="">사랑받는 제품</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="">키트&트래블</a>
+            <div class="gnb_detail_box">
+              <div class="gnb_detail_box_inner">
+                <img src="./img/kit/category_kit.png" alt="category_kit" />
+                <div class="gnb_detail_list">
+                  <ul>
+                    <li>
+                      <a class="bold" href="">키트 & 트래블</a>
+                    </li>
+                    <li><a href="">시즈널 기프트 카드</a></li>
+                    <li><a href="">스킨케어 키트</a></li>
+                    <li><a href="">바디 & 핸드케어 키트</a></li>
+                    <li><a href="">트래블</a></li>
+                  </ul>
+                  <ul>
+                    <li><a class="bold" href="">번들 & 기프트</a></li>
+                    <li><a href="">사랑받는 제품</a></li>
+                    <li><a href="">기프트 번들</a></li>
+                  </ul>
+                  <div class="kit_background">
+                    <img src="./img/kit/Kitnav_img.png" alt="Kitnav_img" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href="">이솝이야기</a>
+            <div class="gnb_detail_box">
+              <div class="gnb_detail_box_inner">
+                <img src="./img/kit/category_kit.png" alt="category_kit" />
+                <div class="gnb_detail_list">
+                  <ul>
+                    <li>
+                      <a class="bold" href="#">더 아테네움 : 도서관</a>
+                    </li>
+                    <li><a class="bold" href="">이솝 스파 :</a></li>
+                    <li><a class="bold" href="">페이션 어포인트먼트</a></li>
+                  </ul>
+                  <ul>
+                    <li><a class="bold" href="">회사소개</a></li>
+                    <li><a class="clickItem" href="https://teamproject-brandstory.web.app" target="_blank">브랜드 스토리</a></li>
+                    <li><a href="">채용</a></li>
+                    <li><a href="">이솝 재단</a></li>
+                    <li><a class="clickItem" href="https://teamproject-aesop-4f07d.web.app" target="_blank">문의하기</a></li>
+                    <li><a href="">스토어 찾기</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="gnb_right">
+          <li><a class="login" href="">로그인</a></li>
+          <li>
+            <a href="https://www.aesop.com/kr/cabinet" target="_blank"
+              >위시리스트</a
+            >
+          </li>
+          <li><a class="cart" href="">카트</a></li>
+          <div class="toggle">
+            <span></span>
+            <span></span>
+          </div>
+        </ul>
+      </nav>
+      <div class="qa_nav_list"></div>
+    </header>
+    <div class="container" id="home">
+      <!-- main -->
+      <main>
+        <section class="home_page1">
+          <div class="page1_inner">
+            <img class="aesop" src="./img/common/logo_light.png" />
+            <div class="banner">
+              <img src="./img/main/main_banner.png" alt="banner" />
+              <div class="banner_heading">
+                <span class="first_span">미지로 인도하는 아로마</span>
+                <span class="other"
+                  ><b>아더토피아</b><br />
+                  전통에 얽매이지 않는 프래그런스 컬렉션
+                </span>
+                <span class="texthome">
+                  인식 너머의 세계로 이끌어주는 강렬하고, 독특한 여섯 가지
+                  아로마를 만나보세요.
+                </span>
+                <a href="https://www.aesop.com/kr/c/fragrance/">향수보기</a>
+              </div>
+            </div>
+            <!--section1==================================================-->
+            <div class="best_seller">
+              <div class="bt_txt">
+                <p>베스트 셀러</p>
+              </div>
+              <div class="bt_product">
+                <div class="bestBtn">
+                  <div class="bt_prev" id="btleft"></div>
+                  <div class="bt_next" id="btright"></div>
+                </div>
+                <div class="items">
+                  <div class="item">
+                    <a
+                      href="https://www.aesop.com/kr/p/body-hand/hand/resurrection-aromatique-hand-balm/"
+                      target="_blank"
+                    >
+                      <img src="./img/main/product01.png" alt="item01" />
+                    </a>
+                    <h5>레저렉션 아로마틱 핸드 밤</h5>
+                    <span>시트러스,우드,허브 향</span>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://www.aesop.com/kr/p/skin/hydrate/parsley-seed-anti-oxidant-intense-serum/"
+                      target="_blank"
+                    >
+                      <img src="./img/main/product02.png" alt="item02" />
+                    </a>
+                    <h5>파슬리 씨드 안티 옥시던트 인텐스 세럼</h5>
+                    <span>민감성 피부를 포함한 대부분의 피부 타입</span>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://www.aesop.com/kr/p/skin/eyes-lips/exalted-eye-serum/"
+                      target="_blank"
+                    >
+                      <img src="./img/main/product03.png" alt="item03" />
+                    </a>
+                    <h5>이그절티드 아이 세럼</h5>
+                    <span
+                      >민감성 피부,수분 부족피부,칙칙하고 메마른 피부를 포함한
+                      대부분의 피부타입</span
+                    >
+                  </div>
+                  <div class="item item4">
+                    <a
+                      href="https://www.aesop.com/kr/p/skin/hydrate/b-triple-c-facial-balancing-gel/"
+                      target="_blank"
+                    >
+                      <img src="./img/main/product04.png" alt="item04" />
+                    </a>
+                    <h5>비 트리플 씨 페이셜 밸런싱 젤</h5>
+                    <span>중성,복합성,지성 피부 덥고 습한 날씨의 피부</span>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://www.aesop.com/kr/p/body-hand/hand/resurrection-aromatique-hand-wash/"
+                      target="_blank"
+                    >
+                      <img src="./img/main/product05.png" alt="item05" />
+                    </a>
+                    <h5>레저렉션 아로마틱 핸드 워시</h5>
+                    <span>라벤더 오일을 함유한 부드러운 핸드 워시</span>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://www.aesop.com/kr/p/hair/condition/conditioner/"
+                      target="_blank"
+                    >
+                      <img src="./img/main/product06.png" alt="item06" />
+                    </a>
+                    <h5>컨디셔너</h5>
+                    <span
+                      >아미노산을 풍부하게 함유한 영양이 풍부한 컨디셔너</span
+                    >
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://www.aesop.com/kr/p/body-hand/personal-care/d-odorant/"
+                      target="_blank"
+                    >
+                      <img src="./img/main/product07.png" alt="item07" />
+                    </a>
+                    <h5>데오도란트</h5>
+                    <span>상쾌한 에센셜 오일 블렌드가 함유된 스프레이</span>
+                  </div>
+                  <div class="item">
+                    <a
+                      href="https://www.aesop.com/kr/p/hair/treat/rose-hair-scalp-moisturising-masque/"
+                      target="_blank"
+                    >
+                      <img src="./img/main/product08.png" alt="item08" />
+                    </a>
+                    <h5>로즈 헤어 앤 스칼프 마스크</h5>
+                    <span>헤어에 윤기와 생기를 주는 트린트먼트</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--section2==================================================-->
+        <section class="home_page2 section">
+          <div class="page2_inner">
+            <div class="contents">
+              <video src="./img/common/video1.mp4" muted loop></video>
+              <div class="content_text">
+                <h6>더 아테네움</h6>
+                <h1>우라논: 아더토피아의 여섯 번째 향수</h1>
+                <p>
+                  아더토피아 향수 컬렉션 6종은 모두 현실이면서 상상 속에
+                  존재하는 또 다른 영역으로 향하는 관문으로 역할을 합니다.
+                  프랑킨센스, 헤이, 미르가 자아내는 우디하고 스파이시한 유향을
+                  선사하는 우라논은 그 여정의 마지막을 장식합니다.
+                </p>
+                <a
+                  href="https://www.aesop.com/kr/r/the-athenaeum/experience-ouranon-fragrance"
+                  >우라논을 경험해보세요.</a
+                >
+              </div>
+            </div>
+            <div class="quotation">
+              <div class="quote_text">
+                'There isn't a train I wouldn't take, / No matter where it's
+                going.'
+              </div>
+              <div class="quote_person">Edna St. Vincent Millay</div>
+            </div>
+          </div>
+        </section>
+        <!--section3==================================================-->
+        <section class="home_page3 section">
+          <div class="page3_inner">
+            <div class="contents">
+              <div class="content_text">
+                <h6>더 아테네움</h6>
+                <h1>추워지는 계절</h1>
+                <p>
+                  난롯가에서 보낸 길고 나른한 밤들. 나뭇가지에 내려앉은 얼음.
+                  따뜻한 식사와 겨울잠. 비가 내리는 택시와 유리창으로 흐릿하게
+                  보이는 형형색색의 불빛. 우리가 웅크리고 지내는 가운데
+                  겨울날들에 대한 낭만이 있습니다. 하지만 계절 변화는 피부의
+                  상태의 변화를 일으킬 수 있어 겨울철에는 각별한 주의를 기울어야
+                  합니다. 수분 공급의 숨겨진 과학 이야기에서 특정 피부 타입과
+                  고민을 위한 제품에 이르기까지 겨울에 초점을 맞춘 계절별
+                  스킨케어를 살펴봅니다.
+                </p>
+                <a
+                  href="https://www.aesop.com/kr/r/the-athenaeum/a-guide-to-winter-skin-care"
+                  >겨울 스킨케어 가이드 읽기</a
+                >
+              </div>
+              <img src="./img/common/commonImg.png" alt="commonImg" />
+            </div>
+            <div class="quotation">
+              <div class="quote_text">
+                'Nothing is ever ended, everything only begun.'
+              </div>
+              <div class="quote_person">Sara Teasdale</div>
+            </div>
+          </div>
+        </section>
+        <!--section4==================================================-->
+        <section class="home_page4 section">
+          <div class="page4_inner">
+            <div class="contents">
+              <video src="./img/common/video2.mp4" muted loop></video>
+              <div class="content_text">
+                <h6>더 아테네움</h6>
+                <h1>어른을 위한 배스 타임: 이솝 바 솝</h1>
+                <p>
+                  비눗방울과 거품 가득한 욕조를 즐기며 보내는 시간만큼 내면의
+                  동심을 불러일으키는 활동은 드뭅니다. 욕조나 세면대, 혹은
+                  샤워기 아래에서 따뜻한 물로 몸을 씻는 일은 편안한 숙면, 진심
+                  어린 웃음, 풍성한 식사와 마찬가지로 감각적인 만족감을
+                  가져다줍니다. 그리고 양질의 비누야말로 이 경험을 함께할 더할
+                  나위 없이 좋은 동반자입니다.
+                </p>
+                <a
+                  href="https://www.aesop.com/kr/r/the-athenaeum/bath-time-for-grown-ups-bar-soaps"
+                  >이솝 바 솝을 경험해보세요.</a
+                >
+              </div>
+            </div>
+            <div class="quotation">
+              <div class="quote_text">
+                'Simplicity of life, even the barest, is not a misery, but the
+                very foundation of refinement.'
+              </div>
+              <div class="quote_person">William Morris</div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--footer-->
+      <footer>
+        <div class="footer_inner">
+          <div class="footer_contents">
+            <div class="footer_content">
+              <h3>서비스</h3>
+              <p>
+                <span>기업체 구매</span><span>페이셜 어포인트먼트</span
+                ><span>1:1 채팅 상담</span><span>린스 앤 리턴 캠페인</span>
+              </p>
+            </div>
+            <div class="footer_content">
+              <h3>위치 기본 설정</h3>
+              <p><span>배송: 대한민국</span><span>언어 : 한국어</span></p>
+            </div>
+            <div class="footer_content">
+              <h3>주문 및 지원</h3>
+              <p>
+                <span>문의하기</span><span>배송 조회하기</span
+                ><span>주문내역</span><span>반품</span
+                ><span>자주 묻는 질문</span>
+              </p>
+            </div>
+            <div class="footer_content">
+              <h3>소셜</h3>
+              <p>
+                <span>Instagram</span><span>Twitter</span><span>Linkedin</span
+                ><span>Kakao Plus Friend</span>
+              </p>
+            </div>
+            <div class="footer_content">
+              <h3>주의</h3>
+              <p>
+                <span
+                  >상호:이솝코리아 유한 회사 | 주소: 서울특별시 강남구 도산대로
+                  45길 10-6 이솝코리아 | 대표자: 프레데리크미셸어완세일러 |
+                  대표전화: 1800-1987 | 대표 이메일: aesop@aesop.com | 호스팅
+                  사업자: SAP Hybris | 사업자 등록 번호: 220-88-561014
+                  사업자정보확인 | 통신판매업 신고번호: 2014-서울강남-02300
+                </span>
+              </p>
+            </div>
+          </div>
+          <span>©Aesop</span>
+        </div>
+      </footer>
+    </div>
+    <div class="query_version">
+      <div class="fixed_side_icon">
+        <img id="query" src="./img/icon/ask.png" alt="miniBox" />
+        <a class="back_to_top" href="#">
+          <i class="fas fa-angle-up"></i>
+        </a>
+      </div>
+      <div class="mini_ask">
+        <i class="fas fa-xmark"></i>
+        <h1>1:1 채팅상담 하기</h1>
+        <p>
+          1:1 채팅상담<br />상담을 시작하기에 앞서, 이용약관, 개인정보 수집 및
+          이용에 대하여 고객님의 동의가 필요합니다. <br />
+          상담 전 고객님의 동의여부 확인 후 상담이 시작됩니다.
+          <br /><span
+            >※이용약관, 개인정보 수집 및 동의에 대하여 동의를 거부할 수 있으며,
+            이 경우 1:1 채팅상담 서비스 이용이 불가합니다.</span
+          >
+        </p>
+        <form class="mini_ask_form">
+          <label for="">이름(선택사항)<em>*</em></label>
+          <input type="name" id="name" required />
+          <label for="email">이메일(선택사항)<em>*</em></label>
+          <input type="email" id="email" required />
+          <label for="message">메세지<em>*</em></label
+          ><textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input id="submitBtn" type="submit" value="제출하기" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
